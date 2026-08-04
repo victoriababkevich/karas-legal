@@ -547,6 +547,55 @@ footer { background:var(--N); padding-bottom:80px; }
 .spec-card[onclick]{cursor:pointer;}
 .spec-card[onclick]:hover{transform:translateY(-4px);}
 </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LegalService",
+        "@id": "https://karas-legal.vercel.app/#firm",
+        "name": "Karaś Chacia i Wspólnicy",
+        "url": "https://karas-legal.vercel.app",
+        "logo": "https://karas-legal.vercel.app/KARA%C5%9A%20CHACIA%20LEGAL.JPG",
+        "telephone": "+48222993118",
+        "email": "kancelaria@karas-legal.com",
+        "foundingDate": "2014",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "al. Jerozolimskie 181A",
+          "postalCode": "02-222",
+          "addressLocality": "Warszawa",
+          "addressCountry": "PL"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Polska"
+        },
+        "knowsAbout": [
+          "Spory z PFR i pomoc publiczna",
+          "Inwestycje budowlane i nieruchomości",
+          "Spory gospodarcze",
+          "Umowy inwestycyjne i projekty biznesowe",
+          "Prawo IT i projekty technologiczne",
+          "Fundacje rodzinne i sukcesja majątku",
+          "Konflikty między wspólnikami"
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Łukasz Chacia",
+        "jobTitle": ["Wspólnik zarządzający", "Adwokat"],
+        "worksFor": {"@id": "https://karas-legal.vercel.app/#firm"}
+      },
+      {
+        "@type": "Person",
+        "name": "Zbigniew Karaś",
+        "jobTitle": ["Wspólnik zarządzający", "Adwokat"],
+        "worksFor": {"@id": "https://karas-legal.vercel.app/#firm"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
