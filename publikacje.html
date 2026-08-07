@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publikacje — Karaś Chacia i Wspólnicy</title>
+  <!-- SEO -->
+  <meta name="description" content="Artykuły, komentarze prawne i materiały eksperckie przygotowane przez prawników kancelarii Karaś Chacia i Wspólnicy.">
+  <link rel="canonical" href="https://karas-legal.vercel.app/publikacje.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Publikacje — Karaś Chacia i Wspólnicy">
+  <meta property="og:description" content="Artykuły, komentarze prawne i materiały eksperckie przygotowane przez prawników kancelarii Karaś Chacia i Wspólnicy.">
+  <meta property="og:url" content="https://karas-legal.vercel.app/publikacje.html">
+  <meta property="og:image" content="https://karas-legal.vercel.app/KARA%C5%9A%20CHACIA%20LEGAL.JPG">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Publikacje — Karaś Chacia i Wspólnicy">
+  <meta name="twitter:description" content="Artykuły, komentarze prawne i materiały eksperckie przygotowane przez prawników kancelarii Karaś Chacia i Wspólnicy.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --T:    #20A9B9;
+  --Td:   #0089AA;
+  --Tl:   #E4F6F8;
+  --N:    #091C2E;
+  --Nm:   #112840;
+  --text: #1C2B3A;
+  --mut:  #5A6E7F;
+  --bg:   #F4F9FA;
+  --w:    #fff;
+  --bdr:  #D9E7EA;
+  --r:    14px;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: "Plus Jakarta Sans", sans-serif; color: var(--text); background: var(--w); overflow-x: hidden; line-height: 1.65; }
+a { text-decoration: none; color: inherit; }
+
+/* ══ HEADER ══ */
+header {
+  background:rgba(255,255,255,.97); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--bdr); position:sticky; top:0; z-index:300;
+  box-shadow:0 2px 20px rgba(9,28,46,.07);
+}
+.header-w {
+  max-width:1200px; margin:0 auto; padding:0 28px;
+  display:flex; justify-content:space-between; align-items:center; height:72px;
+}
+.logo { display:flex; align-items:center; }
+.logo-img { height:48px; width:auto; display:block; }
+
+nav { display:flex; gap:2px; align-items:center; }
+nav > a, .dropdown > a {
+  font-size:13.5px; font-weight:600; color:var(--text);
+  padding:7px 13px; border-radius:8px; transition:all .2s;
+  display:flex; align-items:center; gap:4px;
+}
+nav > a:hover, .dropdown > a:hover { color:var(--T); background:var(--Tl); }
+nav > a.active { color:var(--T); }
+.nav-btn {
+  background:var(--N) !important; color:#fff !important;
+  padding:9px 20px !important; border-radius:9px !important;
+  margin-left:6px; box-shadow:0 4px 12px rgba(9,28,46,.25);
+}
+.nav-btn:hover { background:var(--Nm) !important; }
+.nav-panel {
+  font-size:13px !important; font-weight:600 !important;
+  color:var(--T) !important; border:1.5px solid var(--T);
+  padding:7px 14px !important; border-radius:8px !important;
+  margin-left:4px; transition:all .2s; white-space:nowrap;
+}
+.nav-panel:hover { background:var(--Tl) !important; }
+
+.dropdown { position:relative; }
+.dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:10px;}
+.dropdown > a .arrow { font-size:10px; transition:transform .2s; display:inline-block; }
+.dropdown:hover > a .arrow { transform:rotate(180deg); }
+.dropdown-menu {
+  display:none; position:absolute; top:calc(100% + 8px); left:0;
+  background:#fff; border:1px solid var(--bdr); border-radius:14px;
+  min-width:280px; box-shadow:0 12px 40px rgba(9,28,46,.15);
+  z-index:400; padding:8px; overflow:hidden;
+}
+.dropdown:hover .dropdown-menu { display:block; }
+.dropdown-menu a {
+  display:block; padding:10px 14px; font-size:13.5px;
+  font-weight:600; color:var(--text); border-radius:8px;
+  transition:all .15s; white-space:nowrap;
+}
+.dropdown-menu a:hover { color:var(--T); background:var(--Tl); }
+.dropdown-menu .dm-sep { height:1px; background:var(--bdr); margin:6px 0; }
+.dropdown-menu .dm-label {
+  font-size:10.5px; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--mut); padding:6px 14px 2px;
+}
+.dropdown-menu .dm-highlight { color:var(--T) !important; border-top:1px solid var(--bdr); margin-top:4px; }
+
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:pointer;
+  padding:8px; border-radius:8px; transition:background .2s;
+}
+.hamburger:hover { background:var(--Tl); }
+.hamburger span { display:block; width:22px; height:2px; background:var(--N); border-radius:2px; transition:all .25s; }
+.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+.mobile-nav {
+  display:none; position:fixed; top:72px; left:0; right:0;
+  background:#fff; border-bottom:1px solid var(--bdr);
+  z-index:299; padding:16px 20px 24px;
+  box-shadow:0 8px 24px rgba(9,28,46,.12);
+  max-height:calc(100vh - 72px); overflow-y:auto;
+}
+.mobile-nav.open { display:block; }
+.mobile-nav a { display:block; padding:11px 14px; font-size:15px; font-weight:600; color:var(--text); border-radius:9px; transition:all .15s; }
+.mobile-nav a:hover { color:var(--T); background:var(--Tl); }
+.mobile-nav .mn-group { margin-bottom:8px; }
+.mobile-nav .mn-label { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--mut); padding:8px 14px 4px; }
+.mobile-nav .mn-sub { padding-left:14px; }
+.mobile-nav .mn-sub a { font-size:14px; font-weight:500; }
+.mobile-nav .mn-sep { height:1px; background:var(--bdr); margin:8px 0; }
+.mobile-nav .mn-cta { background:var(--N); color:#fff !important; border-radius:9px; text-align:center; margin-top:12px; padding:13px 14px !important; }
+
+/* ══ SEKCJE ══ */
+.sec { padding:88px 0; }
+.sec-bg { background:var(--bg); }
+.w { max-width:1200px; margin:0 auto; padding:0 28px; }
+.slabel { font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--T); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+.slabel::before { content:''; width:24px; height:2px; background:var(--T); border-radius:2px; }
+.stitle { font-size:40px; font-weight:800; line-height:1.15; color:var(--N); letter-spacing:-.5px; margin-bottom:16px; }
+.ssub { font-size:17px; color:var(--mut); max-width:580px; line-height:1.7; }
+.tc { text-align:center; }
+.tc .ssub { margin:0 auto; }
+
+/* ══ SP-HERO ══ */
+.sp-hero{background:linear-gradient(135deg,#091C2E 0%,#112840 60%,#0E3050 100%);padding:72px 0 64px;position:relative;overflow:hidden;}
+.sp-hero-video{position:absolute;inset:0;z-index:0;}
+.sp-hero-video video{width:100%;height:100%;object-fit:cover;object-position:center;}
+.sp-hero-video::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(9,28,46,.83) 0%,rgba(17,40,64,.78) 60%,rgba(14,48,80,.72) 100%);z-index:1;}
+.sp-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(32,169,185,.15) 0%,transparent 60%);pointer-events:none;z-index:2;}
+.sp-hero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:3;}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:22px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.breadcrumb a{color:rgba(255,255,255,.5);transition:color .2s;}
+.breadcrumb a:hover{color:var(--T);}
+.breadcrumb .bc-sep{color:rgba(255,255,255,.2);}
+.sp-hero h1{font-size:46px;font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.5px;margin:16px 0 20px;max-width:780px;}
+.sp-hero h1 em{color:var(--T);font-style:normal;}
+.sp-hero-sub{font-size:18px;color:rgba(255,255,255,.7);line-height:1.7;max-width:640px;margin-bottom:36px;}
+.hero-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(32,169,185,.15);border:1px solid rgba(32,169,185,.3);color:var(--T);font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:22px;}
+
+/* ══ PUBLIKACJE GRID ══ */
+.pub-filters{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 28px;}
+.pub-filter{border:1.5px solid var(--bdr);background:#fff;color:var(--mut);border-radius:40px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;}
+.pub-filter.active,.pub-filter:hover{border-color:var(--T);color:var(--T);background:var(--Tl);}
+.pub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px;}
+.pub-card{background:#fff;border:1.5px solid var(--bdr);border-radius:18px;overflow:hidden;transition:all .25s;display:flex;flex-direction:column;}
+.pub-card:hover{box-shadow:0 12px 36px rgba(9,28,46,.1);transform:translateY(-2px);border-color:var(--T);}
+.pub-body{padding:24px;flex:1;}
+.pub-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--T);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.pub-title{font-size:16px;font-weight:800;color:var(--N);line-height:1.4;margin-bottom:10px;}
+.pub-desc{font-size:13.5px;color:var(--mut);line-height:1.65;}
+.pub-foot{padding:14px 24px;border-top:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--mut);}
+.pub-read{font-weight:700;color:var(--T);display:flex;align-items:center;gap:4px;transition:gap .2s;}
+.pub-card:hover .pub-read{gap:8px;}
+
+/* Placeholder (brak treści) */
+.pub-placeholder{grid-column:1/-1;text-align:center;padding:72px 24px;}
+.pub-placeholder-icon{width:64px;height:64px;border-radius:18px;background:var(--Tl);border:2px solid rgba(32,169,185,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;color:var(--T);}
+.pub-placeholder h3{font-size:22px;font-weight:800;color:var(--N);margin-bottom:12px;}
+.pub-placeholder p{font-size:16px;color:var(--mut);max-width:460px;margin:0 auto;}
+
+/* ══ FOOTER ══ */
+footer { background:var(--N); padding-bottom:80px; }
+.f-top { max-width:1200px; margin:0 auto; padding:72px 28px 48px; display:grid; grid-template-columns:1.9fr 1fr 1fr 1fr; gap:44px; }
+.f-logo-wrap { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.f-logo-img { height:44px; width:auto; opacity:.9; }
+.f-desc { font-size:14px; color:rgba(255,255,255,.55); line-height:1.7; }
+.f-contacts { margin-top:20px; display:flex; flex-direction:column; gap:8px; }
+.f-c { font-size:14px; color:rgba(255,255,255,.55); display:flex; align-items:center; gap:8px; }
+.f-c a { color:var(--T); font-weight:600; }
+.f-col h4 { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--T); margin-bottom:18px; }
+.f-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.f-col ul li a { font-size:14px; color:rgba(255,255,255,.55); transition:color .2s; }
+.f-col ul li a:hover { color:var(--T); }
+.f-bottom { max-width:1200px; margin:0 auto; padding:20px 28px; border-top:1px solid rgba(255,255,255,.07); display:flex; justify-content:space-between; align-items:center; font-size:13px; color:rgba(255,255,255,.3); flex-wrap:wrap; gap:12px; }
+.f-links { display:flex; gap:20px; }
+.f-links a { color:rgba(255,255,255,.3); transition:color .2s; }
+.f-links a:hover { color:var(--T); }
+
+/* ══ FLOAT BAR ══ */
+.float-bar{position:fixed;bottom:0;left:0;right:0;z-index:500;background:rgba(9,28,46,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(32,169,185,.25);display:flex;align-items:center;justify-content:center;}
+.fb-item{display:flex;align-items:center;gap:10px;padding:14px 28px;color:#fff;font-size:14px;font-weight:600;border-right:1px solid rgba(255,255,255,.08);transition:background .2s;cursor:pointer;}
+.fb-item:hover{background:rgba(32,169,185,.15);}
+.fb-item:last-child{border-right:none;}
+.fb-item .icon{font-size:18px;}
+.fb-item .label{font-size:11px;color:rgba(255,255,255,.5);margin-top:1px;font-weight:500;}
+.fb-cta{background:var(--T)!important;color:#fff;font-size:15px;font-weight:700;padding:14px 32px!important;box-shadow:0 0 20px rgba(32,169,185,.4);letter-spacing:.01em;}
+.fb-cta:hover{background:var(--Td)!important;}
+.float-phone{position:fixed;right:24px;bottom:84px;z-index:499;background:var(--T);color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 6px 24px rgba(32,169,185,.5);transition:all .2s;cursor:pointer;animation:pulse 2.5s ease-in-out infinite;}
+.float-phone:hover{background:var(--Td);transform:scale(1.1);}
+@keyframes pulse{0%,100%{box-shadow:0 6px 24px rgba(32,169,185,.5)}50%{box-shadow:0 6px 36px rgba(32,169,185,.8),0 0 0 10px rgba(32,169,185,.1)}}
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 1024px) {
+  .pub-grid { grid-template-columns:repeat(2,1fr); }
+  .f-top { grid-template-columns:1fr 1fr; }
+}
+@media (max-width: 768px) {
+  nav .dropdown, nav > a:not(.nav-btn) { display:none; }
+  .nav-btn { display:none; }
+  .hamburger { display:flex; }
+  .stitle { font-size:30px; }
+  .sp-hero h1 { font-size:34px; }
+  .pub-grid { grid-template-columns:1fr; }
+  .f-top { grid-template-columns:1fr; gap:32px; }
+  .fb-item:not(.fb-cta) { display:none; }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-w">
+    <a href="index.html" class="logo">
+      <img src="karas-chacia-legal.svg" alt="Karaś Chacia i Wspólnicy" class="logo-img">
+    </a>
+    <nav>
+      <div class="dropdown">
+        <a href="index.html#specjalizacje">Specjalizacje <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <div class="dm-label">Główne obszary</div>
+          <a href="spec_umowy-inwestycyjne.html">Umowy inwestycyjne i projekty biznesowe</a>
+          <a href="spec_prawo-it.html">Prawo IT i projekty technologiczne</a>
+          <a href="spec_spory-pfr.html">Spory z PFR i pomoc publiczna</a>
+          <a href="spec_inwestycje-budowlane.html">Inwestycje budowlane i nieruchomości</a>
+          <a href="spec_konflikty-wspolnicy.html">Konflikty między wspólnikami</a>
+          <a href="spec_spory-gospodarcze.html">Spory gospodarcze</a>
+          <a href="spec_fundacje-rodzinne.html">Fundacje rodzinne i sukcesja majątku</a>
+          <div class="dm-sep"></div>
+          <a href="index.html#specjalizacje" class="dm-highlight">Pozostałe obszary eksperckie →</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="index.html#sprawy">Sprawy <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="sprawy_subwencje-pfr.html">Subwencje PFR</a>
+          <a href="sprawy_w-investments.html">Fundusze W-Investments</a>
+          <a href="sprawy_slupy-energetyczne.html">Odszkodowania za słupy energetyczne</a>
+          <div class="dm-sep"></div>
+          <a href="index.html#sprawy" class="dm-highlight">Inne sprawy →</a>
+        </div>
+      </div>
+      <a href="sukcesy.html">Sukcesy</a>
+      <a href="publikacje.html" class="active">Publikacje</a>
+      <a href="o-nas.html">O kancelarii</a>
+      <a href="kontakt.html" class="nav-btn">Kontakt</a>
+      <a href="https://karas-legal.amberlo.io/login/?lang=pl" class="nav-panel" target="_blank" rel="noopener">Panel Klienta</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mn-group">
+    <div class="mn-label">Specjalizacje</div>
+    <div class="mn-sub">
+      <a href="spec_umowy-inwestycyjne.html">Umowy inwestycyjne i projekty biznesowe</a>
+      <a href="spec_prawo-it.html">Prawo IT i projekty technologiczne</a>
+      <a href="spec_spory-pfr.html">Spory z PFR i pomoc publiczna</a>
+      <a href="spec_inwestycje-budowlane.html">Inwestycje budowlane i nieruchomości</a>
+      <a href="spec_konflikty-wspolnicy.html">Konflikty między wspólnikami</a>
+      <a href="spec_spory-gospodarcze.html">Spory gospodarcze</a>
+      <a href="spec_fundacje-rodzinne.html">Fundacje rodzinne i sukcesja majątku</a>
+    </div>
+  </div>
+  <div class="mn-sep"></div>
+  <div class="mn-group">
+    <div class="mn-label">Sprawy</div>
+    <div class="mn-sub">
+      <a href="sprawy_subwencje-pfr.html">Subwencje PFR</a>
+      <a href="sprawy_w-investments.html">Fundusze W-Investments</a>
+      <a href="sprawy_slupy-energetyczne.html">Odszkodowania za słupy energetyczne</a>
+    </div>
+  </div>
+  <div class="mn-sep"></div>
+  <a href="sukcesy.html">Sukcesy</a>
+  <a href="publikacje.html" style="color:var(--T);">Publikacje</a>
+  <a href="o-nas.html">O kancelarii</a>
+  <a href="kontakt.html" class="mn-cta">Kontakt</a>
+  <a href="https://karas-legal.amberlo.io/login/?lang=pl" target="_blank" rel="noopener" style="text-align:center;margin-top:8px;color:var(--T);border:1.5px solid var(--T);border-radius:9px;padding:11px 14px;display:block;font-weight:600;">Panel Klienta →</a>
+</div>
+
+<!-- HERO -->
+<section class="sp-hero">
+  <div class="sp-hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="https://videos.pexels.com/video-files/7317046/7317046-hd_1920_1080_25fps.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="sp-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Strona główna</a><span class="bc-sep">›</span>
+      <span>Publikacje</span>
+    </nav>
+    <div class="hero-chip">📄 Wiedza i komentarze eksperckie</div>
+    <h1>Publikacje i <em>komentarze prawne</em></h1>
+    <p class="sp-hero-sub">Artykuły, analizy i komentarze przygotowane przez prawników kancelarii — o zmianach w prawie, orzecznictwie i praktyce biznesowej.</p>
+  </div>
+</section>
+
+<!-- PUBLIKACJE -->
+<section class="sec">
+  <div class="w">
+    <div class="slabel">Artykuły i analizy</div>
+    <h2 class="stitle">Publikacje kancelarii</h2>
+    <p class="ssub">Komentujemy zmiany w przepisach, analizujemy orzecznictwo i dzielimy się wiedzą przydatną przedsiębiorcom w codziennym prowadzeniu biznesu.</p>
+
+    <div class="pub-grid">
+      <div class="pub-placeholder">
+        <div class="pub-placeholder-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3>Publikacje wkrótce</h3>
+        <p>Przygotowujemy artykuły i komentarze eksperckie. Zapraszamy wkrótce.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-top">
+    <div>
+      <div class="f-logo-wrap">
+        <img src="logo_transparent.png" alt="Karaś Chacia i Wspólnicy" class="f-logo-img">
+      </div>
+      <div class="f-desc">Od 2014 roku wspieramy przedsiębiorców w prowadzeniu, rozwijaniu i zabezpieczaniu ich biznesów. Łączymy wiedzę prawną z rozumieniem realiów biznesowych.</div>
+      <div class="f-contacts">
+        <div class="f-c">📍 al. Jerozolimskie 181A, 02-222 Warszawa</div>
+        <div class="f-c">📞 <a href="tel:+48222993118">22 299 31 18</a></div>
+        <div class="f-c">✉ <a href="mailto:kancelaria@karas-legal.com">kancelaria@karas-legal.com</a></div>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Specjalizacje</h4>
+      <ul>
+        <li><a href="spec_umowy-inwestycyjne.html">Umowy inwestycyjne</a></li>
+        <li><a href="spec_prawo-it.html">Prawo IT</a></li>
+        <li><a href="spec_spory-pfr.html">Spory z PFR</a></li>
+        <li><a href="spec_inwestycje-budowlane.html">Inwestycje budowlane</a></li>
+        <li><a href="spec_konflikty-wspolnicy.html">Konflikty korporacyjne</a></li>
+        <li><a href="spec_spory-gospodarcze.html">Spory gospodarcze</a></li>
+        <li><a href="spec_fundacje-rodzinne.html">Fundacje rodzinne</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Sprawy</h4>
+      <ul>
+        <li><a href="sprawy_subwencje-pfr.html">Subwencje PFR</a></li>
+        <li><a href="sprawy_w-investments.html">Fundusze W-Investments</a></li>
+        <li><a href="sprawy_slupy-energetyczne.html">Słupy energetyczne</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Kancelaria</h4>
+      <ul>
+        <li><a href="o-nas.html">O kancelarii</a></li>
+        <li><a href="sukcesy.html">Sukcesy</a></li>
+        <li><a href="publikacje.html">Publikacje</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2014–2026 Karaś Chacia i Wspólnicy. Wszelkie prawa zastrzeżone.</span>
+    <div class="f-links">
+      <a href="#">Polityka prywatności</a>
+      <a href="#">Zastrzeżenia prawne</a>
+    </div>
+  </div>
+</footer>
+
+<div class="float-bar">
+  <a href="tel:+48222993118" class="fb-item"><span class="icon">📞</span><div><div>22 299 31 18</div><div class="label">Zadzwoń teraz</div></div></a>
+  <a href="mailto:kancelaria@karas-legal.com" class="fb-item"><span class="icon">✉</span><div><div>kancelaria@karas-legal.com</div><div class="label">Napisz do nas</div></div></a>
+  <a href="kontakt.html" class="fb-item fb-cta">Umów bezpłatną konsultację →</a>
+</div>
+<a href="tel:+48222993118" class="float-phone" title="Zadzwoń">📞</a>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
+</body>
+</html>
