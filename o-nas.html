@@ -244,6 +244,19 @@ nav > a.active { color:var(--T); }
 .sp-h-stat .sn{font-size:30px;font-weight:800;color:#fff;line-height:1;}
 .sp-h-stat .sn em{color:var(--T);font-style:normal;}
 .sp-h-stat .sl{font-size:12px;color:rgba(255,255,255,.5);margin-top:5px;line-height:1.4;}
+.sp-h-trust{font-size:17px;font-weight:700;color:#fff;line-height:1.45;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.1);}
+.sp-h-trust em{color:var(--T);font-style:normal;}
+
+/* ══ O KANCELARII FULL WIDTH ══ */
+.onas-para-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:36px;}
+.onas-para-grid p{font-size:16px;color:var(--mut);line-height:1.8;margin-bottom:18px;}
+.onas-para-grid p:last-child{margin-bottom:0;}
+
+/* ══ KONTAKT LINKI W BIO ══ */
+.pcard-contacts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--bdr);}
+.pcard-contact{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--T);background:var(--Tl);border:1px solid rgba(32,169,185,.25);padding:8px 14px;border-radius:8px;transition:all .2s;}
+.pcard-contact:hover{background:var(--T);color:#fff;}
+.pcard-contact svg{flex-shrink:0;}
 
 /* ══ CO NAS WYRÓŻNIA ══ */
 .wyroz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px;}
@@ -257,8 +270,8 @@ nav > a.active { color:var(--T); }
 .partner-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:52px;}
 .pcard{border-radius:24px;overflow:hidden;border:1.5px solid var(--bdr);background:#fff;transition:all .25s;}
 .pcard:hover{box-shadow:0 16px 52px rgba(9,28,46,.12);transform:translateY(-3px);border-color:rgba(32,169,185,.3);}
-.pcard-photo{background:linear-gradient(160deg,#112840 0%,#091C2E 100%);height:400px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;}
-.pcard-photo img{width:80%;max-height:100%;object-fit:contain;object-position:bottom center;display:block;}
+.pcard-photo{background:#091C2E;height:400px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;}
+.pcard-photo img{width:80%;max-height:100%;object-fit:contain;object-position:bottom center;display:block;filter:drop-shadow(0 0 3px #091C2E);}
 .pcard-body{padding:28px 30px 32px;}
 .pcard-name{font-size:24px;font-weight:800;color:var(--N);margin-bottom:4px;}
 .pcard-role{font-size:12.5px;font-weight:700;color:var(--T);text-transform:uppercase;letter-spacing:.07em;margin-bottom:18px;}
@@ -328,7 +341,7 @@ footer { background:var(--N); padding-bottom:80px; }
   .f-top { grid-template-columns:1fr 1fr; }
 }
 @media (max-width: 900px) {
-  .intro-split { grid-template-columns:1fr; gap:40px; }
+  .onas-para-grid { grid-template-columns:1fr; gap:24px; }
   .partner-cards { grid-template-columns:1fr; max-width:520px; margin-left:auto; margin-right:auto; }
   .kariera-perks { grid-template-columns:1fr; max-width:360px; margin-left:auto; margin-right:auto; }
 }
@@ -438,16 +451,16 @@ footer { background:var(--N); padding-bottom:80px; }
         <span>O nas</span>
       </nav>
       <div class="hero-chip">🏛 Kancelaria Karaś Chacia i Wspólnicy</div>
-      <h1>Prawo dla biznesu — <em>z doświadczeniem i zrozumieniem realiów</em></h1>
-      <p class="sp-hero-sub">Od ponad 12 lat pomagamy przedsiębiorcom zabezpieczać interesy, prowadzić kluczowe negocjacje oraz wygrywać złożone spory gospodarcze.</p>
+      <h1>Prawo dla biznesu:<br>z doświadczeniem i zrozumieniem realiów.</h1>
+      <p class="sp-hero-sub">Od 2014 roku pomagamy przedsiębiorcom zabezpieczać interesy, prowadzić kluczowe negocjacje oraz wygrywać złożone spory gospodarcze.</p>
     </div>
     <div class="sp-h-card">
-      <div class="sp-h-label">Kancelaria w liczbach</div>
+      <div class="sp-h-trust">Zaufało nam ponad <em>650 firm</em> w całej Polsce.</div>
       <div class="sp-h-grid">
-        <div class="sp-h-stat"><div class="sn">12<em>+</em></div><div class="sl">lat wsparcia prawnego</div></div>
-        <div class="sp-h-stat"><div class="sn">650<em>+</em></div><div class="sl">klientów biznesowych</div></div>
+        <div class="sp-h-stat"><div class="sn">12<em>+</em></div><div class="sl">lat praktyki</div></div>
         <div class="sp-h-stat"><div class="sn">1,5<em> mld</em></div><div class="sl">wartość projektów</div></div>
         <div class="sp-h-stat"><div class="sn">10k<em>+</em></div><div class="sl">wynegocjowanych umów</div></div>
+        <div class="sp-h-stat"><div class="sn">100<em>%</em></div><div class="sl">zaangażowania w każdej sprawie</div></div>
       </div>
     </div>
   </div>
@@ -456,21 +469,16 @@ footer { background:var(--N); padding-bottom:80px; }
 <!-- O KANCELARII -->
 <section class="sec">
   <div class="w">
-    <div class="intro-split">
-      <div class="intro-text">
-        <div class="slabel">O kancelarii</div>
-        <h2 class="stitle">Prawo, które wspiera<br>rozwój biznesu</h2>
+    <div class="slabel">O kancelarii</div>
+    <h2 class="stitle">Prawo, które wspiera rozwój biznesu</h2>
+    <div class="onas-para-grid">
+      <div>
         <p>Od ponad 12 lat wspieramy przedsiębiorców w prowadzeniu, rozwijaniu i zabezpieczaniu ich działalności. Doradzamy przy kluczowych kontraktach, inwestycjach oraz projektach biznesowych.</p>
         <p>Reprezentujemy klientów w sporach gospodarczych, konfliktach korporacyjnych i postępowaniach, w których stawką są często wieloletni dorobek przedsiębiorcy, reputacja firmy lub dalszy rozwój biznesu.</p>
-        <div class="intro-quote">Wierzymy, że rolą kancelarii nie jest wyłącznie interpretowanie przepisów. Naszym zadaniem jest pomagać klientom podejmować dobre decyzje, ograniczać ryzyka i skutecznie realizować ich cele biznesowe.</div>
-        <p>Dążymy do tego, aby współpraca z kancelarią była dla naszych klientów prosta, przewidywalna i oparta na partnerskich relacjach.</p>
       </div>
       <div>
-        <div class="intro-right-label">Co nas wyróżnia</div>
-        <div class="intro-right-title">Łączymy doświadczenie prawnicze z rozumieniem biznesu</div>
-        <div class="intro-right-text">Nasi partnerzy przez lata uczestniczyli w realizacji projektów inwestycyjnych i technologicznych, współpracując zarówno z dużymi przedsiębiorstwami, jak i rozwijającymi się firmami prywatnymi.</div>
-        <div class="intro-right-text">Dlatego analizujemy nie tylko przepisy, ale również wpływ podejmowanych decyzji na działalność firmy, relacje z kontrahentami i przyszły rozwój przedsiębiorstwa. Nasze rekomendacje uwzględniają nie tylko aspekt prawny, ale również realia prowadzenia biznesu.</div>
-        <div class="intro-right-text" style="padding:18px 20px;background:var(--bg);border-radius:12px;border-left:4px solid var(--T);">Tam, gdzie inni widzą problem prawny, my szukamy rozwiązania biznesowego.</div>
+        <div class="intro-quote">Wierzymy, że rolą kancelarii nie jest wyłącznie interpretowanie przepisów. Naszym zadaniem jest pomagać klientom podejmować dobre decyzje, ograniczać ryzyka i skutecznie realizować ich cele biznesowe.</div>
+        <p>Dążymy do tego, aby współpraca z kancelarią była dla naszych klientów prosta, przewidywalna i oparta na partnerskich relacjach.</p>
       </div>
     </div>
   </div>
@@ -565,7 +573,7 @@ footer { background:var(--N); padding-bottom:80px; }
   <div class="w">
     <div class="slabel">Nasz zespół</div>
     <h2 class="stitle">Wspólnicy zarządzający</h2>
-    <p class="ssub">Kancelarię tworzą adwokaci z wieloletnim doświadczeniem procesowym i transakcyjnym, łączący wiedzę prawną z praktycznym rozumieniem biznesu.</p>
+    <p class="ssub">Wspólnicy zarządzający osobiście nadzorują każdą sprawę i dobierają do niej właściwy zespół. Kancelarię tworzą adwokaci łączący wiedzę prawną z praktycznym rozumieniem biznesu.</p>
 
     <div class="partner-cards">
 
@@ -603,6 +611,16 @@ footer { background:var(--N); padding-bottom:80px; }
               <div class="pcard-bio-item">Wydział Prawa i Administracji, Uniwersytet Warszawski</div>
               <div class="pcard-bio-item">Podyplomowe Studium Prawa Podatkowego, Uniwersytet Warszawski</div>
               <div class="pcard-bio-item">Centrum Prawa Amerykańskiego — UF Levin College of Law i Uniwersytet Warszawski</div>
+            </div>
+            <div class="pcard-contacts">
+              <a href="mailto:zbigniew.karas@karas-legal.com" class="pcard-contact">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                zbigniew.karas@karas-legal.com
+              </a>
+              <a href="https://www.linkedin.com/in/zbigniewkaras/" class="pcard-contact" target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
@@ -642,6 +660,16 @@ footer { background:var(--N); padding-bottom:80px; }
               <div class="pcard-bio-item">Wydział Prawa i Administracji, Uniwersytet Warszawski</div>
               <div class="pcard-bio-item">Centrum Prawa Brytyjskiego — Uniwersytet Warszawski i Uniwersytet Cambridge</div>
             </div>
+            <div class="pcard-contacts">
+              <a href="mailto:lukasz.chacia@karas-legal.com" class="pcard-contact">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                lukasz.chacia@karas-legal.com
+              </a>
+              <a href="https://www.linkedin.com/in/lukaszchacia/" class="pcard-contact" target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -676,17 +704,6 @@ footer { background:var(--N); padding-bottom:80px; }
     <a href="mailto:kancelaria@karas-legal.com?subject=Aplikacja%20-%20oferta%20pracy" class="btn-w">Wyślij swoje CV →</a>
   </div>
 </section>
-
-<!-- CTA STRIP -->
-<div class="cta-strip">
-  <div class="w">
-    <div class="cta-strip-text">Masz sprawę, która wymaga <span>doświadczonego partnera prawnego?</span></div>
-    <div class="cta-strip-btns">
-      <a href="kontakt.html" class="btn-n">Umów bezpłatną konsultację →</a>
-      <a href="tel:+48222993118" class="btn-phone">📞 22 299 31 18</a>
-    </div>
-  </div>
-</div>
 
 <footer>
   <div class="f-top">
