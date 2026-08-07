@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O nas — Karaś Chacia i Wspólnicy</title>
+  <!-- SEO -->
+  <meta name="description" content="Poznaj kancelarię Karaś Chacia i Wspólnicy — 12 lat wsparcia dla przedsiębiorców, adwokaci z wieloletnią praktyką. Sprawdź, jak pracujemy i kim jesteśmy.">
+  <link rel="canonical" href="https://karas-legal.vercel.app/o-nas.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="O nas — Karaś Chacia i Wspólnicy">
+  <meta property="og:description" content="Adwokaci łączący doświadczenie prawnicze z rozumieniem biznesu. Poznaj wspólników kancelarii i dowiedz się, jak pracujemy.">
+  <meta property="og:url" content="https://karas-legal.vercel.app/o-nas.html">
+  <meta property="og:image" content="https://karas-legal.vercel.app/KARA%C5%9A%20CHACIA%20LEGAL.JPG">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="O nas — Karaś Chacia i Wspólnicy">
+  <meta name="twitter:description" content="Adwokaci łączący doświadczenie prawnicze z rozumieniem biznesu. Poznaj wspólników kancelarii i dowiedz się, jak pracujemy.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Zbigniew Karaś",
+        "jobTitle": ["Wspólnik zarządzający", "Adwokat"],
+        "description": "Adwokat od 2006 roku. Specjalizuje się w umowach handlowych i inwestycyjnych, prawie budowlanym, sporach gospodarczych oraz ochronie własności intelektualnej.",
+        "worksFor": {"@type": "LegalService", "name": "Karaś Chacia i Wspólnicy", "url": "https://karas-legal.vercel.app"}
+      },
+      {
+        "@type": "Person",
+        "name": "Łukasz Chacia",
+        "jobTitle": ["Wspólnik zarządzający", "Adwokat"],
+        "description": "Adwokat z ponad 10-letnim doświadczeniem. Specjalizuje się w prawie upadłościowym, handlowym, doradztwie inwestycyjnym i sporach cywilnych.",
+        "worksFor": {"@type": "LegalService", "name": "Karaś Chacia i Wspólnicy", "url": "https://karas-legal.vercel.app"}
+      }
+    ]
+  }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --T:    #20A9B9;
+  --Td:   #0089AA;
+  --Tl:   #E4F6F8;
+  --N:    #091C2E;
+  --Nm:   #112840;
+  --text: #1C2B3A;
+  --mut:  #5A6E7F;
+  --bg:   #F4F9FA;
+  --w:    #fff;
+  --bdr:  #D9E7EA;
+  --r:    14px;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: "Plus Jakarta Sans", sans-serif; color: var(--text); background: var(--w); overflow-x: hidden; line-height: 1.65; }
+a { text-decoration: none; color: inherit; }
+
+/* ══ HEADER ══ */
+header {
+  background:rgba(255,255,255,.97); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--bdr); position:sticky; top:0; z-index:300;
+  box-shadow:0 2px 20px rgba(9,28,46,.07);
+}
+.header-w {
+  max-width:1200px; margin:0 auto; padding:0 28px;
+  display:flex; justify-content:space-between; align-items:center; height:72px;
+}
+
+/* Logo */
+.logo { display:flex; align-items:center; }
+.logo-img { height:48px; width:auto; display:block; }
+
+/* Nav główna */
+nav { display:flex; gap:2px; align-items:center; }
+nav > a, .dropdown > a {
+  font-size:13.5px; font-weight:600; color:var(--text);
+  padding:7px 13px; border-radius:8px; transition:all .2s;
+  display:flex; align-items:center; gap:4px;
+}
+nav > a:hover, .dropdown > a:hover { color:var(--T); background:var(--Tl); }
+nav > a.active { color:var(--T); }
+.nav-btn {
+  background:var(--N) !important; color:#fff !important;
+  padding:9px 20px !important; border-radius:9px !important;
+  margin-left:6px; box-shadow:0 4px 12px rgba(9,28,46,.25);
+}
+.nav-btn:hover { background:var(--Nm) !important; }
+.nav-panel {
+  font-size:13px !important; font-weight:600 !important;
+  color:var(--T) !important; border:1.5px solid var(--T);
+  padding:7px 14px !important; border-radius:8px !important;
+  margin-left:4px; transition:all .2s; white-space:nowrap;
+}
+.nav-panel:hover { background:var(--Tl) !important; }
+
+/* Dropdowny */
+.dropdown { position:relative; }
+.dropdown > a .arrow { font-size:10px; transition:transform .2s; display:inline-block; }
+.dropdown:hover > a .arrow { transform:rotate(180deg); }
+.dropdown-menu {
+  display:none; position:absolute; top:calc(100% + 8px); left:0;
+  background:#fff; border:1px solid var(--bdr); border-radius:14px;
+  min-width:280px; box-shadow:0 12px 40px rgba(9,28,46,.15);
+  z-index:400; padding:8px; overflow:hidden;
+}
+.dropdown:hover .dropdown-menu { display:block; }
+.dropdown-menu a {
+  display:block; padding:10px 14px; font-size:13.5px;
+  font-weight:600; color:var(--text); border-radius:8px;
+  transition:all .15s; white-space:nowrap;
+}
+.dropdown-menu a:hover { color:var(--T); background:var(--Tl); }
+.dropdown-menu .dm-sep { height:1px; background:var(--bdr); margin:6px 0; }
+.dropdown-menu .dm-label {
+  font-size:10.5px; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--mut); padding:6px 14px 2px;
+}
+.dropdown-menu .dm-highlight { color:var(--T) !important; border-top:1px solid var(--bdr); margin-top:4px; }
+
+/* Hamburger */
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:pointer;
+  padding:8px; border-radius:8px; transition:background .2s;
+}
+.hamburger:hover { background:var(--Tl); }
+.hamburger span { display:block; width:22px; height:2px; background:var(--N); border-radius:2px; transition:all .25s; }
+.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+/* Mobile menu */
+.mobile-nav {
+  display:none; position:fixed; top:72px; left:0; right:0;
+  background:#fff; border-bottom:1px solid var(--bdr);
+  z-index:299; padding:16px 20px 24px;
+  box-shadow:0 8px 24px rgba(9,28,46,.12);
+  max-height:calc(100vh - 72px); overflow-y:auto;
+}
+.mobile-nav.open { display:block; }
+.mobile-nav a {
+  display:block; padding:11px 14px; font-size:15px;
+  font-weight:600; color:var(--text); border-radius:9px; transition:all .15s;
+}
+.mobile-nav a:hover { color:var(--T); background:var(--Tl); }
+.mobile-nav .mn-group { margin-bottom:8px; }
+.mobile-nav .mn-label {
+  font-size:11px; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--mut); padding:8px 14px 4px;
+}
+.mobile-nav .mn-sub { padding-left:14px; }
+.mobile-nav .mn-sub a { font-size:14px; font-weight:500; }
+.mobile-nav .mn-sep { height:1px; background:var(--bdr); margin:8px 0; }
+.mobile-nav .mn-cta {
+  background:var(--N); color:#fff !important; border-radius:9px;
+  text-align:center; margin-top:12px; padding:13px 14px !important;
+}
+
+/* ══ SEKCJE ══ */
+.sec { padding:88px 0; }
+.sec-bg { background:var(--bg); }
+.sec-dark { background:var(--N); }
+.w { max-width:1200px; margin:0 auto; padding:0 28px; }
+.slabel { font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--T); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+.slabel::before { content:''; width:24px; height:2px; background:var(--T); border-radius:2px; }
+.stitle { font-size:40px; font-weight:800; line-height:1.15; color:var(--N); letter-spacing:-.5px; margin-bottom:16px; }
+.stitle-w { color:#fff; }
+.ssub { font-size:17px; color:var(--mut); max-width:580px; line-height:1.7; }
+.ssub-w { color:rgba(255,255,255,.6); }
+.tc { text-align:center; }
+.tc .ssub { margin:0 auto; }
+.mt48 { margin-top:48px; }
+.mt52 { margin-top:52px; }
+.flex-c { display:flex; justify-content:center; margin-top:48px; }
+
+/* Guziki */
+.btn-t { background:var(--T); color:#fff; font-size:15px; font-weight:700; padding:14px 30px; border-radius:10px; display:inline-block; transition:all .2s; box-shadow:0 6px 20px rgba(32,169,185,.4); }
+.btn-t:hover { background:var(--Td); transform:translateY(-1px); }
+.btn-n { font-size:13.5px; font-weight:700; color:var(--T); border:2px solid var(--T); padding:10px 20px; border-radius:9px; display:inline-block; transition:all .2s; white-space:nowrap; }
+.btn-n:hover { background:var(--T); color:#fff; }
+.btn-w { background:#fff; color:var(--N); font-size:15px; font-weight:700; padding:15px 32px; border-radius:10px; display:inline-block; transition:all .2s; }
+.btn-w:hover { background:var(--T); color:#fff; }
+
+/* ══ CTA STRIP ══ */
+.cta-strip { background:var(--Tl); border-top:2px solid rgba(32,169,185,.2); border-bottom:2px solid rgba(32,169,185,.2); padding:24px 0; }
+.cta-strip .w { display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; }
+.cta-strip-text { font-size:16px; font-weight:700; color:var(--N); }
+.cta-strip-text span { color:var(--T); }
+.cta-strip-btns { display:flex; gap:12px; align-items:center; flex-shrink:0; }
+.btn-phone { font-size:15px; font-weight:800; color:var(--N); display:flex; align-items:center; gap:6px; }
+
+/* ══ SP-HERO ══ */
+.sp-hero{background:linear-gradient(135deg,#091C2E 0%,#112840 60%,#0E3050 100%);padding:72px 0 64px;position:relative;overflow:hidden;}
+.sp-hero-video{position:absolute;inset:0;z-index:0;}
+.sp-hero-video video{width:100%;height:100%;object-fit:cover;object-position:center;}
+.sp-hero-video::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(9,28,46,.88) 0%,rgba(17,40,64,.82) 60%,rgba(14,48,80,.75) 100%);z-index:1;}
+.sp-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(32,169,185,.15) 0%,transparent 60%);pointer-events:none;z-index:2;}
+.sp-hero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:3;}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:22px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.breadcrumb a{color:rgba(255,255,255,.5);transition:color .2s;}
+.breadcrumb a:hover{color:var(--T);}
+.breadcrumb .bc-sep{color:rgba(255,255,255,.2);}
+.sp-hero h1{font-size:46px;font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.5px;margin:16px 0 20px;max-width:820px;}
+.sp-hero h1 em{color:var(--T);font-style:normal;}
+.sp-hero-sub{font-size:18px;color:rgba(255,255,255,.7);line-height:1.7;max-width:640px;margin-bottom:36px;}
+.hero-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(32,169,185,.15);border:1px solid rgba(32,169,185,.3);color:var(--T);font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:22px;}
+.sp-hero-stats{display:flex;gap:36px;flex-wrap:wrap;margin-top:8px;}
+.sp-stat{display:flex;flex-direction:column;}
+.sp-stat .sn{font-size:28px;font-weight:800;color:#fff;}
+.sp-stat .sn em{color:var(--T);font-style:normal;}
+.sp-stat .sl{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px;}
+
+/* ══ INTRO SPLIT ══ */
+.intro-split{display:grid;grid-template-columns:1.1fr 1fr;gap:72px;align-items:start;}
+.intro-text p{font-size:16px;color:var(--mut);line-height:1.8;margin-bottom:18px;}
+.intro-text p:last-child{margin-bottom:0;}
+.intro-quote{font-size:19px;font-weight:700;color:var(--N);line-height:1.55;border-left:4px solid var(--T);padding-left:22px;margin:28px 0 28px;}
+.intro-right-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--T);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.intro-right-label::before{content:'';width:20px;height:2px;background:var(--T);border-radius:2px;}
+.intro-right-title{font-size:22px;font-weight:800;color:var(--N);line-height:1.3;margin-bottom:18px;}
+.intro-right-text{font-size:15px;color:var(--mut);line-height:1.8;margin-bottom:24px;}
+
+/* ══ JAK PRACUJEMY ══ */
+.jak-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px;}
+.jak-tile{padding:28px 22px;border-radius:18px;border:1.5px solid var(--bdr);background:#fff;transition:all .22s;}
+.jak-tile:hover{border-color:var(--T);background:var(--Tl);box-shadow:0 8px 28px rgba(32,169,185,.1);transform:translateY(-3px);}
+.jak-icon{width:44px;height:44px;border-radius:12px;background:var(--Tl);border:1.5px solid rgba(32,169,185,.25);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--T);}
+.jak-t{font-size:15px;font-weight:700;color:var(--N);margin-bottom:8px;}
+.jak-d{font-size:13.5px;color:var(--mut);line-height:1.65;}
+
+/* ══ PARTNER CARDS ══ */
+.partner-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:52px;}
+.pcard{border-radius:24px;overflow:hidden;border:1.5px solid var(--bdr);background:#fff;transition:all .25s;}
+.pcard:hover{box-shadow:0 16px 52px rgba(9,28,46,.12);transform:translateY(-3px);border-color:rgba(32,169,185,.3);}
+.pcard-photo{background:linear-gradient(160deg,#112840 0%,#091C2E 100%);position:relative;height:380px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;}
+.pcard-photo img{width:78%;object-fit:contain;display:block;position:absolute;bottom:0;}
+.pcard-photo-badge{position:absolute;top:18px;left:18px;background:rgba(32,169,185,.15);border:1px solid rgba(32,169,185,.35);color:var(--T);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:20px;}
+.pcard-body{padding:28px 30px 32px;}
+.pcard-name{font-size:24px;font-weight:800;color:var(--N);margin-bottom:4px;}
+.pcard-role{font-size:12.5px;font-weight:700;color:var(--T);text-transform:uppercase;letter-spacing:.07em;margin-bottom:18px;}
+.pcard-specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
+.pcard-spec{font-size:11.5px;font-weight:600;color:var(--mut);background:var(--bg);border:1px solid var(--bdr);padding:4px 10px;border-radius:6px;}
+.pcard-intro{font-size:14.5px;color:var(--mut);line-height:1.75;margin-bottom:22px;}
+.pcard-expand-btn{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--T);background:none;border:2px solid var(--T);border-radius:9px;padding:10px 18px;cursor:pointer;transition:all .2s;width:100%;font-family:inherit;}
+.pcard-expand-btn:hover{background:var(--T);color:#fff;}
+.pcard-expand-btn.open{background:var(--Tl);}
+.pcard-bio{display:none;margin-top:22px;padding-top:22px;border-top:1px solid var(--bdr);}
+.pcard-bio.open{display:block;}
+.pcard-bio p{font-size:14px;color:var(--mut);line-height:1.8;margin-bottom:14px;}
+.pcard-bio-section{margin-top:18px;}
+.pcard-bio-label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--T);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.pcard-bio-label::before{content:'';width:16px;height:2px;background:var(--T);border-radius:2px;}
+.pcard-bio-item{font-size:13.5px;color:var(--N);display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--bg);}
+.pcard-bio-item:last-child{border-bottom:none;}
+.pcard-bio-item::before{content:'›';color:var(--T);font-weight:800;flex-shrink:0;margin-top:1px;}
+
+/* ══ KARIERA ══ */
+.kariera-inner{max-width:700px;margin:0 auto;text-align:center;padding:0 28px;}
+.kariera-inner .stitle-w{margin-bottom:20px;}
+.kariera-inner .ssub-w{margin:0 auto 40px;max-width:540px;}
+.kariera-perks{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:40px 0;}
+.kperk{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px 18px;text-align:center;}
+.kperk-icon{font-size:28px;margin-bottom:10px;}
+.kperk-t{font-size:13.5px;font-weight:700;color:#fff;margin-bottom:6px;}
+.kperk-d{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.6;}
+
+/* ══ FOOTER ══ */
+footer { background:var(--N); padding-bottom:80px; }
+.f-top { max-width:1200px; margin:0 auto; padding:72px 28px 48px; display:grid; grid-template-columns:1.9fr 1fr 1fr 1fr; gap:44px; }
+.f-logo-wrap { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.f-logo-img { height:44px; width:auto; opacity:.9; }
+.f-desc { font-size:14px; color:rgba(255,255,255,.55); line-height:1.7; }
+.f-contacts { margin-top:20px; display:flex; flex-direction:column; gap:8px; }
+.f-c { font-size:14px; color:rgba(255,255,255,.55); display:flex; align-items:center; gap:8px; }
+.f-c a { color:var(--T); font-weight:600; }
+.f-col h4 { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--T); margin-bottom:18px; }
+.f-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.f-col ul li a { font-size:14px; color:rgba(255,255,255,.55); transition:color .2s; }
+.f-col ul li a:hover { color:var(--T); }
+.f-bottom { max-width:1200px; margin:0 auto; padding:20px 28px; border-top:1px solid rgba(255,255,255,.07); display:flex; justify-content:space-between; align-items:center; font-size:13px; color:rgba(255,255,255,.3); flex-wrap:wrap; gap:12px; }
+.f-links { display:flex; gap:20px; }
+.f-links a { color:rgba(255,255,255,.3); transition:color .2s; }
+.f-links a:hover { color:var(--T); }
+
+/* ══ FLOAT BAR ══ */
+.float-bar{position:fixed;bottom:0;left:0;right:0;z-index:500;background:rgba(9,28,46,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(32,169,185,.25);display:flex;align-items:center;justify-content:center;}
+.fb-item{display:flex;align-items:center;gap:10px;padding:14px 28px;color:#fff;font-size:14px;font-weight:600;border-right:1px solid rgba(255,255,255,.08);transition:background .2s;cursor:pointer;}
+.fb-item:hover{background:rgba(32,169,185,.15);}
+.fb-item:last-child{border-right:none;}
+.fb-item .icon{font-size:18px;}
+.fb-item .label{font-size:11px;color:rgba(255,255,255,.5);margin-top:1px;font-weight:500;}
+.fb-cta{background:var(--T)!important;color:#fff;font-size:15px;font-weight:700;padding:14px 32px!important;box-shadow:0 0 20px rgba(32,169,185,.4);letter-spacing:.01em;}
+.fb-cta:hover{background:var(--Td)!important;}
+.float-phone{position:fixed;right:24px;bottom:84px;z-index:499;background:var(--T);color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 6px 24px rgba(32,169,185,.5);transition:all .2s;cursor:pointer;animation:pulse 2.5s ease-in-out infinite;}
+.float-phone:hover{background:var(--Td);transform:scale(1.1);}
+@keyframes pulse{0%,100%{box-shadow:0 6px 24px rgba(32,169,185,.5)}50%{box-shadow:0 6px 36px rgba(32,169,185,.8),0 0 0 10px rgba(32,169,185,.1)}}
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 1024px) {
+  .jak-grid { grid-template-columns:repeat(2,1fr); }
+  .f-top { grid-template-columns:1fr 1fr; }
+}
+@media (max-width: 900px) {
+  .intro-split { grid-template-columns:1fr; gap:40px; }
+  .partner-cards { grid-template-columns:1fr; max-width:520px; margin-left:auto; margin-right:auto; }
+  .kariera-perks { grid-template-columns:1fr; max-width:360px; margin-left:auto; margin-right:auto; }
+}
+@media (max-width: 768px) {
+  nav .dropdown, nav > a:not(.nav-btn) { display:none; }
+  .nav-btn { display:none; }
+  .hamburger { display:flex; }
+  .sp-hero h1 { font-size:34px; }
+  .stitle { font-size:30px; }
+  .jak-grid { grid-template-columns:1fr 1fr; gap:14px; }
+  .pcard-photo { height:300px; }
+  .f-top { grid-template-columns:1fr; gap:32px; }
+  .fb-item:not(.fb-cta) { display:none; }
+}
+@media (max-width: 480px) {
+  .jak-grid { grid-template-columns:1fr; }
+  .sp-hero h1 { font-size:28px; }
+  .sp-hero-stats { gap:24px; }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-w">
+    <a href="index.html" class="logo">
+      <img src="KARAŚ CHACIA LEGAL.JPG" alt="Karaś Chacia i Wspólnicy" class="logo-img">
+    </a>
+    <nav>
+      <div class="dropdown">
+        <a href="index.html#specjalizacje">Specjalizacje <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <div class="dm-label">Główne obszary</div>
+          <a href="spec_umowy-inwestycyjne.html">Umowy inwestycyjne i projekty biznesowe</a>
+          <a href="spec_prawo-it.html">Prawo IT i projekty technologiczne</a>
+          <a href="spec_spory-pfr.html">Spory z PFR i pomoc publiczna</a>
+          <a href="spec_inwestycje-budowlane.html">Inwestycje budowlane i nieruchomości</a>
+          <a href="spec_konflikty-wspolnicy.html">Konflikty między wspólnikami</a>
+          <a href="spec_spory-gospodarcze.html">Spory gospodarcze</a>
+          <a href="spec_fundacje-rodzinne.html">Fundacje rodzinne i sukcesja majątku</a>
+          <div class="dm-sep"></div>
+          <a href="index.html#specjalizacje" class="dm-highlight">Pozostałe obszary eksperckie →</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="index.html#sprawy">Sprawy <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="sprawy_subwencje-pfr.html">Subwencje PFR</a>
+          <a href="sprawy_w-investments.html">Fundusze W-Investments</a>
+          <a href="sprawy_slupy-energetyczne.html">Odszkodowania za słupy energetyczne</a>
+          <div class="dm-sep"></div>
+          <a href="index.html#sprawy" class="dm-highlight">Inne sprawy →</a>
+        </div>
+      </div>
+      <a href="sukcesy.html">Sukcesy</a>
+      <a href="o-nas.html" class="active">O nas</a>
+      <a href="kontakt.html" class="nav-btn">Kontakt</a>
+      <a href="https://karas-legal.amberlo.io/login/?lang=pl" class="nav-panel" target="_blank" rel="noopener">Panel Klienta</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mn-group">
+    <div class="mn-label">Specjalizacje</div>
+    <div class="mn-sub">
+      <a href="spec_umowy-inwestycyjne.html">Umowy inwestycyjne i projekty biznesowe</a>
+      <a href="spec_prawo-it.html">Prawo IT i projekty technologiczne</a>
+      <a href="spec_spory-pfr.html">Spory z PFR i pomoc publiczna</a>
+      <a href="spec_inwestycje-budowlane.html">Inwestycje budowlane i nieruchomości</a>
+      <a href="spec_konflikty-wspolnicy.html">Konflikty między wspólnikami</a>
+      <a href="spec_spory-gospodarcze.html">Spory gospodarcze</a>
+      <a href="spec_fundacje-rodzinne.html">Fundacje rodzinne i sukcesja majątku</a>
+    </div>
+  </div>
+  <div class="mn-sep"></div>
+  <div class="mn-group">
+    <div class="mn-label">Sprawy</div>
+    <div class="mn-sub">
+      <a href="sprawy_subwencje-pfr.html">Subwencje PFR</a>
+      <a href="sprawy_w-investments.html">Fundusze W-Investments</a>
+      <a href="sprawy_slupy-energetyczne.html">Odszkodowania za słupy energetyczne</a>
+    </div>
+  </div>
+  <div class="mn-sep"></div>
+  <a href="sukcesy.html">Sukcesy</a>
+  <a href="o-nas.html" style="color:var(--T);">O nas</a>
+  <a href="kontakt.html" class="mn-cta">Kontakt</a>
+  <a href="https://karas-legal.amberlo.io/login/?lang=pl" target="_blank" rel="noopener" style="text-align:center;margin-top:8px;color:var(--T);border:1.5px solid var(--T);border-radius:9px;padding:11px 14px;display:block;font-weight:600;">Panel Klienta →</a>
+</div>
+
+<!-- HERO -->
+<section class="sp-hero">
+  <div class="sp-hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="https://videos.pexels.com/video-files/7317046/7317046-hd_1920_1080_25fps.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="sp-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Strona główna</a><span class="bc-sep">›</span>
+      <span>O nas</span>
+    </nav>
+    <div class="hero-chip">🏛 Kancelaria Karaś Chacia i Wspólnicy</div>
+    <h1>Prawo dla biznesu — <em>z doświadczeniem i zrozumieniem realiów</em></h1>
+    <p class="sp-hero-sub">Od ponad 12 lat pomagamy przedsiębiorcom zabezpieczać interesy, prowadzić kluczowe negocjacje oraz wygrywać złożone spory gospodarcze.</p>
+    <div class="sp-hero-stats">
+      <div class="sp-stat"><div class="sn">12<em>+</em></div><div class="sl">lat praktyki</div></div>
+      <div class="sp-stat"><div class="sn">650<em>+</em></div><div class="sl">klientów biznesowych</div></div>
+      <div class="sp-stat"><div class="sn">1,5<em> mld</em></div><div class="sl">wartość projektów</div></div>
+      <div class="sp-stat"><div class="sn">10k<em>+</em></div><div class="sl">wynegocjowanych umów</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- O KANCELARII -->
+<section class="sec">
+  <div class="w">
+    <div class="intro-split">
+      <div class="intro-text">
+        <div class="slabel">O kancelarii</div>
+        <h2 class="stitle">Prawo, które wspiera<br>rozwój biznesu</h2>
+        <p>Od ponad 12 lat wspieramy przedsiębiorców w prowadzeniu, rozwijaniu i zabezpieczaniu ich działalności. Doradzamy przy kluczowych kontraktach, inwestycjach oraz projektach biznesowych.</p>
+        <p>Reprezentujemy klientów w sporach gospodarczych, konfliktach korporacyjnych i postępowaniach, w których stawką są często wieloletni dorobek przedsiębiorcy, reputacja firmy lub dalszy rozwój biznesu.</p>
+        <div class="intro-quote">Wierzymy, że rolą kancelarii nie jest wyłącznie interpretowanie przepisów. Naszym zadaniem jest pomagać klientom podejmować dobre decyzje, ograniczać ryzyka i skutecznie realizować ich cele biznesowe.</div>
+        <p>Dążymy do tego, aby współpraca z kancelarią była dla naszych klientów prosta, przewidywalna i oparta na partnerskich relacjach.</p>
+      </div>
+      <div>
+        <div class="intro-right-label">Co nas wyróżnia</div>
+        <div class="intro-right-title">Łączymy doświadczenie prawnicze z rozumieniem biznesu</div>
+        <div class="intro-right-text">Nasi partnerzy przez lata uczestniczyli w realizacji projektów inwestycyjnych i technologicznych, współpracując zarówno z dużymi przedsiębiorstwami, jak i rozwijającymi się firmami prywatnymi.</div>
+        <div class="intro-right-text">Dlatego analizujemy nie tylko przepisy, ale również wpływ podejmowanych decyzji na działalność firmy, relacje z kontrahentami i przyszły rozwój przedsiębiorstwa. Nasze rekomendacje uwzględniają nie tylko aspekt prawny, ale również realia prowadzenia biznesu.</div>
+        <div class="intro-right-text" style="padding:18px 20px;background:var(--bg);border-radius:12px;border-left:4px solid var(--T);">Tam, gdzie inni widzą problem prawny, my szukamy rozwiązania biznesowego.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JAK PRACUJEMY -->
+<section class="sec sec-bg">
+  <div class="w">
+    <div class="tc">
+      <div class="slabel" style="justify-content:center;">Nasza metoda pracy</div>
+      <h2 class="stitle">Jak pracujemy?</h2>
+      <p class="ssub">Nie tworzymy dokumentów dla samych dokumentów. Przygotowujemy rozwiązania skuteczne i możliwe do zastosowania w praktyce.</p>
+    </div>
+    <div class="jak-grid">
+      <div class="jak-tile">
+        <div class="jak-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div class="jak-t">Odczuwalne bezpieczeństwo</div>
+        <div class="jak-d">Naszym celem jest zapewnienie klientom poczucia, że ich sprawy są pod kontrolą. Identyfikujemy ryzyka, przewidujemy potencjalne problemy i proponujemy rozwiązania, które pozwalają ich uniknąć lub ograniczyć ich skutki.</div>
+      </div>
+      <div class="jak-tile">
+        <div class="jak-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="jak-t">Szybki kontakt</div>
+        <div class="jak-d">Wiemy, że w biznesie czas ma znaczenie. Dlatego stawiamy na sprawną komunikację, bezpośredni kontakt z prawnikiem prowadzącym sprawę i szybkie reagowanie na pojawiające się wyzwania.</div>
+      </div>
+      <div class="jak-tile">
+        <div class="jak-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="jak-t">Praktyczne rozwiązania</div>
+        <div class="jak-d">Nie tworzymy dokumentów dla samych dokumentów. Przygotowujemy rozwiązania, które są nie tylko zgodne z prawem, ale przede wszystkim skuteczne i możliwe do zastosowania w praktyce.</div>
+      </div>
+      <div class="jak-tile">
+        <div class="jak-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/><path d="M2 12h2M20 12h2M12 2v2M12 20v2"/><path d="M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M17.66 6.34l-1.41 1.41M6.34 17.66l-1.41 1.41"/></svg>
+        </div>
+        <div class="jak-t">Spojrzenie długoterminowe</div>
+        <div class="jak-d">Pomagamy klientom nie tylko rozwiązywać bieżące problemy, ale również planować kolejne etapy rozwoju działalności. Analizujemy konsekwencje podejmowanych decyzji i wspieramy budowanie stabilnych fundamentów wzrostu.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WSPÓLNICY -->
+<section class="sec">
+  <div class="w">
+    <div class="slabel">Nasz zespół</div>
+    <h2 class="stitle">Wspólnicy zarządzający</h2>
+    <p class="ssub">Kancelarię tworzą adwokaci z wieloletnim doświadczeniem procesowym i transakcyjnym, łączący wiedzę prawną z praktycznym rozumieniem biznesu.</p>
+
+    <div class="partner-cards">
+
+      <!-- Zbigniew Karaś -->
+      <div class="pcard">
+        <div class="pcard-photo">
+          <div class="pcard-photo-badge">Adwokat od 2006 r.</div>
+          <img src="zbigniew_transparent.png" alt="Zbigniew Karaś — Adwokat, Wspólnik zarządzający">
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-name">Zbigniew Karaś</div>
+          <div class="pcard-role">Wspólnik zarządzający · Adwokat</div>
+          <div class="pcard-specs">
+            <span class="pcard-spec">Umowy inwestycyjne</span>
+            <span class="pcard-spec">Prawo budowlane</span>
+            <span class="pcard-spec">Spory gospodarcze</span>
+            <span class="pcard-spec">Własność intelektualna</span>
+            <span class="pcard-spec">RODO</span>
+          </div>
+          <p class="pcard-intro">Specjalizuje się w obsłudze prawnej przedsiębiorców w obszarze umów handlowych i inwestycyjnych, prawa budowlanego oraz sporów gospodarczych. Doradza zarówno przy kluczowych transakcjach, jak i w postępowaniach sądowych, w których stawką jest majątek lub dalszy rozwój klienta.</p>
+          <button class="pcard-expand-btn" data-target="bio-zbigniew">Czytaj biografię <span class="expand-arrow">↓</span></button>
+          <div class="pcard-bio" id="bio-zbigniew">
+            <p>Adwokat z wieloletnim doświadczeniem w obsłudze przedsiębiorców i inwestorów. Od początku swojej kariery koncentruje się na sprawach, w których połączenie wiedzy prawnej z rozumieniem mechanizmów biznesowych ma decydujące znaczenie dla osiągnięcia zamierzonego rezultatu.</p>
+            <p>Jego klientami są przede wszystkim właściciele firm i zarządy spółek prowadzący działalność w sektorze nieruchomości, technologii i handlu. Ceni sprawną komunikację i rozwiązania, które można wdrożyć w praktyce.</p>
+            <div class="pcard-bio-section">
+              <div class="pcard-bio-label">Główne specjalizacje</div>
+              <div class="pcard-bio-item">Umowy handlowe i inwestycyjne — negocjacje, opiniowanie, zabezpieczanie</div>
+              <div class="pcard-bio-item">Prawo budowlane i inwestycje nieruchomościowe</div>
+              <div class="pcard-bio-item">Spory gospodarcze i reprezentacja sądowa</div>
+              <div class="pcard-bio-item">Ochrona własności intelektualnej i prawo IT</div>
+              <div class="pcard-bio-item">RODO i ochrona danych osobowych</div>
+              <div class="pcard-bio-item">Prawo spółek i restrukturyzacje</div>
+            </div>
+            <div class="pcard-bio-section">
+              <div class="pcard-bio-label">Wykształcenie</div>
+              <div class="pcard-bio-item">Wydział Prawa i Administracji, Uniwersytet Warszawski</div>
+              <div class="pcard-bio-item">Podyplomowe Studium Prawa Podatkowego, Uniwersytet Warszawski</div>
+              <div class="pcard-bio-item">Centrum Prawa Amerykańskiego — UF Levin College of Law i Uniwersytet Warszawski</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Łukasz Chacia -->
+      <div class="pcard">
+        <div class="pcard-photo">
+          <div class="pcard-photo-badge">Adwokat · 10+ lat praktyki</div>
+          <img src="lukasz_transparent.png" alt="Łukasz Chacia — Adwokat, Wspólnik zarządzający">
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-name">Łukasz Chacia</div>
+          <div class="pcard-role">Wspólnik zarządzający · Adwokat</div>
+          <div class="pcard-specs">
+            <span class="pcard-spec">Prawo upadłościowe</span>
+            <span class="pcard-spec">Doradztwo inwestycyjne</span>
+            <span class="pcard-spec">Prawo handlowe</span>
+            <span class="pcard-spec">Spory cywilne</span>
+            <span class="pcard-spec">Prawo budowlane</span>
+          </div>
+          <p class="pcard-intro">Specjalizuje się w prawie upadłościowym i restrukturyzacyjnym, prawie handlowym oraz doradztwie inwestycyjnym. Z sukcesem reprezentuje klientów w złożonych sporach cywilnych i gospodarczych, a także wspiera przedsiębiorców w kluczowych decyzjach dotyczących struktury biznesu.</p>
+          <button class="pcard-expand-btn" data-target="bio-lukasz">Czytaj biografię <span class="expand-arrow">↓</span></button>
+          <div class="pcard-bio" id="bio-lukasz">
+            <p>Adwokat z ponad 10-letnim doświadczeniem w obsłudze przedsiębiorców, inwestorów i właścicieli firm. Zdobywał doświadczenie zarówno w polskich, jak i międzynarodowych projektach prawnych, co pozwala mu łączyć perspektywę krajową z rozumieniem standardów biznesowych stosowanych w transakcjach transgranicznych.</p>
+            <p>Szczególnie ceni relacje oparte na zaufaniu i długoterminowym partnerstwie — większość jego klientów współpracuje z kancelarią od wielu lat.</p>
+            <div class="pcard-bio-section">
+              <div class="pcard-bio-label">Główne specjalizacje</div>
+              <div class="pcard-bio-item">Prawo upadłościowe i restrukturyzacyjne</div>
+              <div class="pcard-bio-item">Prawo handlowe i korporacyjne — spółki, umowy, M&A</div>
+              <div class="pcard-bio-item">Doradztwo inwestycyjne i transakcyjne</div>
+              <div class="pcard-bio-item">Prawo budowlane i spory kontraktowe</div>
+              <div class="pcard-bio-item">Spory cywilne i gospodarcze — reprezentacja sądowa</div>
+              <div class="pcard-bio-item">Planowanie sukcesji i fundacje rodzinne</div>
+            </div>
+            <div class="pcard-bio-section">
+              <div class="pcard-bio-label">Wykształcenie</div>
+              <div class="pcard-bio-item">Wydział Prawa i Administracji, Uniwersytet Warszawski</div>
+              <div class="pcard-bio-item">Centrum Prawa Brytyjskiego — Uniwersytet Warszawski i Uniwersytet Cambridge</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- KARIERA -->
+<section class="sec sec-dark">
+  <div class="kariera-inner">
+    <div class="slabel" style="justify-content:center;color:var(--T);">Dołącz do nas</div>
+    <h2 class="stitle stitle-w">Szukamy ambitnych prawników</h2>
+    <p class="ssub ssub-w">Pracujemy przy sprawach, które mają realny wpływ na funkcjonowanie przedsiębiorstw. Jeśli chcesz rozwijać się w środowisku, gdzie liczy się jakość, samodzielność i odpowiedzialność za wynik — napisz do nas.</p>
+    <div class="kariera-perks">
+      <div class="kperk">
+        <div class="kperk-icon">⚖️</div>
+        <div class="kperk-t">Złożone sprawy</div>
+        <div class="kperk-d">Wielomilionowe spory, transakcje i projekty wymagające niestandardowego myślenia</div>
+      </div>
+      <div class="kperk">
+        <div class="kperk-icon">🤝</div>
+        <div class="kperk-t">Realne partnerstwo</div>
+        <div class="kperk-d">Pracujesz bezpośrednio z wspólnikami i masz realny wpływ na prowadzone sprawy</div>
+      </div>
+      <div class="kperk">
+        <div class="kperk-icon">📈</div>
+        <div class="kperk-t">Rozwój kariery</div>
+        <div class="kperk-d">Jasna ścieżka rozwoju i dostęp do spraw z wielu obszarów prawa biznesowego</div>
+      </div>
+    </div>
+    <a href="mailto:kancelaria@karas-legal.com?subject=Aplikacja%20-%20oferta%20pracy" class="btn-w">Wyślij swoje CV →</a>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <div class="w">
+    <div class="cta-strip-text">Masz sprawę, która wymaga <span>doświadczonego partnera prawnego?</span></div>
+    <div class="cta-strip-btns">
+      <a href="kontakt.html" class="btn-n">Umów bezpłatną konsultację →</a>
+      <a href="tel:+48222993118" class="btn-phone">📞 22 299 31 18</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="f-top">
+    <div>
+      <div class="f-logo-wrap">
+        <img src="logo_transparent.png" alt="Karaś Chacia i Wspólnicy" class="f-logo-img">
+      </div>
+      <div class="f-desc">Od 2014 roku wspieramy przedsiębiorców w prowadzeniu, rozwijaniu i zabezpieczaniu ich biznesów. Łączymy wiedzę prawną z rozumieniem realiów biznesowych.</div>
+      <div class="f-contacts">
+        <div class="f-c">📞 <a href="tel:+48222993118">22 299 31 18</a></div>
+        <div class="f-c">✉ <a href="mailto:kancelaria@karas-legal.com">kancelaria@karas-legal.com</a></div>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Specjalizacje</h4>
+      <ul>
+        <li><a href="spec_umowy-inwestycyjne.html">Umowy inwestycyjne</a></li>
+        <li><a href="spec_prawo-it.html">Prawo IT</a></li>
+        <li><a href="spec_spory-pfr.html">Spory z PFR</a></li>
+        <li><a href="spec_inwestycje-budowlane.html">Inwestycje budowlane</a></li>
+        <li><a href="spec_konflikty-wspolnicy.html">Konflikty korporacyjne</a></li>
+        <li><a href="spec_spory-gospodarcze.html">Spory gospodarcze</a></li>
+        <li><a href="spec_fundacje-rodzinne.html">Fundacje rodzinne</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Sprawy</h4>
+      <ul>
+        <li><a href="sprawy_subwencje-pfr.html">Subwencje PFR</a></li>
+        <li><a href="sprawy_w-investments.html">Fundusze W-Investments</a></li>
+        <li><a href="sprawy_slupy-energetyczne.html">Słupy energetyczne</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Kancelaria</h4>
+      <ul>
+        <li><a href="o-nas.html">O nas</a></li>
+        <li><a href="sukcesy.html">Sukcesy</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2014–2026 Karaś Chacia i Wspólnicy. Wszelkie prawa zastrzeżone.</span>
+    <div class="f-links">
+      <a href="#">Polityka prywatności</a>
+      <a href="#">Zastrzeżenia prawne</a>
+    </div>
+  </div>
+</footer>
+
+<div class="float-bar">
+  <a href="tel:+48222993118" class="fb-item"><span class="icon">📞</span><div><div>22 299 31 18</div><div class="label">Zadzwoń teraz</div></div></a>
+  <a href="mailto:kancelaria@karas-legal.com" class="fb-item"><span class="icon">✉</span><div><div>kancelaria@karas-legal.com</div><div class="label">Napisz do nas</div></div></a>
+  <a href="kontakt.html" class="fb-item fb-cta">Umów bezpłatną konsultację →</a>
+</div>
+<a href="tel:+48222993118" class="float-phone" title="Zadzwoń">📞</a>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  document.querySelectorAll('.pcard-expand-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const bio = document.getElementById(targetId);
+      const arrow = btn.querySelector('.expand-arrow');
+      const isOpen = bio.classList.contains('open');
+      bio.classList.toggle('open');
+      btn.classList.toggle('open');
+      arrow.textContent = isOpen ? '↓' : '↑';
+      btn.firstChild.textContent = isOpen ? 'Czytaj biografię ' : 'Zwiń ';
+      if (!isOpen) {
+        setTimeout(() => bio.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
