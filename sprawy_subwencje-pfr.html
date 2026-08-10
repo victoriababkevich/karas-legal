@@ -244,7 +244,7 @@ nav > a:hover, .dropdown > a:hover { color:var(--T); background:var(--Tl); }
 .fb-item:last-child { border-right:none; }
 .fb-item .icon { font-size:18px; }
 .fb-item .label { font-size:11px; color:rgba(255,255,255,.5); margin-top:1px; font-weight:500; }
-.fb-cta { background:var(--T) !important; color:#fff; font-size:15px; font-weight:700; padding:14px 32px !important; box-shadow:0 0 20px rgba(32,169,185,.4); letter-spacing:.01em; }
+.fb-cta { background:var(--T) !important; color:#fff; font-size:15px; font-weight:700; padding:14px 32px !important; box-shadow:0 0 20px rgba(32,169,185,.4); letter-spacing:.01em; border-radius:10px; margin:8px 12px; }
 .fb-cta:hover { background:var(--Td) !important; }
 
 .float-phone {
@@ -511,7 +511,17 @@ footer { background:var(--N); padding-bottom:80px; }
 .sp-hero-video video{width:100%;height:100%;object-fit:cover;object-position:center;}
 .sp-hero-video::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(9,28,46,.83) 0%,rgba(17,40,64,.78) 60%,rgba(14,48,80,.72) 100%);z-index:1;}
 .sp-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(32,169,185,.15) 0%,transparent 60%);pointer-events:none;z-index:2;}
-.sp-hero-inner{max-width:1200px;margin:0 auto;padding:0 28px;position:relative;z-index:3;}
+.sp-hero-inner{max-width:1200px;margin:0 auto;padding:48px 28px;position:relative;z-index:3;display:grid;grid-template-columns:1fr 360px;gap:56px;align-items:center;}
+.sp-hero-left{}
+.h-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);border-radius:22px;padding:28px;}
+.h-card-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--T);margin-bottom:18px;}
+.h-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.h-stat{padding:18px 12px;border-radius:14px;background:rgba(255,255,255,.06);text-align:center;border:1px solid rgba(255,255,255,.07);transition:background .2s;}
+.h-stat:hover{background:rgba(32,169,185,.12);}
+.h-stat .n{font-size:28px;font-weight:800;color:#fff;line-height:1;}
+.h-stat .n em{color:var(--T);font-style:normal;}
+.h-stat .l{font-size:11.5px;color:rgba(255,255,255,.5);margin-top:5px;line-height:1.4;}
+.h-stat-wide{grid-column:span 2;}
 .breadcrumb{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:22px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
 .breadcrumb a{color:rgba(255,255,255,.5);transition:color .2s;}.breadcrumb a:hover{color:var(--T);}
 .breadcrumb .bc-sep{color:rgba(255,255,255,.2);}
@@ -564,8 +574,7 @@ footer { background:var(--N); padding-bottom:80px; }
 .cb-link:hover{background:rgba(255,255,255,.18);}
 @media(max-width:768px){
   .sp-hero h1{font-size:32px;}
-  .stat-bar{grid-template-columns:1fr;}
-  .stat-item{border-right:none;border-bottom:1px solid var(--bdr);}
+  .sp-hero-inner{grid-template-columns:1fr;gap:32px;}
   .case-grid,.fund-grid,.banks-row{grid-template-columns:1fr;}
   .contact-band{grid-template-columns:1fr;}
   .sp-cta h2{font-size:28px;}
@@ -650,31 +659,26 @@ footer { background:var(--N); padding-bottom:80px; }
 <section class="sp-hero">
   <div class="sp-hero-video"><video autoplay muted loop playsinline><source src="https://videos.pexels.com/video-files/7317040/7317040-hd_1920_1080_25fps.mp4" type="video/mp4"></video></div>
   <div class="sp-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Strona główna</a><span class="bc-sep">›</span>
-      <a href="index.html#sprawy">Sprawy</a><span class="bc-sep">›</span>
-      <span>Subwencje PFR</span>
-    </nav>
-    <div class="hero-chip">⚖️ Prowadzone sprawy</div>
-    <h1>Spory z PFR o subwencje — bronimy przedsiębiorców</h1>
-    <p class="sp-hero-sub">Przez blisko 5 lat zebraliśmy unikalną wiedzę i dowody nieprawidłowości PFR przy Tarczy 1.0 i 2.0. Skutecznie chronimy firmy przed bezpodstawnymi żądaniami zwrotu.</p>
+    <div class="sp-hero-left">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Strona główna</a><span class="bc-sep">›</span>
+        <a href="index.html#sprawy">Sprawy</a><span class="bc-sep">›</span>
+        <span>Subwencje PFR</span>
+      </nav>
+      <div class="hero-chip">⚖️ Prowadzone sprawy</div>
+      <h1>Spory z PFR o subwencje — bronimy przedsiębiorców</h1>
+      <p class="sp-hero-sub">Przez blisko 5 lat zebraliśmy unikalną wiedzę i dowody nieprawidłowości PFR przy Tarczy 1.0 i 2.0. Skutecznie chronimy firmy przed bezpodstawnymi żądaniami zwrotu.</p>
+    </div>
+    <div class="h-card">
+      <div class="h-card-label">Kancelaria w liczbach</div>
+      <div class="h-grid">
+        <div class="h-stat"><div class="n">5 <em>lat</em></div><div class="l">doświadczenia w sprawach z Tarczą PFR</div></div>
+        <div class="h-stat"><div class="n">100<em>+</em></div><div class="l">prowadzonych spraw</div></div>
+        <div class="h-stat h-stat-wide"><div class="n" style="font-size:22px;">XII 2024</div><div class="l">pierwszy prawomocny wyrok SA w Warszawie korzystny dla beneficjentów</div></div>
+      </div>
+    </div>
   </div>
 </section>
-
-<div class="stat-bar">
-  <div class="stat-item">
-    <div class="stat-num">5 lat</div>
-    <div class="stat-desc">doświadczenia w sprawach z Tarczą PFR 1.0 i 2.0</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">100+</div>
-    <div class="stat-desc">prowadzonych spraw</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">XII 2024</div>
-    <div class="stat-desc">uzyskaliśmy pierwszy prawomocny wyrok SA w Warszawie korzystny dla beneficjentów</div>
-  </div>
-</div>
 
 <section class="sec">
   <div class="w">
@@ -853,9 +857,9 @@ footer { background:var(--N); padding-bottom:80px; }
 <div class="float-bar">
   <a href="tel:+48222993118" class="fb-item"><span class="icon">📞</span><div><div>22 299 31 18</div><div class="label">Zadzwoń teraz</div></div></a>
   <a href="mailto:kancelaria@karas-legal.com" class="fb-item"><span class="icon">✉</span><div><div>kancelaria@karas-legal.com</div><div class="label">Napisz do nas</div></div></a>
-  <a href="kontakt.html" class="fb-item fb-cta">Umów bezpłatną konsultację →</a>
+  <a href="kontakt.html" class="fb-item fb-cta">Umów bezpłatną rozmowę wstępną →
+  </a>
 </div>
-<a href="tel:+48222993118" class="float-phone" title="Zadzwoń">📞</a>
 <script>
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
