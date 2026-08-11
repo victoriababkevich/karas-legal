@@ -530,6 +530,20 @@ footer { background:var(--N); padding-bottom:80px; }
 .sp-cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
 @media(max-width:768px){ .sp-hero h1{font-size:32px} .sp-services{grid-template-columns:1fr} .sp-cta h2{font-size:28px} }
 
+
+.trigger-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px;}
+.trigger-item{display:flex;gap:18px;align-items:flex-start;padding:22px 20px;border-radius:14px;background:#fff;border:1.5px solid var(--bdr);transition:all .2s;}
+.trigger-item:hover{border-color:var(--T);box-shadow:0 6px 20px rgba(32,169,185,.1);}
+.ti-num{font-size:22px;font-weight:800;color:var(--T);line-height:1;flex-shrink:0;min-width:30px;}
+.ti-text{font-size:15px;font-weight:600;color:var(--N);line-height:1.55;}
+.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.benefit-card{background:#fff;border-radius:18px;padding:32px 28px;border:1.5px solid var(--bdr);transition:all .22s;}
+.benefit-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.12);transform:translateY(-2px);}
+.bc-icon{font-size:36px;margin-bottom:18px;line-height:1;}
+.bc-title{font-size:18px;font-weight:800;color:var(--N);margin-bottom:12px;line-height:1.3;}
+.bc-desc{font-size:14.5px;color:var(--mut);line-height:1.7;}
+@media(max-width:1024px){.benefit-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -623,28 +637,66 @@ footer { background:var(--N); padding-bottom:80px; }
 </div>
 </section>
 
-<!-- CO ROBIMY -->
-<section class="sec">
+
+<!-- KIEDY SIĘ ZGŁOSIĆ -->
+<section class="sec sec-bg">
   <div class="w">
-    <div class="slabel">Jak pomagamy</div>
-    <h2 class="stitle">Zakres wsparcia</h2>
-    <p class="ssub">Pomagamy przedsiębiorcom w sporach dotyczących rozliczenia i zwrotu subwencji PFR oraz innych form pomocy publicznej. Przez blisko 5 lat zgromadziliśmy unikalną wiedzę i dowody pokazujące nieprawidłowości po stronie PFR — skutecznie bronimy firm przed bezpodstawnymi żądaniami zwrotu.</p>
-    <div class="sp-services">
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Analiza decyzji i wezwań do zwrotu subwencji PFR</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Wsparcie w postępowaniach wyjaśniających prowadzonych przez PFR</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowanie odwołań i wniosków w postępowaniach dotyczących subwencji</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentowanie przedsiębiorców w sporach dotyczących rozliczenia subwencji PFR</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo w zakresie zasad udzielania i rozliczania pomocy publicznej</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Ocena ryzyka zwrotu pomocy publicznej</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowanie strategii obrony w sporach z instytucjami udzielającymi pomocy publicznej</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentowanie przedsiębiorców w postępowaniach sądowych dotyczących pomocy publicznej</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Wsparcie w sporach dotyczących interpretacji warunków programów pomocowych</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo w zakresie prawidłowego wykorzystania i rozliczenia środków pomocowych</div></div>
+    <div class="slabel">Kiedy warto się zgłosić</div>
+    <h2 class="stitle">Rozpoznajesz swoją sytuację?</h2>
+    <div class="trigger-grid">
+      <div class="trigger-item"><div class="ti-num">01</div><div class="ti-text">Dostałeś wezwanie do zwrotu subwencji PFR lub pismo kwestionujące jej rozliczenie</div></div>
+      <div class="trigger-item"><div class="ti-num">02</div><div class="ti-text">PFR wszczął postępowanie wyjaśniające wobec Twojej firmy</div></div>
+      <div class="trigger-item"><div class="ti-num">03</div><div class="ti-text">Nie wiesz jak odpowiedzieć na zarzuty i jakie prawa Ci przysługują</div></div>
+      <div class="trigger-item"><div class="ti-num">04</div><div class="ti-text">Grozi Ci żądanie zwrotu całej subwencji lub jej znacznej części</div></div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- KORZYŚCI -->
+<section class="sec">
+  <div class="w">
+    <div class="slabel">Co zyskujesz</div>
+    <h2 class="stitle">Wartość, którą dostarczamy</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="bc-icon">🛡️</div>
+        <h3 class="bc-title">Masz strategię, nie tylko reakcję</h3>
+        <p class="bc-desc">Zanim odpiszesz PFR, analizujemy całą sprawę i budujemy linię obrony opartą na realnych argumentach i precedensach — nie szablonowe pisma, ale plan działania.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="bc-icon">⚖️</div>
+        <h3 class="bc-title">Korzystasz z 5 lat unikalnej wiedzy</h3>
+        <p class="bc-desc">Prowadzimy sprawy PFR od samego początku programu. Wiemy, gdzie PFR popełnia błędy i jak je skutecznie wykorzystać na Twoją korzyść.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="bc-icon">💰</div>
+        <h3 class="bc-title">Realnie zwiększasz szansę zachowania subwencji</h3>
+        <p class="bc-desc">W dziesiątkach spraw zatrzymaliśmy lub ograniczyliśmy zwrot. Twoja firma zasługuje na taką samą skuteczną obronę.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JAK POMAGAMY -->
+<section class="sec sec-bg">
+  <div class="w">
+    <div class="slabel">Jak pomagamy</div>
+    <h2 class="stitle">Konkretne działania dla Twojej sprawy</h2>
+    <p class="ssub">Przez blisko 5 lat zebraliśmy unikalną wiedzę i dowody pokazujące nieprawidłowości po stronie PFR. Działamy precyzyjnie — tak, żeby każda czynność prawna miała maksymalny efekt dla Twojej sprawy.</p>
+    <div class="sp-services">
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Sprawdzamy każde pismo z PFR i wyjaśniamy Ci co dokładnie oznacza i jakie masz opcje</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przeprowadzamy Cię przez postępowanie wyjaśniające — wiesz co robić na każdym etapie</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Piszemy odwołania z realną argumentacją — dopasowane do Twojej sprawy, nie szablonowe</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentujemy Cię w sporach o rozliczenie subwencji — mówisz jednym głosem: naszym</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradzamy jak prawidłowo rozliczyć pomoc publiczną i uniknąć problemów w przyszłości</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Oceniamy ryzyko zwrotu z wyprzedzeniem i pomagamy je minimalizować zanim stanie się faktem</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Budujemy strategię obrony dostosowaną do Twojej sytuacji i historii firmy</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentujemy Cię przed sądem — jeśli sprawa trafi na wokandę, jesteśmy gotowi</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Wyjaśniamy warunki programów pomocowych w języku, który rozumiesz</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Wspieramy w prawidłowym rozliczeniu środków, żeby przyszłe kontrole nie były problemem</div></div>
+    </div>
+  </div>
+</section>
 <footer>
   <div class="f-top">
     <div>

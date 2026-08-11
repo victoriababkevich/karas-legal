@@ -530,6 +530,20 @@ footer { background:var(--N); padding-bottom:80px; }
 .sp-cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
 @media(max-width:768px){ .sp-hero h1{font-size:32px} .sp-services{grid-template-columns:1fr} .sp-cta h2{font-size:28px} }
 
+
+.trigger-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px;}
+.trigger-item{display:flex;gap:18px;align-items:flex-start;padding:22px 20px;border-radius:14px;background:#fff;border:1.5px solid var(--bdr);transition:all .2s;}
+.trigger-item:hover{border-color:var(--T);box-shadow:0 6px 20px rgba(32,169,185,.1);}
+.ti-num{font-size:22px;font-weight:800;color:var(--T);line-height:1;flex-shrink:0;min-width:30px;}
+.ti-text{font-size:15px;font-weight:600;color:var(--N);line-height:1.55;}
+.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.benefit-card{background:#fff;border-radius:18px;padding:32px 28px;border:1.5px solid var(--bdr);transition:all .22s;}
+.benefit-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.12);transform:translateY(-2px);}
+.bc-icon{font-size:36px;margin-bottom:18px;line-height:1;}
+.bc-title{font-size:18px;font-weight:800;color:var(--N);margin-bottom:12px;line-height:1.3;}
+.bc-desc{font-size:14.5px;color:var(--mut);line-height:1.7;}
+@media(max-width:1024px){.benefit-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -623,26 +637,64 @@ footer { background:var(--N); padding-bottom:80px; }
 </div>
 </section>
 
-<!-- CO ROBIMY -->
-<section class="sec">
+
+<!-- KIEDY SIĘ ZGŁOSIĆ -->
+<section class="sec sec-bg">
   <div class="w">
-    <div class="slabel">Jak pomagamy</div>
-    <h2 class="stitle">Zakres wsparcia</h2>
-    <p class="ssub">Wspieramy wspólników i spółki w sytuacjach konfliktowych — od doradztwa strategicznego i negocjacji po reprezentację w sporach sądowych. Skutecznie chronimy interesy każdej ze stron konfliktu korporacyjnego.</p>
-    <div class="sp-services">
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentowanie wspólników w sporach dotyczących prowadzenia spraw spółki</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo w konfliktach między wspólnikami oraz członkami zarządu</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowanie strategii rozwiązania konfliktów korporacyjnych</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentowanie klientów w sporach dotyczących uchwał organów spółki</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Dochodzenie roszczeń wynikających z relacji między wspólnikami</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Wsparcie w negocjacjach dotyczących wyjścia wspólnika ze spółki</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowanie ugód i porozumień między wspólnikami</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentowanie klientów w sporach dotyczących odpowiedzialności członków zarządu</div></div>
+    <div class="slabel">Kiedy warto się zgłosić</div>
+    <h2 class="stitle">Rozpoznajesz swoją sytuację?</h2>
+    <div class="trigger-grid">
+      <div class="trigger-item"><div class="ti-num">01</div><div class="ti-text">Masz poważny konflikt ze wspólnikiem co do kierunku lub zarządzania firmą</div></div>
+      <div class="trigger-item"><div class="ti-num">02</div><div class="ti-text">Wspólnik podejmuje decyzje szkodliwe dla spółki lub przekracza swoje uprawnienia</div></div>
+      <div class="trigger-item"><div class="ti-num">03</div><div class="ti-text">Chcesz wyjść ze spółki lub chcesz, żeby wspólnik z niej wyszedł</div></div>
+      <div class="trigger-item"><div class="ti-num">04</div><div class="ti-text">Spotkałeś się z uchwałą organów spółki, która narusza Twoje prawa jako wspólnika</div></div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- KORZYŚCI -->
+<section class="sec">
+  <div class="w">
+    <div class="slabel">Co zyskujesz</div>
+    <h2 class="stitle">Wartość, którą dostarczamy</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="bc-icon">🎯</div>
+        <h3 class="bc-title">Masz jasną strategię — nie działasz pod wpływem emocji</h3>
+        <p class="bc-desc">Konflikty korporacyjne mają swoje ścieżki prawne. Analizujemy sytuację i proponujemy rozwiązanie, które chroni Twoje interesy niezależnie od tego, co robi druga strona.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="bc-icon">⚖️</div>
+        <h3 class="bc-title">Twoje prawa jako wspólnika są w bezpiecznych rękach</h3>
+        <p class="bc-desc">Niezależnie czy chcesz zostać w spółce czy wyjść — dbamy o to, żebyś wyszedł z jak najlepszą pozycją prawną i finansową.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="bc-icon">🤝</div>
+        <h3 class="bc-title">Ugoda albo sąd — wybierasz razem z nami</h3>
+        <p class="bc-desc">Potrafimy doprowadzić do porozumienia nawet w najtrudniejszych sytuacjach. A jeśli nie — jesteśmy gotowi walczyć w sądzie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JAK POMAGAMY -->
+<section class="sec sec-bg">
+  <div class="w">
+    <div class="slabel">Jak pomagamy</div>
+    <h2 class="stitle">Konkretne działania dla Twojej sprawy</h2>
+    <p class="ssub">Zapewniamy kompleksowe wsparcie prawne w konfliktach między wspólnikami oraz sporach korporacyjnych — od opracowania strategii rozwiązania sporu i negocjacji, aż po reprezentowanie klientów w postępowaniach sądowych.</p>
+    <div class="sp-services">
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentujemy wspólników w sporach o prowadzenie spraw spółki — Twój głos jest słyszany</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradzamy w konfliktach między wspólnikami i zarządem — wiesz jakie masz prawa i możliwości</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Budujemy strategię rozwiązania konfliktu dopasowaną do Twoich celów biznesowych i osobistych</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Zaskarżamy i kwestionujemy uchwały organów spółki naruszające Twoje prawa</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Dochodzimy roszczeń wynikających z relacji między wspólnikami</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Negocjujemy warunki wyjścia wspólnika ze spółki — Ty decydujesz co jest dla Ciebie korzystne</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowujemy ugody i porozumienia między wspólnikami — trwałe i bezpieczne dla obu stron</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentujemy Cię w sporach o odpowiedzialność członków zarządu za szkody wyrządzone spółce</div></div>
+    </div>
+  </div>
+</section>
 <footer>
   <div class="f-top">
     <div>

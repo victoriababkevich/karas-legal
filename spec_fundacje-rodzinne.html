@@ -530,6 +530,20 @@ footer { background:var(--N); padding-bottom:80px; }
 .sp-cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
 @media(max-width:768px){ .sp-hero h1{font-size:32px} .sp-services{grid-template-columns:1fr} .sp-cta h2{font-size:28px} }
 
+
+.trigger-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px;}
+.trigger-item{display:flex;gap:18px;align-items:flex-start;padding:22px 20px;border-radius:14px;background:#fff;border:1.5px solid var(--bdr);transition:all .2s;}
+.trigger-item:hover{border-color:var(--T);box-shadow:0 6px 20px rgba(32,169,185,.1);}
+.ti-num{font-size:22px;font-weight:800;color:var(--T);line-height:1;flex-shrink:0;min-width:30px;}
+.ti-text{font-size:15px;font-weight:600;color:var(--N);line-height:1.55;}
+.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.benefit-card{background:#fff;border-radius:18px;padding:32px 28px;border:1.5px solid var(--bdr);transition:all .22s;}
+.benefit-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.12);transform:translateY(-2px);}
+.bc-icon{font-size:36px;margin-bottom:18px;line-height:1;}
+.bc-title{font-size:18px;font-weight:800;color:var(--N);margin-bottom:12px;line-height:1.3;}
+.bc-desc{font-size:14.5px;color:var(--mut);line-height:1.7;}
+@media(max-width:1024px){.benefit-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -623,28 +637,66 @@ footer { background:var(--N); padding-bottom:80px; }
 </div>
 </section>
 
-<!-- CO ROBIMY -->
-<section class="sec">
+
+<!-- KIEDY SIĘ ZGŁOSIĆ -->
+<section class="sec sec-bg">
   <div class="w">
-    <div class="slabel">Jak pomagamy</div>
-    <h2 class="stitle">Zakres wsparcia</h2>
-    <p class="ssub">Pomagamy przedsiębiorcom i rodzinom biznesowym w planowaniu sukcesji — od zaprojektowania odpowiedniej struktury, przez założenie fundacji rodzinnej, po bieżące doradztwo dotyczące jej funkcjonowania i relacji z beneficjentami.</p>
-    <div class="sp-services">
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo w zakresie planowania sukcesji majątku i biznesu rodzinnego</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowanie i zakładanie fundacji rodzinnych</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Opracowanie statutu fundacji rodzinnej oraz zasad zarządzania majątkiem</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowanie struktury prawnej przekazania majątku do fundacji rodzinnej</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo w zakresie relacji między fundacją, beneficjentami i członkami rodziny</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Wsparcie przy wnoszeniu przedsiębiorstw, udziałów lub innych aktywów do fundacji</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowanie dokumentów i zasad funkcjonowania organów fundacji rodzinnej</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo w zakresie ochrony majątku rodzinnego i budowania ładu rodzinnego</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Rozwiązywanie sporów między beneficjentami lub członkami rodziny</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo prawne w zakresie bieżącego funkcjonowania fundacji rodzinnej</div></div>
+    <div class="slabel">Kiedy warto się zgłosić</div>
+    <h2 class="stitle">Rozpoznajesz swoją sytuację?</h2>
+    <div class="trigger-grid">
+      <div class="trigger-item"><div class="ti-num">01</div><div class="ti-text">Budujesz majątek i chcesz zabezpieczyć go dla kolejnych pokoleń</div></div>
+      <div class="trigger-item"><div class="ti-num">02</div><div class="ti-text">Prowadzisz firmę rodzinną i zastanawiasz się kto i jak ją przejmie po Tobie</div></div>
+      <div class="trigger-item"><div class="ti-num">03</div><div class="ti-text">Obawiasz się, że konflikt w rodzinie może zniszczyć to, co budowałeś latami</div></div>
+      <div class="trigger-item"><div class="ti-num">04</div><div class="ti-text">Chcesz chronić majątek przed ryzykami związanymi z prowadzeniem działalności</div></div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- KORZYŚCI -->
+<section class="sec">
+  <div class="w">
+    <div class="slabel">Co zyskujesz</div>
+    <h2 class="stitle">Wartość, którą dostarczamy</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="bc-icon">🏛️</div>
+        <h3 class="bc-title">Majątek chroniony na pokolenia</h3>
+        <p class="bc-desc">Fundacja rodzinna to struktura, która zabezpiecza Twój dorobek przed rozdrobnieniem, sporami i ryzykami biznesowymi — na warunkach, które sam określasz.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="bc-icon">👨‍👩‍👧‍👦</div>
+        <h3 class="bc-title">Sukcesja bez konfliktów i zaskoczeń</h3>
+        <p class="bc-desc">Planujemy przekazanie firmy i majątku w sposób, który minimalizuje ryzyko sporów rodzinnych i zapewnia płynne przejście bez chaosu.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="bc-icon">🛡️</div>
+        <h3 class="bc-title">Jasne zasady dla całej rodziny</h3>
+        <p class="bc-desc">Opracowujemy statut, ład rodzinny i dokumenty, które jasno określają prawa i obowiązki wszystkich — dziś i w przyszłości.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JAK POMAGAMY -->
+<section class="sec sec-bg">
+  <div class="w">
+    <div class="slabel">Jak pomagamy</div>
+    <h2 class="stitle">Konkretne działania dla Twojej sprawy</h2>
+    <p class="ssub">Zapewniamy kompleksowe wsparcie prawne w planowaniu sukcesji majątku i biznesu rodzinnego — pomagając przedsiębiorcom zabezpieczyć dorobek całego życia oraz stworzyć stabilną strukturę zarządzania dla kolejnych pokoleń.</p>
+    <div class="sp-services">
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradzamy jak zaplanować sukcesję majątku i firmy rodzinnej z odpowiednim wyprzedzeniem</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Zakładamy fundacje rodzinne od podstaw — wszystkie formalności po naszej stronie</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Opracowujemy statut fundacji i zasady zarządzania majątkiem dopasowane do Twojej rodziny</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Projektujemy strukturę prawną przekazania majątku, udziałów i aktywów do fundacji</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradzamy jak ułożyć relacje między fundacją, beneficjentami i członkami rodziny</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Wspieramy przy wnoszeniu przedsiębiorstw, udziałów i aktywów do fundacji</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowujemy dokumenty organów fundacji i zasady ich funkcjonowania</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Chronimy majątek rodzinny przed ryzykami biznesowymi, rozdrobnieniem i sporami</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Pomagamy rozwiązywać spory między beneficjentami zanim przerodzą się w poważne konflikty</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradzamy prawnie w bieżącym funkcjonowaniu fundacji rodzinnej — zawsze gdy potrzebujesz</div></div>
+    </div>
+  </div>
+</section>
 <footer>
   <div class="f-top">
     <div>
