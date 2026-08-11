@@ -160,26 +160,28 @@ footer { background:var(--N); padding-bottom:80px; }
 /* ══ SUBPAGE HERO ══ */
 .sp-hero { background:linear-gradient(135deg,#091C2E 0%,#112840 60%,#0E3050 100%); padding:72px 0 64px; position:relative; overflow:hidden; }
 .sp-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 40%,rgba(32,169,185,.15) 0%,transparent 60%); pointer-events:none; }
-.sp-hero-inner { max-width:1200px; margin:0 auto; padding:0 28px; position:relative; z-index:3; }
+.sp-hero-inner { max-width:1200px; margin:0 auto; padding:0 28px; position:relative; z-index:3; display:grid; grid-template-columns:1fr 340px; gap:64px; align-items:center; }
+.sp-hero-left { grid-column:1; }
 .breadcrumb { font-size:13px; color:rgba(255,255,255,.4); margin-bottom:22px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
 .breadcrumb a { color:rgba(255,255,255,.5); transition:color .2s; }
 .breadcrumb a:hover { color:var(--T); }
 .breadcrumb .bc-sep { color:rgba(255,255,255,.2); }
-.sp-hero h1 { font-size:46px; font-weight:800; color:#fff; line-height:1.15; letter-spacing:-.5px; margin:16px 0 20px; max-width:740px; }
+.sp-hero h1 { font-size:46px; font-weight:800; color:#fff; line-height:1.15; letter-spacing:-.5px; margin:16px 0 20px; }
 .sp-hero h1 em { color:var(--T); font-style:normal; }
-.sp-hero-sub { font-size:18px; color:rgba(255,255,255,.7); line-height:1.7; max-width:620px; }
+.sp-hero-sub { font-size:18px; color:rgba(255,255,255,.7); line-height:1.7; }
 .hero-chip { display:inline-flex; align-items:center; gap:8px; background:rgba(32,169,185,.15); border:1px solid rgba(32,169,185,.3); color:var(--T); font-size:12px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; padding:6px 14px; border-radius:20px; margin-bottom:22px; }
 
-/* ══ TRUST BLOCK ══ */
-.po-trust-block { display:flex; align-items:center; gap:48px; background:#fff; border:1.5px solid var(--bdr); border-radius:20px; padding:36px 40px; margin:52px 0; flex-wrap:wrap; }
-.po-trust-text { font-size:21px; font-weight:700; color:var(--N); line-height:1.4; flex:1; min-width:240px; }
+/* ══ TRUST BLOCK (hero right) ══ */
+.po-hero-trust { grid-column:2; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); backdrop-filter:blur(16px); border-radius:22px; padding:32px 28px; }
+.po-trust-label { font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--T); margin-bottom:18px; }
+.po-trust-text { font-size:17px; font-weight:700; color:#fff; line-height:1.5; margin-bottom:24px; }
 .po-trust-text em { color:var(--T); font-style:normal; }
-.po-trust-stats { display:flex; gap:16px; flex-shrink:0; }
-.po-stat-card { background:var(--bg); border:1.5px solid var(--bdr); border-radius:16px; padding:24px 36px; text-align:center; transition:all .2s; }
-.po-stat-card:hover { border-color:var(--T); background:var(--Tl); }
-.po-stat-n { font-size:38px; font-weight:800; color:var(--N); line-height:1; }
+.po-trust-stats { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.po-stat-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.07); border-radius:14px; padding:20px 14px; text-align:center; transition:background .2s; }
+.po-stat-card:hover { background:rgba(32,169,185,.12); }
+.po-stat-n { font-size:34px; font-weight:800; color:#fff; line-height:1; }
 .po-stat-n em { color:var(--T); font-style:normal; }
-.po-stat-l { font-size:13px; color:var(--mut); margin-top:6px; white-space:nowrap; }
+.po-stat-l { font-size:12px; color:rgba(255,255,255,.5); margin-top:5px; line-height:1.4; }
 
 /* ══ PO-CARDS ══ */
 .po-intro { font-size:17px; color:var(--mut); line-height:1.75; max-width:700px; margin-top:18px; }
@@ -216,13 +218,14 @@ footer { background:var(--N); padding-bottom:80px; }
 .po-cta-inner { max-width:640px; margin:0 auto; padding:0 28px; }
 .po-cta h2 { font-size:34px; font-weight:800; color:var(--N); line-height:1.2; margin-bottom:16px; }
 .po-cta p { font-size:17px; color:var(--mut); line-height:1.75; }
-.po-cta-contact { display:flex; gap:32px; justify-content:center; flex-wrap:wrap; margin-top:32px; }
-.po-cta-link { font-size:15px; font-weight:700; color:var(--T); display:flex; align-items:center; gap:8px; }
-
 /* ══ RESPONSIVE ══ */
 @media(max-width:1024px) {
   .po-grid { grid-template-columns:1fr; }
   .f-top { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:1024px) {
+  .sp-hero-inner { grid-template-columns:1fr; gap:36px; }
+  .po-hero-trust { grid-column:1; }
 }
 @media(max-width:768px) {
   nav .dropdown, nav > a:not(.nav-btn) { display:none; }
@@ -233,9 +236,6 @@ footer { background:var(--N); padding-bottom:80px; }
   .fb-item:not(.fb-cta) { display:none; }
   .f-top { grid-template-columns:1fr; gap:32px; }
   .po-cta h2 { font-size:26px; }
-  .po-trust-block { flex-direction:column; align-items:flex-start; gap:28px; padding:28px 24px; }
-  .po-trust-stats { width:100%; }
-  .po-stat-card { flex:1; padding:20px 16px; }
   .po-services { grid-template-columns:1fr; }
 }
 @media(max-width:600px) {
@@ -320,26 +320,20 @@ footer { background:var(--N); padding-bottom:80px; }
 
 <section class="sp-hero">
   <div class="sp-hero-inner">
-    <div class="breadcrumb">
-      <a href="index.html">Strona główna</a>
-      <span class="bc-sep">›</span>
-      <a href="index.html#specjalizacje">Specjalizacje</a>
-      <span class="bc-sep">›</span>
-      <span>Pozostałe obszary eksperckie</span>
+    <div class="sp-hero-left">
+      <div class="breadcrumb">
+        <a href="index.html">Strona główna</a>
+        <span class="bc-sep">›</span>
+        <a href="index.html#specjalizacje">Specjalizacje</a>
+        <span class="bc-sep">›</span>
+        <span>Pozostałe obszary eksperckie</span>
+      </div>
+      <div class="hero-chip">Obsługa prawna</div>
+      <h1>Pozostałe obszary<em> eksperckie</em></h1>
+      <p class="sp-hero-sub">Poza kluczowymi specjalizacjami kancelaria zapewnia kompleksowe wsparcie w kolejnych 10 obszarach prawa gospodarczego i cywilnego — od stałej obsługi spółek po spory z bankami i postępowania grupowe.</p>
     </div>
-    <div class="hero-chip">Obsługa prawna</div>
-    <h1>Pozostałe obszary<em> eksperckie</em></h1>
-    <p class="sp-hero-sub">Poza kluczowymi specjalizacjami kancelaria zapewnia kompleksowe wsparcie w kolejnych 10 obszarach prawa gospodarczego i cywilnego — od stałej obsługi spółek po spory z bankami i postępowania grupowe.</p>
-  </div>
-</section>
-
-<section class="sec sec-bg">
-  <div class="w">
-    <div class="slabel">Wszystkie obszary wsparcia</div>
-    <h2 class="stitle">Kompleksowa obsługa prawna</h2>
-    <p class="po-intro">Każdy z poniższych obszarów to pełnowymiarowa ekspertyza kancelarii — z wieloletnim doświadczeniem procesowym, bieżącym doradztwem i realną skutecznością w sporach i negocjacjach.</p>
-
-    <div class="po-trust-block">
+    <div class="po-hero-trust">
+      <div class="po-trust-label">Zaufanie klientów</div>
       <div class="po-trust-text">Zaufało nam ponad <em>650 firm</em> w całej Polsce.</div>
       <div class="po-trust-stats">
         <div class="po-stat-card">
@@ -352,8 +346,16 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="po-grid">
+<section class="sec sec-bg">
+  <div class="w">
+    <div class="slabel">Wszystkie obszary wsparcia</div>
+    <h2 class="stitle">Kompleksowa obsługa prawna</h2>
+    <p class="po-intro">Każdy z poniższych obszarów to pełnowymiarowa ekspertyza kancelarii — z wieloletnim doświadczeniem procesowym, bieżącym doradztwem i realną skutecznością w sporach i negocjacjach.</p>
+
+    <div class="po-grid" style="margin-top:48px;">
 
       <!-- 01 -->
       <div class="po-card">
@@ -595,10 +597,6 @@ footer { background:var(--N); padding-bottom:80px; }
   <div class="po-cta-inner">
     <h2>Potrzebujesz wsparcia prawnego?</h2>
     <p>Zadzwoń lub napisz — ocenimy Twoją sytuację podczas bezpłatnej rozmowy wstępnej i dobierzemy odpowiedni obszar ekspertyzy.</p>
-    <div class="po-cta-contact">
-      <a href="tel:+48222993118" class="po-cta-link">📞 22 299 31 18</a>
-      <a href="mailto:kancelaria@karas-legal.com" class="po-cta-link">✉ kancelaria@karas-legal.com</a>
-    </div>
   </div>
 </section>
 
