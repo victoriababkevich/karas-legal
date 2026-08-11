@@ -542,13 +542,13 @@ footer { background:var(--N); padding-bottom:80px; }
 .bc-icon{width:48px;height:48px;border-radius:12px;background:var(--Tl);border:1.5px solid rgba(32,169,185,.25);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--T);}
 .bc-title{font-size:18px;font-weight:800;color:var(--N);margin-bottom:12px;line-height:1.3;}
 .bc-desc{font-size:14.5px;color:var(--mut);line-height:1.7;}
-.sp-services{display:flex;flex-direction:column;gap:0;margin-top:32px;border:1.5px solid var(--bdr);border-radius:14px;overflow:hidden;}
-.sp-service{display:flex;gap:14px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--bdr);background:#fff;}
-.sp-service:last-child{border-bottom:none;}
-.ss-icon{color:var(--T);font-weight:700;font-size:15px;flex-shrink:0;}
-.ss-text{font-size:14.5px;color:var(--N);font-weight:500;line-height:1.4;}
+.sp-services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:32px;}
+.sp-service{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:12px;background:#fff;border:1.5px solid var(--bdr);transition:border-color .2s;}
+.sp-service:hover{border-color:var(--T);}
+.ss-num{width:26px;height:26px;border-radius:7px;background:var(--Tl);border:1.5px solid rgba(32,169,185,.3);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--T);flex-shrink:0;margin-top:1px;}
+.ss-text{font-size:14px;color:var(--N);font-weight:600;line-height:1.45;}
 @media(max-width:1024px){.benefit-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}.benefit-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}.sp-services{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -644,6 +644,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
 
 
+
 <!-- KIEDY SIĘ ZGŁOSIĆ -->
 <section class="sec sec-bg">
   <div class="w">
@@ -690,16 +691,16 @@ footer { background:var(--N); padding-bottom:80px; }
     <h2 class="stitle">Zakres wsparcia</h2>
     <p class="ssub">Wspieramy inwestorów i wykonawców na każdym etapie inwestycji budowlanej — od przygotowania umów, przez doradztwo w trakcie realizacji, aż po dochodzenie roszczeń.</p>
     <div class="sp-services">
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Negocjacje i przygotowanie umów o roboty budowlane</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Weryfikacja kontraktów przed podpisaniem</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Analiza ryzyk, kar umownych i terminów</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo prawne na każdym etapie inwestycji</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reagowanie na kryzysy i opóźnienia na budowie</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Ochrona przed nieuzasadnionymi karami umownymi</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Renegocjacja i wyjście z niekorzystnych kontraktów</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Bezpieczne zejście z budowy bez konsekwencji</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Dochodzenie zapłaty za roboty budowlane</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentacja w sporach budowlanych</div></div>
+      <div class="sp-service"><div class="ss-num">01</div><div class="ss-text">Negocjujemy kontrakty budowlane po Twojej stronie</div></div>
+      <div class="sp-service"><div class="ss-num">02</div><div class="ss-text">Weryfikujemy umowy zanim cokolwiek podpiszesz</div></div>
+      <div class="sp-service"><div class="ss-num">03</div><div class="ss-text">Analizujemy ryzyka, kary i terminy z wyprzedzeniem</div></div>
+      <div class="sp-service"><div class="ss-num">04</div><div class="ss-text">Doradzamy prawnie na każdym etapie inwestycji</div></div>
+      <div class="sp-service"><div class="ss-num">05</div><div class="ss-text">Reagujemy na kryzysy i opóźnienia na budowie</div></div>
+      <div class="sp-service"><div class="ss-num">06</div><div class="ss-text">Chronimy Cię przed nieuzasadnionymi karami umownymi</div></div>
+      <div class="sp-service"><div class="ss-num">07</div><div class="ss-text">Negocjujemy wyjście z niekorzystnych kontraktów</div></div>
+      <div class="sp-service"><div class="ss-num">08</div><div class="ss-text">Doradzamy jak bezpiecznie zakończyć lub wstrzymać prace</div></div>
+      <div class="sp-service"><div class="ss-num">09</div><div class="ss-text">Dochodzimy Twojej zapłaty za wykonane roboty</div></div>
+      <div class="sp-service"><div class="ss-num">10</div><div class="ss-text">Reprezentujemy Cię w sporach budowlanych</div></div>
     </div>
   </div>
 </section>
