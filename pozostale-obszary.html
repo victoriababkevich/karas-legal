@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pozostałe obszary eksperckie — Karaś Chacia i Wspólnicy</title>
+<meta name="description" content="Kompleksowa obsługa prawna w 10 obszarach: stała obsługa spółek, własność intelektualna, zamówienia publiczne, spory z bankami, postępowania grupowe i więcej.">
+<link rel="canonical" href="https://karas-legal.vercel.app/pozostale-obszary.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Pozostałe obszary eksperckie — Karaś Chacia i Wspólnicy">
+<meta property="og:description" content="Kompleksowa obsługa prawna w 10 dodatkowych obszarach prawa gospodarczego i cywilnego.">
+<meta property="og:url" content="https://karas-legal.vercel.app/pozostale-obszary.html">
+<meta property="og:image" content="https://karas-legal.vercel.app/KARA%C5%9A%20CHACIA%20LEGAL.JPG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pozostałe obszary eksperckie — Karaś Chacia i Wspólnicy">
+<meta name="twitter:description" content="Kompleksowa obsługa prawna w 10 dodatkowych obszarach prawa gospodarczego i cywilnego.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --T:    #20A9B9;
+  --Td:   #0089AA;
+  --Tl:   #E4F6F8;
+  --N:    #091C2E;
+  --Nm:   #112840;
+  --text: #1C2B3A;
+  --mut:  #5A6E7F;
+  --bg:   #F4F9FA;
+  --w:    #fff;
+  --bdr:  #D9E7EA;
+  --r:    14px;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: "Plus Jakarta Sans", sans-serif; color: var(--text); background: var(--w); overflow-x: hidden; line-height: 1.65; }
+a { text-decoration: none; color: inherit; }
+
+/* ══ HEADER ══ */
+header {
+  background:rgba(255,255,255,.97); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--bdr); position:sticky; top:0; z-index:300;
+  box-shadow:0 2px 20px rgba(9,28,46,.07);
+}
+.header-w {
+  max-width:1200px; margin:0 auto; padding:0 28px;
+  display:flex; justify-content:space-between; align-items:center; height:72px;
+}
+.logo { display:flex; align-items:center; }
+.logo-img { height:48px; width:auto; display:block; }
+nav { display:flex; gap:2px; align-items:center; }
+nav > a, .dropdown > a {
+  font-size:13.5px; font-weight:600; color:var(--text);
+  padding:7px 13px; border-radius:8px; transition:all .2s;
+  display:flex; align-items:center; gap:4px;
+}
+nav > a:hover, .dropdown > a:hover { color:var(--T); background:var(--Tl); }
+.nav-btn {
+  background:var(--N) !important; color:#fff !important;
+  padding:9px 20px !important; border-radius:9px !important;
+  margin-left:6px; box-shadow:0 4px 12px rgba(9,28,46,.25);
+}
+.nav-btn:hover { background:var(--Nm) !important; }
+.nav-panel {
+  font-size:13px !important; font-weight:600 !important;
+  color:var(--T) !important; border:1.5px solid var(--T);
+  padding:7px 14px !important; border-radius:8px !important;
+  margin-left:4px; transition:all .2s; white-space:nowrap;
+}
+.nav-panel:hover { background:var(--Tl) !important; }
+.dropdown { position:relative; }
+.dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:10px;}
+.dropdown > a .arrow { font-size:10px; transition:transform .2s; display:inline-block; }
+.dropdown:hover > a .arrow { transform:rotate(180deg); }
+.dropdown-menu {
+  display:none; position:absolute; top:calc(100% + 8px); left:0;
+  background:#fff; border:1px solid var(--bdr); border-radius:14px;
+  min-width:280px; box-shadow:0 12px 40px rgba(9,28,46,.15);
+  z-index:400; padding:8px; overflow:hidden;
+}
+.dropdown:hover .dropdown-menu { display:block; }
+.dropdown-menu a {
+  display:block; padding:10px 14px; font-size:13.5px;
+  font-weight:600; color:var(--text); border-radius:8px;
+  transition:all .15s; white-space:nowrap;
+}
+.dropdown-menu a:hover { color:var(--T); background:var(--Tl); }
+.dropdown-menu .dm-sep { height:1px; background:var(--bdr); margin:6px 0; }
+.dropdown-menu .dm-label {
+  font-size:10.5px; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--mut); padding:6px 14px 2px;
+}
+.dropdown-menu .dm-highlight { color:var(--T) !important; border-top:1px solid var(--bdr); margin-top:4px; }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:pointer;
+  padding:8px; border-radius:8px; transition:background .2s;
+}
+.hamburger:hover { background:var(--Tl); }
+.hamburger span { display:block; width:22px; height:2px; background:var(--N); border-radius:2px; transition:all .25s; }
+.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+.mobile-nav {
+  display:none; position:fixed; top:72px; left:0; right:0;
+  background:#fff; border-bottom:1px solid var(--bdr);
+  z-index:299; padding:16px 20px 24px;
+  box-shadow:0 8px 24px rgba(9,28,46,.12);
+  max-height:calc(100vh - 72px); overflow-y:auto;
+}
+.mobile-nav.open { display:block; }
+.mobile-nav a { display:block; padding:11px 14px; font-size:15px; font-weight:600; color:var(--text); border-radius:9px; transition:all .15s; }
+.mobile-nav a:hover { color:var(--T); background:var(--Tl); }
+.mobile-nav .mn-group { margin-bottom:8px; }
+.mobile-nav .mn-label { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--mut); padding:8px 14px 4px; }
+.mobile-nav .mn-sub { padding-left:14px; }
+.mobile-nav .mn-sub a { font-size:14px; font-weight:500; }
+.mobile-nav .mn-sep { height:1px; background:var(--bdr); margin:8px 0; }
+.mobile-nav .mn-cta { background:var(--N); color:#fff !important; border-radius:9px; text-align:center; margin-top:12px; padding:13px 14px !important; }
+
+/* ══ SEKCJE ══ */
+.sec { padding:88px 0; }
+.sec-bg { background:var(--bg); }
+.w { max-width:1200px; margin:0 auto; padding:0 28px; }
+.slabel { font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--T); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+.slabel::before { content:''; width:24px; height:2px; background:var(--T); border-radius:2px; }
+.stitle { font-size:40px; font-weight:800; line-height:1.15; color:var(--N); letter-spacing:-.5px; margin-bottom:16px; }
+
+/* ══ FLOAT BAR ══ */
+.float-bar {
+  position:fixed; bottom:0; left:0; right:0; z-index:500;
+  background:rgba(9,28,46,.95); backdrop-filter:blur(12px);
+  border-top:1px solid rgba(32,169,185,.25);
+  display:flex; align-items:center; justify-content:center;
+}
+.fb-item { display:flex; align-items:center; gap:10px; padding:14px 28px; color:#fff; font-size:14px; font-weight:600; border-right:1px solid rgba(255,255,255,.08); transition:background .2s; cursor:pointer; }
+.fb-item:hover { background:rgba(32,169,185,.15); }
+.fb-item:last-child { border-right:none; }
+.fb-item .icon { font-size:18px; }
+.fb-item .label { font-size:11px; color:rgba(255,255,255,.5); margin-top:1px; font-weight:500; }
+.fb-cta { background:var(--T) !important; color:#fff; font-size:15px; font-weight:700; padding:14px 32px !important; box-shadow:0 0 20px rgba(32,169,185,.4); letter-spacing:.01em; border-radius:10px; margin:8px 12px; }
+.fb-cta:hover { background:var(--Td) !important; }
+
+/* ══ FOOTER ══ */
+footer { background:var(--N); padding-bottom:80px; }
+.f-top { max-width:1200px; margin:0 auto; padding:72px 28px 48px; display:grid; grid-template-columns:1.9fr 1fr 1fr 1fr; gap:44px; }
+.f-logo-wrap { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.f-logo-img { height:44px; width:auto; opacity:.9; }
+.f-desc { font-size:14px; color:rgba(255,255,255,.55); line-height:1.7; }
+.f-contacts { margin-top:20px; display:flex; flex-direction:column; gap:8px; }
+.f-c { font-size:14px; color:rgba(255,255,255,.55); display:flex; align-items:center; gap:8px; }
+.f-c a { color:var(--T); font-weight:600; }
+.f-col h4 { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--T); margin-bottom:18px; }
+.f-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.f-col ul li a { font-size:14px; color:rgba(255,255,255,.55); transition:color .2s; }
+.f-col ul li a:hover { color:var(--T); }
+.f-bottom { max-width:1200px; margin:0 auto; padding:20px 28px; border-top:1px solid rgba(255,255,255,.07); display:flex; justify-content:space-between; align-items:center; font-size:13px; color:rgba(255,255,255,.3); flex-wrap:wrap; gap:12px; }
+.f-links { display:flex; gap:20px; }
+.f-links a { color:rgba(255,255,255,.3); transition:color .2s; }
+.f-links a:hover { color:var(--T); }
+
+/* ══ SUBPAGE HERO ══ */
+.sp-hero { background:linear-gradient(135deg,#091C2E 0%,#112840 60%,#0E3050 100%); padding:72px 0 64px; position:relative; overflow:hidden; }
+.sp-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 40%,rgba(32,169,185,.15) 0%,transparent 60%); pointer-events:none; }
+.sp-hero-inner { max-width:1200px; margin:0 auto; padding:0 28px; position:relative; z-index:3; }
+.breadcrumb { font-size:13px; color:rgba(255,255,255,.4); margin-bottom:22px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.breadcrumb a { color:rgba(255,255,255,.5); transition:color .2s; }
+.breadcrumb a:hover { color:var(--T); }
+.breadcrumb .bc-sep { color:rgba(255,255,255,.2); }
+.sp-hero h1 { font-size:46px; font-weight:800; color:#fff; line-height:1.15; letter-spacing:-.5px; margin:16px 0 20px; max-width:740px; }
+.sp-hero h1 em { color:var(--T); font-style:normal; }
+.sp-hero-sub { font-size:18px; color:rgba(255,255,255,.7); line-height:1.7; max-width:620px; margin-bottom:36px; }
+.hero-chip { display:inline-flex; align-items:center; gap:8px; background:rgba(32,169,185,.15); border:1px solid rgba(32,169,185,.3); color:var(--T); font-size:12px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; padding:6px 14px; border-radius:20px; margin-bottom:22px; }
+.sp-hero-stats { display:flex; gap:40px; flex-wrap:wrap; margin-top:36px; padding-top:32px; border-top:1px solid rgba(255,255,255,.1); }
+.sp-hero-stat .n { font-size:32px; font-weight:800; color:#fff; line-height:1; }
+.sp-hero-stat .n em { color:var(--T); font-style:normal; }
+.sp-hero-stat .l { font-size:13px; color:rgba(255,255,255,.45); margin-top:4px; }
+.btn-t { background:var(--T); color:#fff; font-size:15px; font-weight:700; padding:14px 30px; border-radius:10px; display:inline-block; transition:all .2s; box-shadow:0 6px 20px rgba(32,169,185,.4); }
+.btn-t:hover { background:var(--Td); transform:translateY(-1px); }
+
+/* ══ SP-CTA ══ */
+.sp-cta { background:linear-gradient(135deg,#091C2E 0%,#112840 100%); padding:72px 0; text-align:center; }
+.sp-cta-inner { max-width:640px; margin:0 auto; padding:0 28px; }
+.sp-cta h2 { font-size:36px; font-weight:800; color:#fff; line-height:1.2; margin-bottom:16px; }
+.sp-cta p { font-size:17px; color:rgba(255,255,255,.65); line-height:1.7; margin-bottom:36px; }
+.sp-cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-g { background:rgba(255,255,255,.1); color:#fff; font-size:15px; font-weight:600; padding:14px 30px; border-radius:10px; display:inline-block; transition:all .2s; border:1.5px solid rgba(255,255,255,.25); backdrop-filter:blur(6px); }
+.btn-g:hover { border-color:rgba(255,255,255,.6); background:rgba(255,255,255,.15); }
+
+/* ══ PO-CARDS ══ */
+.po-intro { font-size:17px; color:var(--mut); line-height:1.75; max-width:700px; margin-top:18px; }
+.po-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:52px; }
+.po-card { background:#fff; border:1.5px solid var(--bdr); border-radius:20px; padding:32px 28px; transition:all .25s; display:flex; flex-direction:column; }
+.po-card:hover { border-color:var(--T); box-shadow:0 12px 40px rgba(32,169,185,.12); transform:translateY(-2px); }
+.po-header { display:flex; align-items:flex-start; gap:16px; margin-bottom:18px; }
+.po-num { width:46px; height:46px; min-width:46px; border-radius:12px; background:var(--Tl); border:1.5px solid rgba(32,169,185,.3); display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:800; color:var(--T); }
+.po-title-wrap { flex:1; }
+.po-title { font-size:17px; font-weight:800; color:var(--N); line-height:1.25; margin-bottom:6px; }
+.po-tagline { font-size:13px; color:var(--mut); line-height:1.55; }
+.po-sep { height:1px; background:var(--bdr); margin:18px 0; }
+.po-services { display:grid; grid-template-columns:1fr 1fr; gap:10px 14px; }
+.po-service { display:flex; gap:9px; align-items:flex-start; }
+.po-dot { width:20px; height:20px; min-width:20px; border-radius:6px; background:var(--Tl); border:1.5px solid rgba(32,169,185,.3); display:flex; align-items:center; justify-content:center; margin-top:2px; color:var(--T); }
+.po-dot svg { width:10px; height:10px; }
+.po-svc-text { font-size:12.5px; color:var(--N); font-weight:500; line-height:1.5; }
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:1024px) {
+  .po-grid { grid-template-columns:1fr; }
+  .f-top { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:768px) {
+  nav .dropdown, nav > a:not(.nav-btn) { display:none; }
+  .nav-btn { display:none; }
+  .hamburger { display:flex; }
+  .sp-hero h1 { font-size:32px; }
+  .stitle { font-size:30px; }
+  .sp-hero-stats { gap:24px; }
+  .fb-item:not(.fb-cta) { display:none; }
+  .f-top { grid-template-columns:1fr; gap:32px; }
+  .sp-cta h2 { font-size:28px; }
+  .po-services { grid-template-columns:1fr; }
+}
+@media(max-width:600px) {
+  .po-services { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-w">
+    <a href="index.html" class="logo">
+      <img src="karas-chacia-legal.svg" alt="Karaś Chacia i Wspólnicy" class="logo-img">
+    </a>
+    <nav>
+      <div class="dropdown">
+        <a href="index.html#specjalizacje">Specjalizacje <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <div class="dm-label">Główne obszary</div>
+          <a href="spec_umowy-inwestycyjne.html">Umowy inwestycyjne i projekty biznesowe</a>
+          <a href="spec_prawo-it.html">Prawo IT i projekty technologiczne</a>
+          <a href="spec_spory-pfr.html">Spory z PFR i pomoc publiczna</a>
+          <a href="spec_inwestycje-budowlane.html">Inwestycje budowlane i nieruchomości</a>
+          <a href="spec_konflikty-wspolnicy.html">Konflikty między wspólnikami</a>
+          <a href="spec_spory-gospodarcze.html">Spory gospodarcze</a>
+          <a href="spec_fundacje-rodzinne.html">Fundacje rodzinne i sukcesja majątku</a>
+          <div class="dm-sep"></div>
+          <a href="pozostale-obszary.html" class="dm-highlight">Pozostałe obszary eksperckie →</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="index.html#sprawy">Sprawy <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="sprawy_subwencje-pfr.html">Subwencje PFR</a>
+          <a href="sprawy_w-investments.html">Fundusze W-Investments</a>
+          <a href="sprawy_slupy-energetyczne.html">Odszkodowania za słupy energetyczne</a>
+          <div class="dm-sep"></div>
+          <a href="index.html#sprawy" class="dm-highlight">Inne sprawy →</a>
+        </div>
+      </div>
+      <a href="sukcesy.html">Sukcesy</a>
+      <a href="publikacje.html">Publikacje</a>
+      <a href="o-nas.html">O nas</a>
+      <a href="kontakt.html" class="nav-btn">Kontakt</a>
+      <a href="https://karas-legal.amberlo.io/login/?lang=pl" class="nav-panel" target="_blank" rel="noopener">Panel Klienta</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <div class="mn-group">
+    <div class="mn-label">Specjalizacje</div>
+    <div class="mn-sub">
+      <a href="spec_umowy-inwestycyjne.html">Umowy inwestycyjne i projekty biznesowe</a>
+      <a href="spec_prawo-it.html">Prawo IT i projekty technologiczne</a>
+      <a href="spec_spory-pfr.html">Spory z PFR i pomoc publiczna</a>
+      <a href="spec_inwestycje-budowlane.html">Inwestycje budowlane i nieruchomości</a>
+      <a href="spec_konflikty-wspolnicy.html">Konflikty między wspólnikami</a>
+      <a href="spec_spory-gospodarcze.html">Spory gospodarcze</a>
+      <a href="spec_fundacje-rodzinne.html">Fundacje rodzinne i sukcesja majątku</a>
+      <a href="pozostale-obszary.html" style="color:var(--T) !important;font-weight:700 !important;">Pozostałe obszary eksperckie →</a>
+    </div>
+  </div>
+  <div class="mn-sep"></div>
+  <div class="mn-group">
+    <div class="mn-label">Sprawy</div>
+    <div class="mn-sub">
+      <a href="sprawy_subwencje-pfr.html">Subwencje PFR</a>
+      <a href="sprawy_w-investments.html">Fundusze W-Investments</a>
+      <a href="sprawy_slupy-energetyczne.html">Odszkodowania za słupy energetyczne</a>
+    </div>
+  </div>
+  <div class="mn-sep"></div>
+  <a href="sukcesy.html">Sukcesy</a>
+  <a href="publikacje.html">Publikacje</a>
+  <a href="o-nas.html">O nas</a>
+  <a href="kontakt.html" class="mn-cta">Kontakt</a>
+  <a href="https://karas-legal.amberlo.io/login/?lang=pl" target="_blank" rel="noopener" style="text-align:center;margin-top:8px;color:var(--T);border:1.5px solid var(--T);border-radius:9px;padding:11px 14px;display:block;font-weight:600;">Panel Klienta →</a>
+</div>
+
+<section class="sp-hero">
+  <div class="sp-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Strona główna</a>
+      <span class="bc-sep">›</span>
+      <a href="index.html#specjalizacje">Specjalizacje</a>
+      <span class="bc-sep">›</span>
+      <span>Pozostałe obszary eksperckie</span>
+    </div>
+    <div class="hero-chip">Obsługa prawna</div>
+    <h1>Pozostałe obszary<em> eksperckie</em></h1>
+    <p class="sp-hero-sub">Poza kluczowymi specjalizacjami kancelaria zapewnia kompleksowe wsparcie w kolejnych 10 obszarach prawa gospodarczego i cywilnego — od stałej obsługi spółek po spory z bankami i postępowania grupowe.</p>
+    <a href="kontakt.html" class="btn-t">Umów bezpłatną rozmowę →</a>
+    <div class="sp-hero-stats">
+      <div class="sp-hero-stat"><div class="n">10<em>+</em></div><div class="l">obszarów eksperckich</div></div>
+      <div class="sp-hero-stat"><div class="n">12<em>+</em></div><div class="l">lat doświadczenia</div></div>
+      <div class="sp-hero-stat"><div class="n">500<em>+</em></div><div class="l">obsługiwanych klientów</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-bg">
+  <div class="w">
+    <div class="slabel">Wszystkie obszary wsparcia</div>
+    <h2 class="stitle">Kompleksowa obsługa <em style="color:var(--T)">prawna</em></h2>
+    <p class="po-intro">Każdy z poniższych obszarów to pełnowymiarowa ekspertyza kancelarii — z wieloletnim doświadczeniem procesowym, bieżącym doradztwem i realną skutecznością w sporach i negocjacjach.</p>
+
+    <div class="po-grid">
+
+      <!-- 01 -->
+      <div class="po-card">
+        <div class="po-header">
+          <div class="po-num">01</div>
+          <div class="po-title-wrap">
+            <div class="po-title">Stała kompleksowa obsługa prawna przedsiębiorców i spółek</div>
+            <div class="po-tagline">Zapewnij swojej firmie stałe wsparcie prawne w codziennym prowadzeniu działalności.</div>
+          </div>
+        </div>
+        <div class="po-sep"></div>
+        <div class="po-services">
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przygotowanie i opiniowanie umów handlowych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przygotowanie regulaminów i dokumentów firmowych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Bieżące doradztwo dla zarządu i właścicieli</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Wsparcie prawne w bieżących sprawach spółki</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Doradztwo w zakresie RODO i ochrony danych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przygotowanie odpowiedzi na reklamacje klientów</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Dochodzenie należności i wsparcie windykacyjne</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Obsługa prawna organów spółek</span></div>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="po-card">
+        <div class="po-header">
+          <div class="po-num">02</div>
+          <div class="po-title-wrap">
+            <div class="po-title">Przekształcenia spółek i optymalizacja struktur działalności</div>
+            <div class="po-tagline">Stwórz efektywną strukturę prawną firmy i dostosuj ją do etapu rozwoju biznesu.</div>
+          </div>
+        </div>
+        <div class="po-sep"></div>
+        <div class="po-services">
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Doradztwo w wyborze optymalnej formy prawnej</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przeprowadzanie procesów przekształceń spółek</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Dokumentacja przekształceń, połączeń i podziałów</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Tworzenie struktur holdingowych i grup spółek</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Reorganizacja struktur właścicielskich</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Wsparcie prawne w reorganizacji działalności</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Dokumenty korporacyjne przy restrukturyzacji</span></div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="po-card">
+        <div class="po-header">
+          <div class="po-num">03</div>
+          <div class="po-title-wrap">
+            <div class="po-title">Konflikty między wspólnikami i spory korporacyjne</div>
+            <div class="po-tagline">Rozwiązuj konflikty wewnętrzne i zabezpieczaj stabilność spółki na każdym etapie sporu.</div>
+          </div>
+        </div>
+        <div class="po-sep"></div>
+        <div class="po-services">
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Reprezentowanie wspólników w sporach spółkowych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Doradztwo w konfliktach wspólników i zarządu</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Strategia rozwiązania konfliktów korporacyjnych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Spory dotyczące uchwał organów spółki</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Dochodzenie roszczeń między wspólnikami</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Negocjacje dotyczące wyjścia wspólnika</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przygotowanie ugód między wspólnikami</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Odpowiedzialność członków zarządu</span></div>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="po-card">
+        <div class="po-header">
+          <div class="po-num">04</div>
+          <div class="po-title-wrap">
+            <div class="po-title">Własność intelektualna, prawa autorskie i know-how</div>
+            <div class="po-tagline">Chroń wartości niematerialne swojej firmy — know-how, IP i prawa autorskie.</div>
+          </div>
+        </div>
+        <div class="po-sep"></div>
+        <div class="po-services">
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Ochrona własności intelektualnej przedsiębiorstwa</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Umowy dotyczące przeniesienia praw autorskich</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przygotowanie i negocjowanie umów licencyjnych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Zabezpieczanie know-how i tajemnicy firmy</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Umowy o zachowaniu poufności (NDA)</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Korzystanie z utworów, technologii i treści cyfrowych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Komercjalizacja praw własności intelektualnej</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Spory dotyczące naruszenia praw autorskich</span></div>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="po-card">
+        <div class="po-header">
+          <div class="po-num">05</div>
+          <div class="po-title-wrap">
+            <div class="po-title">Ochrona konkurencji i konsumentów, zwalczanie nieuczciwej konkurencji</div>
+            <div class="po-tagline">Chroń firmę przed nieuczciwymi działaniami rynkowymi i bezpiecznie zarządzaj relacjami z konsumentami.</div>
+          </div>
+        </div>
+        <div class="po-sep"></div>
+        <div class="po-services">
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Spory dotyczące czynów nieuczciwej konkurencji</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Strategia ochrony interesów przedsiębiorcy na rynku</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Roszczenia za naruszenie zasad uczciwej konkurencji</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Ochrona renomy, marki i know-how przed konkurencją</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Doradztwo w zakresie prawa konsumenckiego</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Regulaminy sprzedaży i świadczenia usług</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Klauzule umowne w relacjach z konsumentami</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Naruszenia zbiorowych interesów konsumentów</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Reprezentacja w sporach reklamacyjnych z konsumentami</span></div>
+        </div>
+      </div>
+
+      <!-- 06 -->
+      <div class="po-card">
+        <div class="po-header">
+          <div class="po-num">06</div>
+          <div class="po-title-wrap">
+            <div class="po-title">Zamówienia publiczne</div>
+            <div class="po-tagline">Bezpiecznie przygotuj firmę do udziału w przetargach i postępowaniach o zamówienia publiczne.</div>
+          </div>
+        </div>
+        <div class="po-sep"></div>
+        <div class="po-services">
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Doradztwo przy przygotowaniu ofert przetargowych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Analiza dokumentacji przetargowej</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przygotowanie pytań do SWZ</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Reprezentowanie wykonawców w postępowaniach</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Odwołania przed Krajową Izbą Odwoławczą (KIO)</span></div>
+        </div>
+      </div>
+
+      <!-- 07 -->
+      <div class="po-card">
+        <div class="po-header">
+          <div class="po-num">07</div>
+          <div class="po-title-wrap">
+            <div class="po-title">Ochrona dóbr osobistych</div>
+            <div class="po-tagline">Chroń reputację, prywatność i dobre imię — zarówno w mediach, jak i w internecie.</div>
+          </div>
+        </div>
+        <div class="po-sep"></div>
+        <div class="po-services">
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Doradztwo w sprawach naruszenia dóbr osobistych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Reprezentacja w sporach o ochronę reputacji</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przygotowanie wezwań do zaprzestania naruszeń</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Roszczenia o przeprosiny, sprostowanie, odszkodowanie</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Ochrona reputacji w mediach i internecie</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Usuwanie naruszających treści z internetu</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Postępowania sądowe o naruszenie dóbr osobistych</span></div>
+        </div>
+      </div>
+
+      <!-- 08 -->
+      <div class="po-card">
+        <div class="po-header">
+          <div class="po-num">08</div>
+          <div class="po-title-wrap">
+            <div class="po-title">Spory z bankami i instytucjami finansowymi</div>
+            <div class="po-tagline">Chroń swoje interesy w sporach z bankami — w tym dotyczących kredytów CHF, EUR i WIBOR.</div>
+          </div>
+        </div>
+        <div class="po-sep"></div>
+        <div class="po-services">
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Sprawy dotyczące kredytów walutowych (CHF, EUR)</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Reprezentacja klientów w sporach z bankami</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Analiza umów bankowych i dochodzenie roszczeń</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Sprawy dotyczące kredytów opartych o WIBOR</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Spory dotyczące produktów inwestycyjnych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Roszczenia uczestników funduszy inwestycyjnych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Spory z domami maklerskimi i dystrybutorami</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Sprawy dotyczące missellingu produktów finansowych</span></div>
+        </div>
+      </div>
+
+      <!-- 09 -->
+      <div class="po-card">
+        <div class="po-header">
+          <div class="po-num">09</div>
+          <div class="po-title-wrap">
+            <div class="po-title">Postępowania grupowe i spory zbiorowe</div>
+            <div class="po-tagline">Dochodź roszczeń wspólnie z innymi poszkodowanymi — skuteczniej i efektywniej kosztowo.</div>
+          </div>
+        </div>
+        <div class="po-sep"></div>
+        <div class="po-services">
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przygotowanie i prowadzenie postępowań grupowych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Reprezentowanie członków grupy w postępowaniach</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przygotowanie pozwów grupowych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Koordynacja działań uczestników postępowania</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Spory zbiorowe przeciwko instytucjom finansowym</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Roszczenia wielu poszkodowanych</span></div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="po-card">
+        <div class="po-header">
+          <div class="po-num">10</div>
+          <div class="po-title-wrap">
+            <div class="po-title">Odszkodowania</div>
+            <div class="po-tagline">Dochodź odszkodowań za szkody majątkowe z działalności gospodarczej i niewykonanych umów.</div>
+          </div>
+        </div>
+        <div class="po-sep"></div>
+        <div class="po-services">
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Dochodzenie roszczeń za szkody majątkowe</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Roszczenia z niewykonanych lub wadliwie wykonanych umów</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Reprezentacja w sporach o naprawienie szkody</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Przygotowanie strategii dochodzenia roszczeń</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Reprezentacja w negocjacjach ugodowych</span></div>
+          <div class="po-service"><div class="po-dot"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9.5 10,2.5"/></svg></div><span class="po-svc-text">Dochodzenie roszczeń przed sądami powszechnymi</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="sp-cta">
+  <div class="sp-cta-inner">
+    <h2>Potrzebujesz wsparcia prawnego?</h2>
+    <p>Zadzwoń lub napisz — ocenimy Twoją sytuację podczas bezpłatnej rozmowy wstępnej i dobierzemy odpowiedni obszar ekspertyzy.</p>
+    <div class="sp-cta-btns">
+      <a href="kontakt.html" class="btn-t">Umów bezpłatną rozmowę →</a>
+      <a href="tel:+48222993118" class="btn-g">📞 22 299 31 18</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-top">
+    <div>
+      <div class="f-logo-wrap">
+        <img src="logo_transparent.png" alt="Karaś Chacia i Wspólnicy" class="f-logo-img">
+      </div>
+      <div class="f-desc">Od 2014 roku wspieramy przedsiębiorców w prowadzeniu, rozwijaniu i zabezpieczaniu ich biznesów. Łączymy wiedzę prawną z rozumieniem realiów biznesowych.</div>
+      <div class="f-contacts">
+        <div class="f-c">📍 al. Jerozolimskie 181A, 02-222 Warszawa</div>
+        <div class="f-c">📞 <a href="tel:+48222993118">22 299 31 18</a></div>
+        <div class="f-c">✉ <a href="mailto:kancelaria@karas-legal.com">kancelaria@karas-legal.com</a></div>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Specjalizacje</h4>
+      <ul>
+        <li><a href="spec_umowy-inwestycyjne.html">Umowy inwestycyjne</a></li>
+        <li><a href="spec_prawo-it.html">Prawo IT</a></li>
+        <li><a href="spec_spory-pfr.html">Spory z PFR</a></li>
+        <li><a href="spec_inwestycje-budowlane.html">Inwestycje budowlane</a></li>
+        <li><a href="spec_konflikty-wspolnicy.html">Konflikty korporacyjne</a></li>
+        <li><a href="spec_spory-gospodarcze.html">Spory gospodarcze</a></li>
+        <li><a href="spec_fundacje-rodzinne.html">Fundacje rodzinne</a></li>
+        <li><a href="pozostale-obszary.html">Pozostałe obszary</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Sprawy</h4>
+      <ul>
+        <li><a href="sprawy_subwencje-pfr.html">Subwencje PFR</a></li>
+        <li><a href="sprawy_w-investments.html">Fundusze W-Investments</a></li>
+        <li><a href="sprawy_slupy-energetyczne.html">Słupy energetyczne</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Kancelaria</h4>
+      <ul>
+        <li><a href="o-nas.html">O nas</a></li>
+        <li><a href="sukcesy.html">Sukcesy</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2014–2026 Karaś Chacia i Wspólnicy. Wszelkie prawa zastrzeżone.</span>
+    <div class="f-links">
+      <a href="#">Polityka prywatności</a>
+      <a href="#">Zastrzeżenia prawne</a>
+    </div>
+  </div>
+</footer>
+
+<div class="float-bar">
+  <a href="tel:+48222993118" class="fb-item"><span class="icon">📞</span><div><div>22 299 31 18</div><div class="label">Zadzwoń teraz</div></div></a>
+  <a href="mailto:kancelaria@karas-legal.com" class="fb-item"><span class="icon">✉</span><div><div>kancelaria@karas-legal.com</div><div class="label">Napisz do nas</div></div></a>
+  <a href="kontakt.html" class="fb-item fb-cta">Umów bezpłatną rozmowę wstępną →</a>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+</body>
+</html>
