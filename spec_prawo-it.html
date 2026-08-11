@@ -539,11 +539,16 @@ footer { background:var(--N); padding-bottom:80px; }
 .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
 .benefit-card{background:#fff;border-radius:18px;padding:32px 28px;border:1.5px solid var(--bdr);transition:all .22s;}
 .benefit-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.12);transform:translateY(-2px);}
-.bc-icon{font-size:36px;margin-bottom:18px;line-height:1;}
+.bc-icon{width:48px;height:48px;border-radius:12px;background:var(--Tl);border:1.5px solid rgba(32,169,185,.25);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--T);}
 .bc-title{font-size:18px;font-weight:800;color:var(--N);margin-bottom:12px;line-height:1.3;}
 .bc-desc{font-size:14.5px;color:var(--mut);line-height:1.7;}
+.sp-services{display:flex;flex-direction:column;gap:0;margin-top:32px;border:1.5px solid var(--bdr);border-radius:14px;overflow:hidden;}
+.sp-service{display:flex;gap:14px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--bdr);background:#fff;}
+.sp-service:last-child{border-bottom:none;}
+.ss-icon{color:var(--T);font-weight:700;font-size:15px;flex-shrink:0;}
+.ss-text{font-size:14.5px;color:var(--N);font-weight:500;line-height:1.4;}
 @media(max-width:1024px){.benefit-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}.benefit-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -638,16 +643,17 @@ footer { background:var(--N); padding-bottom:80px; }
 </section>
 
 
+
 <!-- KIEDY SIĘ ZGŁOSIĆ -->
 <section class="sec sec-bg">
   <div class="w">
     <div class="slabel">Kiedy warto się zgłosić</div>
     <h2 class="stitle">Rozpoznajesz swoją sytuację?</h2>
     <div class="trigger-grid">
-      <div class="trigger-item"><div class="ti-num">01</div><div class="ti-text">Wdrażasz lub kupujesz system informatyczny i chcesz się zabezpieczyć kontraktowo</div></div>
-      <div class="trigger-item"><div class="ti-num">02</div><div class="ti-text">Dostawca IT nie dostarczył tego co obiecał lub projekt utknął w martwym punkcie</div></div>
+      <div class="trigger-item"><div class="ti-num">01</div><div class="ti-text">Wdrażasz lub kupujesz system IT i chcesz się zabezpieczyć kontraktowo</div></div>
+      <div class="trigger-item"><div class="ti-num">02</div><div class="ti-text">Dostawca IT nie dostarczył tego co obiecał lub projekt utknął</div></div>
       <div class="trigger-item"><div class="ti-num">03</div><div class="ti-text">Masz spór o prawa autorskie do oprogramowania lub własność intelektualną</div></div>
-      <div class="trigger-item"><div class="ti-num">04</div><div class="ti-text">Uruchamiasz platformę cyfrową lub usługę SaaS i potrzebujesz regulaminów i umów</div></div>
+      <div class="trigger-item"><div class="ti-num">04</div><div class="ti-text">Uruchamiasz platformę cyfrową lub usługę SaaS i potrzebujesz umów i regulaminów</div></div>
     </div>
   </div>
 </section>
@@ -659,17 +665,17 @@ footer { background:var(--N); padding-bottom:80px; }
     <h2 class="stitle">Wartość, którą dostarczamy</h2>
     <div class="benefit-grid">
       <div class="benefit-card">
-        <div class="bc-icon">💻</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
         <h3 class="bc-title">Umowy IT, które działają — nie tylko na papierze</h3>
         <p class="bc-desc">Przygotowujemy kontrakty dopasowane do realiów projektów technologicznych. Wiesz co kupujesz, co Ci się należy i co robić, gdy coś pójdzie nie tak.</p>
       </div>
       <div class="benefit-card">
-        <div class="bc-icon">🔐</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
         <h3 class="bc-title">Chronimy Twój kod, know-how i własność intelektualną</h3>
-        <p class="bc-desc">Kod, algorytmy, dane — to Twój majątek. Dbamy o to, żeby odpowiednie zapisy w umowach chroniły go przed przejęciem przez dostawcę lub pracownika.</p>
+        <p class="bc-desc">Kod, algorytmy, dane — to Twój majątek. Dbamy o to, żeby odpowiednie zapisy w umowach chroniły go przed przejęciem przez dostawcę.</p>
       </div>
       <div class="benefit-card">
-        <div class="bc-icon">⚡</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <h3 class="bc-title">Działasz sprawnie, nawet gdy projekt idzie źle</h3>
         <p class="bc-desc">Gdy dostawca IT zawodzi, wiesz jak reagować i masz prawnika gotowego działać. Pomagamy rozwiązać spór szybko i z jak najmniejszymi stratami.</p>
       </div>
@@ -681,19 +687,19 @@ footer { background:var(--N); padding-bottom:80px; }
 <section class="sec sec-bg">
   <div class="w">
     <div class="slabel">Jak pomagamy</div>
-    <h2 class="stitle">Konkretne działania dla Twojej sprawy</h2>
-    <p class="ssub">Zapewniamy kompleksowe wsparcie prawne w projektach IT i technologicznych — od przygotowania umów wdrożeniowych i licencyjnych, przez doradztwo przy realizacji projektów, aż po ochronę własności intelektualnej i rozwiązywanie sporów.</p>
+    <h2 class="stitle">Zakres wsparcia</h2>
+    <p class="ssub">Zapewniamy kompleksowe wsparcie prawne w projektach IT — od przygotowania umów wdrożeniowych i licencyjnych, przez doradztwo przy realizacji, aż po ochronę własności intelektualnej i rozwiązywanie sporów.</p>
     <div class="sp-services">
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowujemy i negocjujemy umowy IT — wdrożeniowe, serwisowe, utrzymaniowe</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Opracowujemy umowy wdrożeniowe systemów informatycznych z precyzyjnym podziałem odpowiedzialności</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Tworzymy umowy licencyjne na oprogramowanie — jasne prawa, jasne obowiązki stron</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradzamy prawnie przy realizacji projektów technologicznych na każdym etapie</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowujemy umowy SaaS i cloud computing — zabezpieczamy Twoje dane i dostęp do usług</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Chronimy prawa autorskie do oprogramowania — precyzyjnie określamy kto jest właścicielem czego</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Tworzymy regulaminy usług cyfrowych i platform internetowych zgodne z obowiązującym prawem</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentujemy Cię w sporach dotyczących projektów IT — egzekwujemy to co zostało obiecane</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradzamy prawnie przy wdrażaniu nowych technologii — bez zaskoczeń regulacyjnych</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Zabezpieczamy know-how i tajemnicę przedsiębiorstwa — Twoja przewaga konkurencyjna zostaje Twoja</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Umowy wdrożeniowe systemów IT</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Umowy serwisowe i utrzymaniowe</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Umowy licencyjne na oprogramowanie</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo przy projektach technologicznych</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Umowy SaaS i cloud computing</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Ochrona praw autorskich do oprogramowania</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Regulaminy usług cyfrowych i platform</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentacja w sporach IT</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo przy wdrażaniu nowych technologii</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Ochrona know-how i tajemnicy przedsiębiorstwa</div></div>
     </div>
   </div>
 </section>

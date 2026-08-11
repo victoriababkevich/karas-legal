@@ -539,11 +539,16 @@ footer { background:var(--N); padding-bottom:80px; }
 .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
 .benefit-card{background:#fff;border-radius:18px;padding:32px 28px;border:1.5px solid var(--bdr);transition:all .22s;}
 .benefit-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.12);transform:translateY(-2px);}
-.bc-icon{font-size:36px;margin-bottom:18px;line-height:1;}
+.bc-icon{width:48px;height:48px;border-radius:12px;background:var(--Tl);border:1.5px solid rgba(32,169,185,.25);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--T);}
 .bc-title{font-size:18px;font-weight:800;color:var(--N);margin-bottom:12px;line-height:1.3;}
 .bc-desc{font-size:14.5px;color:var(--mut);line-height:1.7;}
+.sp-services{display:flex;flex-direction:column;gap:0;margin-top:32px;border:1.5px solid var(--bdr);border-radius:14px;overflow:hidden;}
+.sp-service{display:flex;gap:14px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--bdr);background:#fff;}
+.sp-service:last-child{border-bottom:none;}
+.ss-icon{color:var(--T);font-weight:700;font-size:15px;flex-shrink:0;}
+.ss-text{font-size:14.5px;color:var(--N);font-weight:500;line-height:1.4;}
 @media(max-width:1024px){.benefit-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}.benefit-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -638,15 +643,16 @@ footer { background:var(--N); padding-bottom:80px; }
 </section>
 
 
+
 <!-- KIEDY SIĘ ZGŁOSIĆ -->
 <section class="sec sec-bg">
   <div class="w">
     <div class="slabel">Kiedy warto się zgłosić</div>
     <h2 class="stitle">Rozpoznajesz swoją sytuację?</h2>
     <div class="trigger-grid">
-      <div class="trigger-item"><div class="ti-num">01</div><div class="ti-text">Planujesz sprzedaż lub zakup firmy albo udziałów i chcesz się dobrze zabezpieczyć</div></div>
-      <div class="trigger-item"><div class="ti-num">02</div><div class="ti-text">Wchodzisz w dużą transakcję inwestycyjną i nie wiesz jakie ryzyka ze sobą niesie</div></div>
-      <div class="trigger-item"><div class="ti-num">03</div><div class="ti-text">Negocjujesz umowę inwestycyjną i chcesz mieć pewność, że zapisy są dla Ciebie korzystne</div></div>
+      <div class="trigger-item"><div class="ti-num">01</div><div class="ti-text">Planujesz sprzedaż lub zakup firmy albo udziałów</div></div>
+      <div class="trigger-item"><div class="ti-num">02</div><div class="ti-text">Wchodzisz w dużą transakcję i nie wiesz jakie ryzyka ze sobą niesie</div></div>
+      <div class="trigger-item"><div class="ti-num">03</div><div class="ti-text">Negocjujesz umowę inwestycyjną i chcesz mieć pewność, że zapisy są korzystne</div></div>
       <div class="trigger-item"><div class="ti-num">04</div><div class="ti-text">Projekt inwestycyjny utknął w sporze z drugą stroną transakcji</div></div>
     </div>
   </div>
@@ -659,17 +665,17 @@ footer { background:var(--N); padding-bottom:80px; }
     <h2 class="stitle">Wartość, którą dostarczamy</h2>
     <div class="benefit-grid">
       <div class="benefit-card">
-        <div class="bc-icon">🔍</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
         <h3 class="bc-title">Wchodzisz w transakcję z otwartymi oczami</h3>
         <p class="bc-desc">Audyt prawny przed podpisaniem ujawnia ryzyka zanim staną się problemem. Wiesz dokładnie w co wchodzisz — bez nieprzyjemnych zaskoczeń po fakcie.</p>
       </div>
       <div class="benefit-card">
-        <div class="bc-icon">📝</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <h3 class="bc-title">Umowa, która naprawdę Cię zabezpiecza</h3>
         <p class="bc-desc">Przygotowujemy dokumenty transakcyjne, które chronią Cię na każdym etapie — nie tylko przy podpisaniu, ale też gdy coś pójdzie nie tak.</p>
       </div>
       <div class="benefit-card">
-        <div class="bc-icon">🤝</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
         <h3 class="bc-title">Negocjujesz z pozycji siły</h3>
         <p class="bc-desc">Towarzyszymy Ci przy stole negocjacyjnym i dbamy o to, żebyś wychodził z każdej rozmowy z jak najlepszymi warunkami dla siebie.</p>
       </div>
@@ -681,19 +687,19 @@ footer { background:var(--N); padding-bottom:80px; }
 <section class="sec sec-bg">
   <div class="w">
     <div class="slabel">Jak pomagamy</div>
-    <h2 class="stitle">Konkretne działania dla Twojej sprawy</h2>
-    <p class="ssub">Zapewniamy kompleksowe wsparcie prawne w projektach inwestycyjnych — od audytu prawnego i strukturyzacji, przez przygotowanie dokumentacji i negocjacje, aż po koordynację realizacji transakcji i rozwiązywanie sporów.</p>
+    <h2 class="stitle">Zakres wsparcia</h2>
+    <p class="ssub">Zapewniamy kompleksowe wsparcie prawne w projektach inwestycyjnych — od audytu prawnego i strukturyzacji, przez przygotowanie dokumentacji, aż po zamknięcie transakcji i rozwiązywanie sporów.</p>
     <div class="sp-services">
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przeprowadzamy pełny audyt prawny firmy lub projektu zanim podejmiesz decyzję (due diligence)</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradzamy jak zbudować optymalną strukturę transakcji, żeby minimalizować ryzyka</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowujemy i negocjujemy umowy inwestycyjne — każdy zapis w Twoim interesie</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Opracowujemy kompletną dokumentację transakcyjną — nic Cię nie zaskoczy</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Wspieramy przy sprzedaży i zakupie przedsiębiorstw lub udziałów w spółkach</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentujemy Cię w negocjacjach — masz prawnika, który zna język drugiej strony</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Zapewniamy wsparcie prawne na każdym etapie realizacji projektu inwestycyjnego</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Projektujemy strukturę prawną projektów biznesowych dopasowaną do Twoich celów</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Koordynujemy prawne aspekty całej transakcji — od due diligence po zamknięcie</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Rozwiązujemy spory wynikające z realizacji projektów inwestycyjnych — ugodowo i sądownie</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Audyt prawny (due diligence)</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Strukturyzacja transakcji inwestycyjnych</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowanie i negocjacje umów inwestycyjnych</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Dokumentacja transakcyjna</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Sprzedaż i zakup przedsiębiorstw i udziałów</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentacja w negocjacjach</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Wsparcie prawne przy realizacji projektu</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Projektowanie struktury prawnej projektu</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Koordynacja transakcji od due diligence po zamknięcie</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Rozwiązywanie sporów z transakcji inwestycyjnych</div></div>
     </div>
   </div>
 </section>

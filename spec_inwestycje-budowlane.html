@@ -539,11 +539,16 @@ footer { background:var(--N); padding-bottom:80px; }
 .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
 .benefit-card{background:#fff;border-radius:18px;padding:32px 28px;border:1.5px solid var(--bdr);transition:all .22s;}
 .benefit-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.12);transform:translateY(-2px);}
-.bc-icon{font-size:36px;margin-bottom:18px;line-height:1;}
+.bc-icon{width:48px;height:48px;border-radius:12px;background:var(--Tl);border:1.5px solid rgba(32,169,185,.25);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--T);}
 .bc-title{font-size:18px;font-weight:800;color:var(--N);margin-bottom:12px;line-height:1.3;}
 .bc-desc{font-size:14.5px;color:var(--mut);line-height:1.7;}
+.sp-services{display:flex;flex-direction:column;gap:0;margin-top:32px;border:1.5px solid var(--bdr);border-radius:14px;overflow:hidden;}
+.sp-service{display:flex;gap:14px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--bdr);background:#fff;}
+.sp-service:last-child{border-bottom:none;}
+.ss-icon{color:var(--T);font-weight:700;font-size:15px;flex-shrink:0;}
+.ss-text{font-size:14.5px;color:var(--N);font-weight:500;line-height:1.4;}
 @media(max-width:1024px){.benefit-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}.benefit-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -638,14 +643,15 @@ footer { background:var(--N); padding-bottom:80px; }
 </section>
 
 
+
 <!-- KIEDY SIĘ ZGŁOSIĆ -->
 <section class="sec sec-bg">
   <div class="w">
     <div class="slabel">Kiedy warto się zgłosić</div>
     <h2 class="stitle">Rozpoznajesz swoją sytuację?</h2>
     <div class="trigger-grid">
-      <div class="trigger-item"><div class="ti-num">01</div><div class="ti-text">Wchodzisz w duży projekt budowlany i chcesz się zabezpieczyć kontraktowo od początku</div></div>
-      <div class="trigger-item"><div class="ti-num">02</div><div class="ti-text">Wykonawca nie wywiązuje się z umowy, opóźnia prace lub żąda dodatkowych pieniędzy</div></div>
+      <div class="trigger-item"><div class="ti-num">01</div><div class="ti-text">Wchodzisz w duży projekt budowlany i chcesz się zabezpieczyć kontraktowo</div></div>
+      <div class="trigger-item"><div class="ti-num">02</div><div class="ti-text">Wykonawca nie wywiązuje się z umowy lub żąda dodatkowych pieniędzy</div></div>
       <div class="trigger-item"><div class="ti-num">03</div><div class="ti-text">Klient odmawia zapłaty za wykonane roboty budowlane</div></div>
       <div class="trigger-item"><div class="ti-num">04</div><div class="ti-text">Na budowie wybuchł spór i nie wiesz jak chronić swoje interesy</div></div>
     </div>
@@ -659,17 +665,17 @@ footer { background:var(--N); padding-bottom:80px; }
     <h2 class="stitle">Wartość, którą dostarczamy</h2>
     <div class="benefit-grid">
       <div class="benefit-card">
-        <div class="bc-icon">📋</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <h3 class="bc-title">Umowa, która chroni — nie tylko na papierze</h3>
         <p class="bc-desc">Przygotowujemy i negocjujemy kontrakty budowlane, które realnie zabezpieczają Twoje interesy na każdym etapie — nie tylko spełniają formalności.</p>
       </div>
       <div class="benefit-card">
-        <div class="bc-icon">🏗️</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
         <h3 class="bc-title">Masz prawnika, gdy budowa się komplikuje</h3>
         <p class="bc-desc">Opóźnienia, zmiany zakresu, spory z podwykonawcami — wiesz jak reagować natychmiast, zanim sytuacja wymknie się spod kontroli.</p>
       </div>
       <div class="benefit-card">
-        <div class="bc-icon">💼</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
         <h3 class="bc-title">Odzyskujesz pieniądze za wykonaną pracę</h3>
         <p class="bc-desc">Dochodzenie zapłaty za roboty budowlane to nasza specjalność. Skutecznie reprezentujemy zarówno inwestorów jak i wykonawców.</p>
       </div>
@@ -681,19 +687,19 @@ footer { background:var(--N); padding-bottom:80px; }
 <section class="sec sec-bg">
   <div class="w">
     <div class="slabel">Jak pomagamy</div>
-    <h2 class="stitle">Konkretne działania dla Twojej sprawy</h2>
-    <p class="ssub">Wspieramy inwestorów i wykonawców na każdym etapie inwestycji budowlanej — od przygotowania i negocjacji umów, przez doradztwo w trakcie realizacji, aż po dochodzenie roszczeń w sporach budowlanych.</p>
+    <h2 class="stitle">Zakres wsparcia</h2>
+    <p class="ssub">Wspieramy inwestorów i wykonawców na każdym etapie inwestycji budowlanej — od przygotowania umów, przez doradztwo w trakcie realizacji, aż po dochodzenie roszczeń.</p>
     <div class="sp-services">
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowujemy i negocjujemy umowy o roboty budowlane — wiesz co podpisujesz i co Cię chroni</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Weryfikujemy umowy z inwestorami, generalnymi wykonawcami i podwykonawcami przed podpisaniem</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Analizujemy ryzyka kontraktowe z wyprzedzeniem — kary umowne, odpowiedzialność, terminy</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradzamy prawnie na każdym etapie realizacji inwestycji — stałe wsparcie, nie tylko w kryzysie</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Pomagamy reagować gdy pojawiają się kryzysy: opóźnienia, zmiany zakresu, konflikty na budowie</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Chronimy przed nieuzasadnionymi karami umownymi i nieuczciwymi klauzulami kontraktowymi</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Wspieramy w renegocjacji i bezpiecznym wyjściu z niekorzystnych kontraktów</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradzamy jak bezpiecznie wstrzymać prace lub zejść z budowy bez konsekwencji prawnych</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Dochodzimy zapłaty za wykonane roboty — windykacja i reprezentacja w sporach</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentujemy inwestorów i wykonawców w sporach budowlanych — w sądzie i poza nim</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Negocjacje i przygotowanie umów o roboty budowlane</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Weryfikacja kontraktów przed podpisaniem</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Analiza ryzyk, kar umownych i terminów</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Doradztwo prawne na każdym etapie inwestycji</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reagowanie na kryzysy i opóźnienia na budowie</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Ochrona przed nieuzasadnionymi karami umownymi</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Renegocjacja i wyjście z niekorzystnych kontraktów</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Bezpieczne zejście z budowy bez konsekwencji</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Dochodzenie zapłaty za roboty budowlane</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentacja w sporach budowlanych</div></div>
     </div>
   </div>
 </section>

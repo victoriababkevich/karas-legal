@@ -539,11 +539,16 @@ footer { background:var(--N); padding-bottom:80px; }
 .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
 .benefit-card{background:#fff;border-radius:18px;padding:32px 28px;border:1.5px solid var(--bdr);transition:all .22s;}
 .benefit-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.12);transform:translateY(-2px);}
-.bc-icon{font-size:36px;margin-bottom:18px;line-height:1;}
+.bc-icon{width:48px;height:48px;border-radius:12px;background:var(--Tl);border:1.5px solid rgba(32,169,185,.25);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--T);}
 .bc-title{font-size:18px;font-weight:800;color:var(--N);margin-bottom:12px;line-height:1.3;}
 .bc-desc{font-size:14.5px;color:var(--mut);line-height:1.7;}
+.sp-services{display:flex;flex-direction:column;gap:0;margin-top:32px;border:1.5px solid var(--bdr);border-radius:14px;overflow:hidden;}
+.sp-service{display:flex;gap:14px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--bdr);background:#fff;}
+.sp-service:last-child{border-bottom:none;}
+.ss-icon{color:var(--T);font-weight:700;font-size:15px;flex-shrink:0;}
+.ss-text{font-size:14.5px;color:var(--N);font-weight:500;line-height:1.4;}
 @media(max-width:1024px){.benefit-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}}.benefit-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -638,6 +643,7 @@ footer { background:var(--N); padding-bottom:80px; }
 </section>
 
 
+
 <!-- KIEDY SIĘ ZGŁOSIĆ -->
 <section class="sec sec-bg">
   <div class="w">
@@ -646,8 +652,8 @@ footer { background:var(--N); padding-bottom:80px; }
     <div class="trigger-grid">
       <div class="trigger-item"><div class="ti-num">01</div><div class="ti-text">Kontrahent nie zapłacił za dostarczone towary lub wykonane usługi</div></div>
       <div class="trigger-item"><div class="ti-num">02</div><div class="ti-text">Otrzymałeś pozew lub groźbę pozwu od partnera biznesowego</div></div>
-      <div class="trigger-item"><div class="ti-num">03</div><div class="ti-text">Umowa handlowa nie jest realizowana zgodnie z ustaleniami i ponosisz przez to straty</div></div>
-      <div class="trigger-item"><div class="ti-num">04</div><div class="ti-text">Twoja firma weszła w spór, który zaczyna zagrażać bieżącej działalności</div></div>
+      <div class="trigger-item"><div class="ti-num">03</div><div class="ti-text">Umowa handlowa nie jest realizowana i ponosisz przez to straty</div></div>
+      <div class="trigger-item"><div class="ti-num">04</div><div class="ti-text">Twoja firma weszła w spór, który zaczyna zagrażać działalności</div></div>
     </div>
   </div>
 </section>
@@ -659,17 +665,17 @@ footer { background:var(--N); padding-bottom:80px; }
     <h2 class="stitle">Wartość, którą dostarczamy</h2>
     <div class="benefit-grid">
       <div class="benefit-card">
-        <div class="bc-icon">⚡</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <h3 class="bc-title">Działasz, nie czekasz</h3>
         <p class="bc-desc">Zamiast liczyć na to, że kontrahent się opamięta, budujesz realną presję prawną. Zaczynamy analizować sprawę i działać od pierwszego dnia.</p>
       </div>
       <div class="benefit-card">
-        <div class="bc-icon">🎯</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <h3 class="bc-title">Strategia, nie chaotyczna reakcja</h3>
-        <p class="bc-desc">Każda sprawa gospodarcza ma swoją najlepszą ścieżkę. Analizujemy sytuację i proponujemy rozwiązanie, które maksymalizuje Twoje szanse i minimalizuje koszty.</p>
+        <p class="bc-desc">Każda sprawa gospodarcza ma swoją najlepszą ścieżkę. Analizujemy sytuację i proponujemy rozwiązanie, które maksymalizuje Twoje szanse.</p>
       </div>
       <div class="benefit-card">
-        <div class="bc-icon">🤝</div>
+        <div class="bc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h3 class="bc-title">Ugoda albo wyrok — Ty decydujesz</h3>
         <p class="bc-desc">Walczymy o najlepszy wynik — czy to przez skuteczną negocjację ugodową, czy przez pełne postępowanie sądowe lub arbitrażowe.</p>
       </div>
@@ -681,19 +687,19 @@ footer { background:var(--N); padding-bottom:80px; }
 <section class="sec sec-bg">
   <div class="w">
     <div class="slabel">Jak pomagamy</div>
-    <h2 class="stitle">Konkretne działania dla Twojej sprawy</h2>
-    <p class="ssub">Pomagamy przedsiębiorcom w sporach z kontrahentami wynikających z relacji biznesowych — dotyczących wykonania umów handlowych, odpowiedzialności kontraktowej, kar umownych i rozliczeń. Działamy szybko i z pełnym przygotowaniem.</p>
+    <h2 class="stitle">Zakres wsparcia</h2>
+    <p class="ssub">Pomagamy przedsiębiorcom w sporach z kontrahentami wynikających z relacji biznesowych — dotyczących wykonania umów, odpowiedzialności kontraktowej i rozliczeń. Działamy szybko.</p>
     <div class="sp-services">
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentujemy Cię w sporach sądowych i arbitrażowych — masz doświadczonego prawnika po swojej stronie</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Dochodzimy Twoich należności z umów handlowych — skutecznie i bez zbędnej zwłoki</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Bronimy Twojej firmy gdy jesteś pozwany — analizujemy sprawę i budujemy linię obrony</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Dochodzimy kar umownych i odszkodowań, które Ci się należą</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Prowadzimy spory o niewykonanie lub nienależyte wykonanie kontraktów</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Przygotowujemy strategię procesową dopasowaną do Twojej sytuacji i celów biznesowych</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Negocjujemy ugody i prowadzimy mediacje — szybkie porozumienie, gdy to korzystniejsze niż sąd</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Zabezpieczamy Twoje roszczenia na czas postępowania sądowego</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Prowadzimy spory o rozliczenia i wynagrodzenia między kontrahentami</div></div>
-      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Pomagamy przy rozwiązaniu lub odstąpieniu od umów handlowych, które przestały działać</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Reprezentacja w sporach sądowych i arbitrażowych</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Dochodzenie należności z umów handlowych</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Obrona w postępowaniach sądowych</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Dochodzenie kar umownych i odszkodowań</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Spory o wykonanie i niewykonanie kontraktów</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Strategia procesowa dopasowana do celu</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Negocjacje ugodowe i mediacje</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Zabezpieczenie roszczeń na czas postępowania</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Spory o rozliczenia między kontrahentami</div></div>
+      <div class="sp-service"><div class="ss-icon">✓</div><div class="ss-text">Rozwiązanie i odstąpienie od umów handlowych</div></div>
     </div>
   </div>
 </section>
