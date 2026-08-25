@@ -159,7 +159,10 @@ footer { background:var(--N); padding-bottom:80px; }
 
 /* ══ SUBPAGE HERO ══ */
 .sp-hero { background:linear-gradient(135deg,#091C2E 0%,#112840 60%,#0E3050 100%); padding:72px 0 64px; position:relative; overflow:hidden; }
-.sp-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 40%,rgba(32,169,185,.15) 0%,transparent 60%); pointer-events:none; }
+.sp-hero-video { position:absolute; inset:0; z-index:0; }
+.sp-hero-video img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.sp-hero-video::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(9,28,46,.85) 0%,rgba(17,40,64,.80) 60%,rgba(14,48,80,.75) 100%); z-index:1; }
+.sp-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 40%,rgba(32,169,185,.15) 0%,transparent 60%); pointer-events:none; z-index:2; }
 .sp-hero-inner { max-width:1200px; margin:0 auto; padding:0 28px; position:relative; z-index:3; display:grid; grid-template-columns:1fr 340px; gap:64px; align-items:center; }
 .sp-hero-left { grid-column:1; }
 .breadcrumb { font-size:13px; color:rgba(255,255,255,.4); margin-bottom:22px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
@@ -319,6 +322,7 @@ footer { background:var(--N); padding-bottom:80px; }
 </div>
 
 <section class="sp-hero">
+  <div class="sp-hero-video"><img src="images/pozostale-obszary.jpg" alt="Obszary prawa kancelarii" style="width:100%;height:100%;object-fit:cover;object-position:center;"></div>
   <div class="sp-hero-inner">
     <div class="sp-hero-left">
       <div class="breadcrumb">
