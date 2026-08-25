@@ -175,6 +175,20 @@ nav > a.active { color:var(--T); }
 .pub-placeholder h3{font-size:22px;font-weight:800;color:var(--N);margin-bottom:12px;}
 .pub-placeholder p{font-size:16px;color:var(--mut);max-width:460px;margin:0 auto;}
 
+/* ══ NEWS LIST ══ */
+.news-list { display:flex; flex-direction:column; margin-top:44px; }
+.news-item { padding:40px 0; border-bottom:1px solid var(--bdr); }
+.news-item:last-child { border-bottom:none; }
+.news-meta { display:flex; align-items:center; gap:12px; margin-bottom:16px; flex-wrap:wrap; }
+.news-tag { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--T); background:var(--Tl); padding:4px 12px; border-radius:20px; }
+.news-date { font-size:13px; color:var(--mut); font-weight:500; }
+.news-title { font-size:24px; font-weight:800; color:var(--N); line-height:1.3; margin-bottom:14px; letter-spacing:-.3px; }
+.news-title a { color:inherit; transition:color .2s; }
+.news-title a:hover { color:var(--T); }
+.news-excerpt { font-size:15.5px; color:var(--mut); line-height:1.75; max-width:820px; margin-bottom:20px; }
+.news-link { font-size:14px; font-weight:700; color:var(--T); display:inline-flex; align-items:center; gap:6px; transition:gap .2s; }
+.news-link:hover { gap:10px; }
+
 /* ══ FOOTER ══ */
 footer { background:var(--N); padding-bottom:80px; }
 .f-top { max-width:1200px; margin:0 auto; padding:72px 28px 48px; display:grid; grid-template-columns:1.9fr 1fr 1fr 1fr; gap:44px; }
@@ -320,205 +334,67 @@ footer { background:var(--N); padding-bottom:80px; }
     <h2 class="stitle">Publikacje kancelarii</h2>
     <p class="ssub">Komentujemy zmiany w przepisach, analizujemy orzecznictwo i dzielimy się wiedzą przydatną przedsiębiorcom w codziennym prowadzeniu biznesu.</p>
 
-    <div class="pub-grid">
+    <div class="news-list">
 
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Sukcesy sądowe</div>
-          <div class="pub-title">Sąd Najwyższy ponownie po stronie beneficjentów Tarczy PFR!</div>
-          <div class="pub-desc">Sąd Najwyższy nie przyjął skargi kasacyjnej PFR do rozpoznania w sprawie dotyczącej komornika. To drugi wyrok SN wskazujący, że PFR nie może karać firm za dane zgodne ze stanem faktycznym, które wcześniej zaakceptował.</div>
+      <article class="news-item">
+        <div class="news-meta">
+          <span class="news-tag">Sukcesy sądowe</span>
+          <span class="news-date">22 czerwca 2026</span>
         </div>
-        <div class="pub-foot"><span>22 czerwca 2026</span><a href="https://karas-legal.com/blog/post/87" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
+        <h3 class="news-title"><a href="aktualnosci_sn-pfr-2026.html">Sąd Najwyższy ponownie po stronie beneficjentów Tarczy PFR!</a></h3>
+        <p class="news-excerpt">W postanowieniu I CSK 2106/25 Sąd Najwyższy po raz drugi odrzucił skargę kasacyjną PFR — tym razem w sprawie dotyczącej komornika. SN potwierdził: fundusz nie może karać przedsiębiorców za dane prawidłowe w momencie składania wniosku, które PFR sam zaakceptował, a dopiero później zmienił interpretację.</p>
+        <a href="aktualnosci_sn-pfr-2026.html" class="news-link">Czytaj więcej →</a>
+      </article>
 
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Sukcesy sądowe</div>
-          <div class="pub-title">Wygrana z PFR – sąd oddala pozew w sprawie korekt deklaracji</div>
-          <div class="pub-desc">Sąd Okręgowy w Warszawie oddalił powództwo PFR przeciwko klientowi kancelarii. Sąd uznał, że działania PFR naruszają zasady słuszności i zaufania obywatela do państwa.</div>
+      <article class="news-item">
+        <div class="news-meta">
+          <span class="news-tag">Sukcesy sądowe</span>
+          <span class="news-date">19 czerwca 2025</span>
         </div>
-        <div class="pub-foot"><span>19 czerwca 2025</span><a href="https://karas-legal.com/blog/post/85" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
+        <h3 class="news-title"><a href="aktualnosci_wygrana-korekty-deklaracji.html">Wygrana z PFR – sąd oddala pozew w sprawie korekt deklaracji</a></h3>
+        <p class="news-excerpt">Sąd Okręgowy w Warszawie oddalił powództwo PFR przeciwko klientowi kancelarii. Sąd uznał, że samo złożenie korekty deklaracji podatkowej — bez wykazania celowego działania na szkodę PFR — nie stanowi naruszenia warunków umowy subwencji. Działania PFR naruszają zasady słuszności i zaufania obywatela do państwa.</p>
+        <a href="aktualnosci_wygrana-korekty-deklaracji.html" class="news-link">Czytaj więcej →</a>
+      </article>
 
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
-          <div class="pub-title">Jak odpierać roszczenia PFR? Rusza cykl artykułów mec. Łukasza Chaci na Infor.pl</div>
-          <div class="pub-desc">Mecenas Łukasz Chacia publikuje na portalu Infor.pl serię artykułów ze strategiami obrony oraz analizą podstaw roszczeń kierowanych przez PFR wobec beneficjentów programu pomocowego.</div>
+      <article class="news-item">
+        <div class="news-meta">
+          <span class="news-tag">Spory z PFR</span>
+          <span class="news-date">30 maja 2025</span>
         </div>
-        <div class="pub-foot"><span>30 maja 2025</span><a href="https://karas-legal.com/blog/post/86" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
+        <h3 class="news-title"><a href="aktualnosci_jak-odpierac-roszczenia-pfr.html">Jak odpierać roszczenia PFR? Rusza cykl artykułów mec. Łukasza Chaci na Infor.pl</a></h3>
+        <p class="news-excerpt">PFR złożył ponad 16 000 pozwów. Mecenas Łukasz Chacia rozpoczyna na portalu Infor.pl serię artykułów poświęconych najczęstszym podstawom roszczeń funduszu oraz skutecznym strategiom obrony — opartym na aktualnym orzecznictwie, przepisach krajowych i unijnych.</p>
+        <a href="aktualnosci_jak-odpierac-roszczenia-pfr.html" class="news-link">Czytaj więcej →</a>
+      </article>
 
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Prawo gospodarcze</div>
-          <div class="pub-title">Jak zabezpieczyć firmę na wypadek śmierci wspólnika?</div>
-          <div class="pub-desc">Komentarz mec. Łukasza Chacia dotyczący ochrony działalności biznesu w sytuacji utraty wspólnika. Brak właściwych zabezpieczeń może prowadzić do poważnych komplikacji prawnych i finansowych.</div>
+      <article class="news-item">
+        <div class="news-meta">
+          <span class="news-tag">Prawo gospodarcze</span>
+          <span class="news-date">7 maja 2025</span>
         </div>
-        <div class="pub-foot"><span>7 maja 2025</span><a href="https://karas-legal.com/blog/post/84" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
+        <h3 class="news-title"><a href="aktualnosci_zabezpieczenie-firmy-smierc-wspolnika.html">Jak zabezpieczyć firmę na wypadek śmierci wspólnika?</a></h3>
+        <p class="news-excerpt">Śmierć wspólnika to jeden z najpoważniejszych kryzysów, jakie mogą dotknąć firmę. Brak odpowiednich zabezpieczeń prowadzi do paraliżu operacyjnego i sporów spadkowych. Mecenas Łukasz Chacia omawia skuteczne rozwiązania dla spółek osobowych i kapitałowych.</p>
+        <a href="aktualnosci_zabezpieczenie-firmy-smierc-wspolnika.html" class="news-link">Czytaj więcej →</a>
+      </article>
 
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Sukcesy sądowe</div>
-          <div class="pub-title">Wygrana w sprawie PFR o 1,75 mln</div>
-          <div class="pub-desc">Sąd Okręgowy w Warszawie w całości oddalił roszczenie PFR o zwrot 1,75 mln zł w sprawie kantoru. Sukces szczególnie istotny wobec dotychczas niekorzystnej linii orzeczniczej dla kantorów.</div>
+      <article class="news-item">
+        <div class="news-meta">
+          <span class="news-tag">Sukcesy sądowe</span>
+          <span class="news-date">5 maja 2025</span>
         </div>
-        <div class="pub-foot"><span>5 maja 2025</span><a href="https://karas-legal.com/blog/post/83" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
+        <h3 class="news-title"><a href="aktualnosci_wygrana-pfr-1-75mln.html">Wygrana w sprawie PFR o 1,75 mln</a></h3>
+        <p class="news-excerpt">25 kwietnia 2025 r. Sąd Okręgowy w Warszawie (XXVI Wydział Gospodarczy) w całości oddalił roszczenie PFR o zwrot 1,75 mln zł. Sprawa dotyczyła kantoru — kategorii przedsiębiorstw, dla której dotychczasowa linia orzecznicza była niekorzystna. To przełom.</p>
+        <a href="aktualnosci_wygrana-pfr-1-75mln.html" class="news-link">Czytaj więcej →</a>
+      </article>
 
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Sukcesy sądowe</div>
-          <div class="pub-title">Wygrana Oddziału przedsiębiorcy zagranicznego o zwrot subwencji PFR</div>
-          <div class="pub-desc">Sąd Okręgowy w Warszawie oddalił roszczenie PFR o zwrot ponad 1,3 mln zł przyznanej oddziałom zagranicznych przedsiębiorstw w ramach Tarczy Finansowej 1.0.</div>
+      <article class="news-item">
+        <div class="news-meta">
+          <span class="news-tag">Sukcesy sądowe</span>
+          <span class="news-date">17 marca 2025</span>
         </div>
-        <div class="pub-foot"><span>17 marca 2025</span><a href="https://karas-legal.com/blog/post/82" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Sukcesy sądowe</div>
-          <div class="pub-title">Przełomowy wyrok w sprawie Tarczy Finansowej PFR</div>
-          <div class="pub-desc">Pierwszy prawomocny wyrok Sądu Apelacyjnego w Warszawie korzystny dla beneficjentów Tarczy PFR. Wyrok może zmienić dotychczasową linię orzeczniczą w sprawach przeciwko PFR.</div>
-        </div>
-        <div class="pub-foot"><span>4 marca 2025</span><a href="https://karas-legal.com/blog/post/81" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Media i wydarzenia</div>
-          <div class="pub-title">Partner kancelarii w debacie Izby Gospodarczej Gastronomii Polskiej o Tarczy PFR</div>
-          <div class="pub-desc">Partner zarządzający kancelarii uczestniczył w debacie IGGP dotyczącej Tarczy Finansowej PFR i problemów przedsiębiorców z branży gastronomicznej w sporach z funduszem.</div>
-        </div>
-        <div class="pub-foot"><span>19 września 2024</span><a href="https://karas-legal.com/blog/post/80" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Media i wydarzenia</div>
-          <div class="pub-title">Debata w Sejmie RP o Tarczy PFR z udziałem partnera kancelarii</div>
-          <div class="pub-desc">Partner kancelarii zabrał głos w debacie sejmowej zorganizowanej przez IGGP, omawiając problematykę Tarczy Finansowej PFR i sytuację tysięcy przedsiębiorców.</div>
-        </div>
-        <div class="pub-foot"><span>15 września 2022</span><a href="https://karas-legal.com/blog/post/79" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Kredyty frankowe</div>
-          <div class="pub-title">Kolejne zabezpieczenie roszczeń w sprawie frankowej</div>
-          <div class="pub-desc">Sąd uwzględnił kolejny wniosek o zabezpieczenie roszczeń kredytobiorcy w sprawie kredytu frankowego. Kancelaria skutecznie chroni interesy frankowiczów na etapie zabezpieczającym.</div>
-        </div>
-        <div class="pub-foot"><span>4 stycznia 2022</span><a href="https://karas-legal.com/blog/post/78" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">W-Investments</div>
-          <div class="pub-title">W-Investments — kolejne argumenty za przedawnieniem roszczeń</div>
-          <div class="pub-desc">Analiza argumentów prawnych wskazujących na możliwe przedawnienie roszczeń inwestorów funduszy W-Investments. Istotna lektura dla poszkodowanych przez Dom Maklerski W Investments S.A.</div>
-        </div>
-        <div class="pub-foot"><span>31 grudnia 2021</span><a href="https://karas-legal.com/blog/post/77" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">W-Investments</div>
-          <div class="pub-title">Fundusze W-Investments — roszczenia wobec Raiffeisen Bank mogą się przedawnić 31.12.2021</div>
-          <div class="pub-desc">Pilny alert dla poszkodowanych inwestorów — roszczenia przeciwko Raiffeisen Bank związane z funduszami W-Investments mogły ulec przedawnieniu z końcem 2021 roku.</div>
-        </div>
-        <div class="pub-foot"><span>27 grudnia 2021</span><a href="https://karas-legal.com/blog/post/76" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Sukcesy sądowe</div>
-          <div class="pub-title">NSA potwierdza nasze stanowisko w sprawie Tarcz Finansowych PFR</div>
-          <div class="pub-desc">Naczelny Sąd Administracyjny potwierdził stanowisko kancelarii dotyczące zasad rozliczania Tarczy Finansowej PFR — ważny wyrok dla beneficjentów programu.</div>
-        </div>
-        <div class="pub-foot"><span>16 grudnia 2021</span><a href="https://karas-legal.com/blog/post/75" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
-          <div class="pub-title">Terminy rozliczenia subwencji z Tarczy Finansowej 2.0</div>
-          <div class="pub-desc">Omówienie terminów i zasad rozliczenia subwencji w ramach Tarczy Finansowej 2.0 — praktyczny przewodnik dla beneficjentów programu wsparcia dla MŚP.</div>
-        </div>
-        <div class="pub-foot"><span>17 listopada 2021</span><a href="https://karas-legal.com/blog/post/74" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Media i wydarzenia</div>
-          <div class="pub-title">Adw. Zbigniew Karaś w Dzienniku Gazecie Prawnej o sporach z PFR</div>
-          <div class="pub-desc">Mecenas Zbigniew Karaś wyjaśnia na łamach DGP kwestię właściwości drogi cywilnej w sporach przedsiębiorców z PFR o wypłatę subwencji z Tarczy Finansowej.</div>
-        </div>
-        <div class="pub-foot"><span>14 lipca 2021</span><a href="https://karas-legal.com/blog/post/73" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Media i wydarzenia</div>
-          <div class="pub-title">Prawo.pl cytuje stanowisko adw. Zbigniewa Karasia ws. żądań zwrotu subwencji</div>
-          <div class="pub-desc">Portal Prawo.pl przytacza stanowisko mec. Zbigniewa Karasia w sprawie żądań zwrotu subwencji przez PFR i sposobów obrony przedsiębiorców przed tymi roszczeniami.</div>
-        </div>
-        <div class="pub-foot"><span>15 czerwca 2021</span><a href="https://karas-legal.com/blog/post/72" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
-          <div class="pub-title">PFR wzywa do zwrotów vs. kuriozalny błąd w formularzach wnioskowania o Tarczę</div>
-          <div class="pub-desc">Analiza nieścisłości w formularzach wnioskowania o Tarczę Finansową w kontekście masowych wezwań do zwrotu subwencji. Błąd PFR, za który płacą przedsiębiorcy.</div>
-        </div>
-        <div class="pub-foot"><span>11 czerwca 2021</span><a href="https://karas-legal.com/blog/post/71" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
-          <div class="pub-title">Zastanawiająca zmiana regulaminu Tarczy Finansowej PFR dla MŚP 1.0</div>
-          <div class="pub-desc">Omówienie zaskakującej zmiany regulaminu Tarczy Finansowej PFR dla MŚP 1.0 i jej możliwych skutków dla beneficjentów — analizujemy, co się zmieniło i dlaczego.</div>
-        </div>
-        <div class="pub-foot"><span>17 maja 2021</span><a href="https://karas-legal.com/blog/post/70" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
-          <div class="pub-title">Definicja przychodów ze sprzedaży przy Tarczy Finansowej PFR MŚP 1.0</div>
-          <div class="pub-desc">Analiza rozbieżności w definicji przychodów ze sprzedaży stosowanej przez PFR — kluczowa kwestia dla firm, które otrzymały wezwanie do zwrotu subwencji.</div>
-        </div>
-        <div class="pub-foot"><span>15 maja 2021</span><a href="https://karas-legal.com/blog/post/69" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
-          <div class="pub-title">PFR odmawia udzielania subwencji bez podania przyczyny</div>
-          <div class="pub-desc">PFR masowo odmawiał wypłaty subwencji bez jakiegokolwiek uzasadnienia — analiza sytuacji prawnej poszkodowanych firm i dostępnych środków odwoławczych.</div>
-        </div>
-        <div class="pub-foot"><span>23 czerwca 2020</span><a href="https://karas-legal.com/blog/post/68" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
-          <div class="pub-title">Sytuacja kantorów w ramach Tarczy Finansowej PFR 1.0</div>
-          <div class="pub-desc">Analiza problemów kantorów z kwalifikacją przychodów w ramach Tarczy Finansowej PFR 1.0 — sprawa, którą kancelaria prowadziła z powodzeniem przez kolejne lata.</div>
-        </div>
-        <div class="pub-foot"><span>25 czerwca 2020</span><a href="https://karas-legal.com/blog/post/64" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
-
-      <div class="pub-card">
-        <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
-          <div class="pub-title">Pierwsze wątpliwości związane z Tarczą Finansową PFR dla MŚP</div>
-          <div class="pub-desc">Pierwsze prawne wątpliwości dotyczące warunków programu Tarcza Finansowa PFR dla MŚP — analiza luk i niejasności w regulaminie tuż po jego uruchomieniu.</div>
-        </div>
-        <div class="pub-foot"><span>15 maja 2020</span><a href="https://karas-legal.com/blog/post/67" target="_blank" rel="noopener" class="pub-read">Czytaj więcej →</a></div>
-      </div>
+        <h3 class="news-title"><a href="aktualnosci_oddzial-zagranicznego-przedsiebiorcy.html">Wygrana Oddziału przedsiębiorcy zagranicznego o zwrot subwencji PFR</a></h3>
+        <p class="news-excerpt">13 marca 2025 r. Sąd Okręgowy w Warszawie oddalił roszczenie PFR o zwrot ponad 1,3 mln zł subwencji przyznanej Oddziałowi zagranicznego przedsiębiorcy w ramach Tarczy Finansowej 1.0. Wyrok otwiera drogę do odzyskania środków przez firmy, które wcześniej zwróciły je pod presją.</p>
+        <a href="aktualnosci_oddzial-zagranicznego-przedsiebiorcy.html" class="news-link">Czytaj więcej →</a>
+      </article>
 
     </div>
   </div>
