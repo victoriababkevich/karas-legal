@@ -292,6 +292,31 @@ nav > a.active { color:var(--T); }
 .pcard-bio-item:last-child{border-bottom:none;}
 .pcard-bio-item::before{content:'›';color:var(--T);font-weight:800;flex-shrink:0;margin-top:1px;}
 
+/* ══ ZAUFALI NAM ══ */
+.logos-wrap{overflow:hidden;position:relative;margin-top:44px;}
+.logos-wrap::before,.logos-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;}
+.logos-wrap::before{left:0;background:linear-gradient(to right,#fff,transparent);}
+.logos-wrap::after{right:0;background:linear-gradient(to left,#fff,transparent);}
+.logos-track{display:flex;align-items:center;gap:56px;width:max-content;animation:marqueeRight 42s linear infinite;}
+.logo-item{display:flex;flex-direction:column;align-items:center;gap:8px;flex-shrink:0;}
+.logo-item img{height:42px;width:auto;max-width:140px;object-fit:contain;filter:grayscale(100%) opacity(.45);transition:filter .25s;display:block;}
+.logo-item:hover img{filter:grayscale(0%) opacity(1);}
+.logo-name{font-size:10.5px;color:var(--mut);font-weight:600;letter-spacing:.04em;}
+@keyframes marqueeRight{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ref-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
+.ref-card{background:var(--bg);border:1.5px solid var(--bdr);border-radius:18px;padding:28px 24px;display:flex;flex-direction:column;gap:20px;transition:all .22s;}
+.ref-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.1);transform:translateY(-2px);}
+.ref-stars{color:var(--T);font-size:13px;letter-spacing:3px;}
+.ref-quote{font-size:15px;color:var(--text);line-height:1.78;font-style:italic;flex:1;}
+.ref-author{border-top:1px solid var(--bdr);padding-top:16px;}
+.ref-name{font-size:13.5px;font-weight:700;color:var(--N);}
+.ref-company{font-size:12.5px;color:var(--mut);margin-top:2px;}
+.ref-more-wrap{text-align:center;margin-top:28px;}
+.ref-more-btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--T);border:1.5px solid var(--T);padding:10px 24px;border-radius:40px;cursor:pointer;background:none;transition:all .2s;}
+.ref-more-btn:hover{background:var(--Tl);}
+.ref-hidden{display:none;}
+.ref-hidden.open{display:contents;}
+
 /* ══ KARIERA ══ */
 .sec-kariera{background:var(--bg);}
 .kariera-inner{max-width:700px;margin:0 auto;text-align:center;padding:0 28px;}
@@ -411,7 +436,8 @@ footer { background:var(--N); padding-bottom:80px; }
         <div class="dropdown-menu">
           <a href="o-nas.html#kancelaria">O kancelarii</a>
           <a href="o-nas.html#zespol">Nasz zespół</a>
-          <a href="o-nas.html#kariera">Kariera</a>
+          <a href="o-nas.html#zaufali-nam">Zaufali nam</a>
+          <a href="o-nas.html#kariera">Dołącz do nas</a>
         </div>
       </div>
       <a href="kontakt.html" class="nav-btn">Kontakt</a>
@@ -453,7 +479,8 @@ footer { background:var(--N); padding-bottom:80px; }
     <div class="mn-sub">
       <a href="o-nas.html#kancelaria" style="color:var(--T);">O kancelarii</a>
       <a href="o-nas.html#zespol">Nasz zespół</a>
-      <a href="o-nas.html#kariera">Kariera</a>
+      <a href="o-nas.html#zaufali-nam">Zaufali nam</a>
+      <a href="o-nas.html#kariera">Dołącz do nas</a>
     </div>
   </div>
   <a href="kontakt.html" class="mn-cta">Kontakt</a>
@@ -661,6 +688,137 @@ footer { background:var(--N); padding-bottom:80px; }
 </section>
 
 <!-- KARIERA -->
+<section class="sec" id="zaufali-nam">
+  <div class="w tc">
+    <div class="slabel" style="justify-content:center;">Zaufali nam</div>
+    <h2 class="stitle">Ponad 650 przedsiębiorców i firm</h2>
+    <p class="ssub" style="margin:0 auto;">Od 2014 roku wspieramy firmy w kluczowych momentach ich działalności — od umów przez spory sądowe po sukcesję majątku.</p>
+  </div>
+
+  <div class="logos-wrap">
+    <div class="logos-track">
+      <div class="logo-item"><img src="GLOBE TRADE CENTRE (1).jpg" alt="Globe Trade Centre"><span class="logo-name">Globe Trade Centre</span></div>
+      <div class="logo-item"><img src="Zoo FACTORY.jpg" alt="Zoo Factory"><span class="logo-name">Zoo Factory</span></div>
+      <div class="logo-item"><img src="MM CONFERENCES (1).jpg" alt="MM Conferences"><span class="logo-name">MM Conferences</span></div>
+      <div class="logo-item"><img src="IBD BUSINESS SCHOOL..jpg" alt="IBD Business School"><span class="logo-name">IBD Business School</span></div>
+      <div class="logo-item"><img src="TRIO-TECH (1).jpg" alt="Trio-Tech"><span class="logo-name">Trio-Tech</span></div>
+      <div class="logo-item"><img src="BOS.jpg" alt="Bank Ochrony Środowiska"><span class="logo-name">Bank Ochrony Środowiska</span></div>
+      <div class="logo-item"><img src="APA group.jpg" alt="APA Group"><span class="logo-name">APA Group</span></div>
+      <div class="logo-item"><img src="Bankomat sp zoo .jpg" alt="Bankomat"><span class="logo-name">Bankomat</span></div>
+      <div class="logo-item"><img src="Volta Medica..jpg" alt="Volta Medica"><span class="logo-name">Volta Medica</span></div>
+      <div class="logo-item"><img src="4hfix (1).jpg" alt="4HFIX"><span class="logo-name">4HFIX</span></div>
+      <div class="logo-item"><img src="Dolcar.jpg" alt="Dolcar"><span class="logo-name">Dolcar Rent a Car</span></div>
+      <div class="logo-item"><img src="Mudita..jpg" alt="Mudita"><span class="logo-name">Mudita</span></div>
+      <div class="logo-item"><img src="Crytpomage.jpg" alt="Cryptomage"><span class="logo-name">Cryptomage</span></div>
+      <div class="logo-item"><img src="Black cat.jpg" alt="Black Cat"><span class="logo-name">Black Cat</span></div>
+      <div class="logo-item"><img src="unitra..jpg" alt="Unitra"><span class="logo-name">Unitra</span></div>
+      <div class="logo-item"><img src="PWN (1).jpg" alt="PWN"><span class="logo-name">Wydawnictwo Naukowe PWN</span></div>
+      <div class="logo-item"><img src="Wiedza i Praktyka (1).jpg" alt="Wiedza i Praktyka"><span class="logo-name">Wiedza i Praktyka</span></div>
+      <div class="logo-item"><img src="One Dynamics..jpg" alt="One Dynamics"><span class="logo-name">One Dynamics</span></div>
+      <!-- duplikat dla płynnej pętli -->
+      <div class="logo-item"><img src="GLOBE TRADE CENTRE (1).jpg" alt="Globe Trade Centre"><span class="logo-name">Globe Trade Centre</span></div>
+      <div class="logo-item"><img src="Zoo FACTORY.jpg" alt="Zoo Factory"><span class="logo-name">Zoo Factory</span></div>
+      <div class="logo-item"><img src="MM CONFERENCES (1).jpg" alt="MM Conferences"><span class="logo-name">MM Conferences</span></div>
+      <div class="logo-item"><img src="IBD BUSINESS SCHOOL..jpg" alt="IBD Business School"><span class="logo-name">IBD Business School</span></div>
+      <div class="logo-item"><img src="TRIO-TECH (1).jpg" alt="Trio-Tech"><span class="logo-name">Trio-Tech</span></div>
+      <div class="logo-item"><img src="BOS.jpg" alt="Bank Ochrony Środowiska"><span class="logo-name">Bank Ochrony Środowiska</span></div>
+      <div class="logo-item"><img src="APA group.jpg" alt="APA Group"><span class="logo-name">APA Group</span></div>
+      <div class="logo-item"><img src="Bankomat sp zoo .jpg" alt="Bankomat"><span class="logo-name">Bankomat</span></div>
+      <div class="logo-item"><img src="Volta Medica..jpg" alt="Volta Medica"><span class="logo-name">Volta Medica</span></div>
+      <div class="logo-item"><img src="4hfix (1).jpg" alt="4HFIX"><span class="logo-name">4HFIX</span></div>
+      <div class="logo-item"><img src="Dolcar.jpg" alt="Dolcar"><span class="logo-name">Dolcar Rent a Car</span></div>
+      <div class="logo-item"><img src="Mudita..jpg" alt="Mudita"><span class="logo-name">Mudita</span></div>
+      <div class="logo-item"><img src="Crytpomage.jpg" alt="Cryptomage"><span class="logo-name">Cryptomage</span></div>
+      <div class="logo-item"><img src="Black cat.jpg" alt="Black Cat"><span class="logo-name">Black Cat</span></div>
+      <div class="logo-item"><img src="unitra..jpg" alt="Unitra"><span class="logo-name">Unitra</span></div>
+      <div class="logo-item"><img src="PWN (1).jpg" alt="PWN"><span class="logo-name">Wydawnictwo Naukowe PWN</span></div>
+      <div class="logo-item"><img src="Wiedza i Praktyka (1).jpg" alt="Wiedza i Praktyka"><span class="logo-name">Wiedza i Praktyka</span></div>
+      <div class="logo-item"><img src="One Dynamics..jpg" alt="One Dynamics"><span class="logo-name">One Dynamics</span></div>
+    </div>
+  </div>
+
+  <div class="w" style="margin-top:64px;">
+    <div class="slabel" style="justify-content:center;">Referencje</div>
+    <h3 class="stitle tc" style="font-size:28px;margin-bottom:8px;">Co mówią nasi klienci</h3>
+
+    <div class="ref-grid" id="refGrid">
+
+      <div class="ref-card">
+        <div class="ref-stars">★★★★★</div>
+        <p class="ref-quote">Kancelaria prowadziła naszą sprawę przeciwko PFR z pełnym profesjonalizmem. Dzięki zaangażowaniu i precyzyjnej argumentacji prawnej wygraliśmy spór, który wydawał się niemożliwy do wygrania. Polecam każdemu przedsiębiorcy w podobnej sytuacji.</p>
+        <div class="ref-author">
+          <div class="ref-name">Prezes zarządu</div>
+          <div class="ref-company">Spółka z branży gastronomicznej</div>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-stars">★★★★★</div>
+        <p class="ref-quote">Współpraca przy transakcji M&amp;A przebiegła sprawnie i bezpiecznie. Prawnicy kancelarii rozumieją realia biznesowe — nie tylko przepisy. Czuliśmy się w dobrych rękach na każdym etapie procesu due diligence i negocjacji umowy.</p>
+        <div class="ref-author">
+          <div class="ref-name">Wspólnik</div>
+          <div class="ref-company">Firma technologiczna</div>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-stars">★★★★★</div>
+        <p class="ref-quote">Kancelaria pomogła nam w sporze z generalnym wykonawcą dotyczącym opóźnień i wad budowlanych. Dzięki skutecznej strategii procesowej uzyskaliśmy pełne odszkodowanie. Profesjonalizm i komunikacja na najwyższym poziomie.</p>
+        <div class="ref-author">
+          <div class="ref-name">Dyrektor finansowy</div>
+          <div class="ref-company">Deweloper nieruchomości komercyjnych</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ref-grid ref-hidden" id="refGridMore">
+
+      <div class="ref-card">
+        <div class="ref-stars">★★★★★</div>
+        <p class="ref-quote">Obsługa stała kancelarii to dla nas bezpieczeństwo prawne w codziennych operacjach. Szybkie odpowiedzi, jasne wyjaśnienia zamiast prawniczego żargonu i realne wsparcie w decyzjach biznesowych. Współpracujemy od ponad 4 lat.</p>
+        <div class="ref-author">
+          <div class="ref-name">Właściciel</div>
+          <div class="ref-company">Firma dystrybucyjna</div>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-stars">★★★★★</div>
+        <p class="ref-quote">Kancelaria przeprowadziła nas przez proces założenia fundacji rodzinnej — kompleksowo, sprawnie i z pełnym wytłumaczeniem każdego kroku. Dziś mamy spokój co do przyszłości firmy i majątku rodziny.</p>
+        <div class="ref-author">
+          <div class="ref-name">Założyciel</div>
+          <div class="ref-company">Grupa rodzinna, branża produkcyjna</div>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-stars">★★★★★</div>
+        <p class="ref-quote">Sprawa z bankiem o kredyt frankowy zakończyła się wygraną po niespełna roku procesu. Kancelaria prowadziła sprawę pewnie i skutecznie — zero zbędnych opóźnień, pełna transparentność kosztów. Gorąco polecam.</p>
+        <div class="ref-author">
+          <div class="ref-name">Klient indywidualny</div>
+          <div class="ref-company">Sprawa o kredyt frankowy</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ref-more-wrap">
+      <button class="ref-more-btn" id="refMoreBtn" onclick="
+        var more = document.getElementById('refGridMore');
+        var btn = document.getElementById('refMoreBtn');
+        if(more.classList.contains('open')){
+          more.classList.remove('open');
+          btn.innerHTML = 'Pokaż więcej referencji ↓';
+        } else {
+          more.classList.add('open');
+          btn.innerHTML = 'Zwiń ↑';
+        }
+      ">Pokaż więcej referencji ↓</button>
+    </div>
+  </div>
+</section>
+
 <section class="sec sec-kariera" id="kariera">
   <div class="kariera-inner">
     <div class="slabel" style="justify-content:center;color:var(--T);">Dołącz do nas</div>
@@ -728,7 +886,8 @@ footer { background:var(--N); padding-bottom:80px; }
         <div class="dropdown-menu">
           <a href="o-nas.html#kancelaria">O kancelarii</a>
           <a href="o-nas.html#zespol">Nasz zespół</a>
-          <a href="o-nas.html#kariera">Kariera</a>
+          <a href="o-nas.html#zaufali-nam">Zaufali nam</a>
+          <a href="o-nas.html#kariera">Dołącz do nas</a>
         </div>
       </div></li>
         <li><a href="sukcesy.html">Sukcesy</a></li>
