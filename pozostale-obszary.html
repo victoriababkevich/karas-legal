@@ -233,9 +233,13 @@ footer { background:var(--N); padding-bottom:80px; }
 @media(max-width:768px) {
   nav .dropdown, nav > a:not(.nav-btn) { display:none; }
   .nav-btn { display:none; }
+  .nav-panel { display:none; }
   .hamburger { display:flex; }
   .sp-hero h1 { font-size:32px; }
   .stitle { font-size:30px; }
+  
+  .f-bottom { flex-direction:column; align-items:center; text-align:center; gap:8px; }
+  .f-links { flex-direction:column; gap:8px; align-items:center; }
   .fb-item:not(.fb-cta) { display:none; }
   .f-top { grid-template-columns:1fr; gap:32px; }
   .po-cta h2 { font-size:26px; }
