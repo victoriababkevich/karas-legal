@@ -658,7 +658,7 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
 .court-ex-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:14px;}
 .court-ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px;}
 .court-ex-card{border:1.5px solid rgba(32,169,185,.25);border-radius:12px;padding:16px;background:var(--Tl);}
-.court-ex-amount{font-size:22px;font-weight:800;color:var(--T);margin-bottom:6px;}
+.court-ex-amount{font-size:32px;font-weight:800;color:var(--T);margin-bottom:6px;line-height:1.1;}
 .court-ex-desc{font-size:13px;color:var(--mut);line-height:1.6;}
 .court-ex-note{font-size:12px;color:var(--mut);font-style:italic;}
 .example-btn{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:11px 20px;border:2px solid var(--T);border-radius:10px;background:var(--Tl);color:var(--T);font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;transition:all .2s;}
@@ -669,7 +669,17 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
 .cr-hist-amount{font-size:22px;font-weight:800;color:var(--N);margin-bottom:4px;}
 .cr-hist-formula{font-size:12px;color:var(--mut);}
 @media(max-width:900px){.calc-app{grid-template-columns:1fr;}.crow{grid-template-columns:1fr;}.cr-fields{grid-template-columns:1fr;}.device-grid{grid-template-columns:repeat(2,1fr);}.court-ex-grid{grid-template-columns:1fr;}}
-@media(max-width:520px){.calc-wrap{padding:0 14px 60px;}.device-grid{grid-template-columns:1fr;}}
+@media(max-width:520px){.calc-wrap{padding:0 14px 120px;}.device-grid{grid-template-columns:1fr;}}
+.sp-hero-cta{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:14px 28px;background:var(--T);color:#fff;font-weight:800;font-size:15px;border-radius:12px;box-shadow:0 8px 24px rgba(32,169,185,.35);transition:all .2s;}
+.sp-hero-cta:hover{background:#178fa0;transform:translateY(-2px);}
+.sp-checklist{margin-top:20px;display:flex;flex-direction:column;gap:9px;}
+.sp-check{display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,.92);font-size:14.5px;font-weight:500;line-height:1.5;}
+.sp-check::before{content:"✓";color:var(--T);font-weight:900;flex-shrink:0;font-size:16px;}
+.cr-contact-success{text-align:center;padding:28px 16px;}
+.cr-contact-success .success-icon{font-size:40px;margin-bottom:12px;}
+.cr-contact-success h3{color:var(--N);margin-bottom:8px;}
+.cr-contact-success p{color:var(--mut);font-size:14px;line-height:1.6;}
+.field-error{border-color:#e53e3e !important;box-shadow:0 0 0 3px rgba(229,62,62,.12) !important;}
 </style>
 </head>
 <body>
@@ -772,7 +782,13 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
     </nav>
     <div class="hero-chip">Urządzenia przesyłowe</div>
     <h1>Odszkodowania za słupy energetyczne i urządzenia przesyłowe</h1>
-    <p class="sp-hero-sub">Jeśli na Twojej działce przebiegają linie energetyczne, gazociągi lub inne urządzenia przesyłowe bez formalnej umowy — możesz dochodzić wynagrodzenia za bezumowne korzystanie z gruntu oraz odszkodowania za spadek wartości nieruchomości.</p>
+    <p class="sp-hero-sub">Jeśli na Twojej działce przebiegają linie energetyczne, gazociągi lub inne urządzenia przesyłowe bez formalnej umowy — możesz dochodzić wynagrodzenia za bezumowne korzystanie z gruntu.</p>
+    <div class="sp-checklist">
+      <div class="sp-check">Przez Twoją działkę przebiegają linie energetyczne, słupy, rury lub kable?</div>
+      <div class="sp-check">Nie podpisałeś umowy z zakładem energetycznym ani gazowniczym?</div>
+      <div class="sp-check">Urządzenia są na działce od lat — bez Twojej zgody lub bez zapłaty?</div>
+    </div>
+    <a href="#kalkulator" class="sp-hero-cta">Sprawdź, ile możesz uzyskać →</a>
 </div>
 </section>
 
@@ -780,7 +796,7 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
 
   <!-- Przykłady z orzecznictwa -->
   <div class="court-examples">
-    <div class="court-ex-label">Przykłady świadczeń zasądzonych przez sądy</div>
+    <div class="court-ex-label">Ile zasądzają sądy? Przykłady z 2026 roku</div>
     <div class="court-ex-grid">
       <div class="court-ex-card">
         <div class="court-ex-amount">335 237 zł</div>
@@ -835,6 +851,7 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
 
         <div class="cstep">
           <h3>2. Powierzchnia pasa objętego urządzeniami</h3>
+          <p class="chint" style="margin-bottom:12px;">Jeśli znasz powierzchnię — wpisz ją bezpośrednio. Jeśli nie — podaj długość i szerokość linii poniżej, a kalkulator obliczy automatycznie.</p>
           <div class="crow">
             <div class="cinput">
               <label class="clabel" for="area">Wpisz powierzchnię ręcznie</label>
@@ -889,7 +906,7 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
               <span class="cunit">zł</span>
             </div>
             <div class="cmini" style="display:flex;align-items:center;">
-              <p class="chint">Możesz wpisać cenę z portalu ogłoszeń albo obliczyć: <strong style="color:var(--N)">wartość działki ÷ jej powierzchnia</strong></p>
+              <p class="chint">Możesz wpisać cenę z portalu ogłoszeń albo obliczyć: <strong style="color:var(--N)">wartość działki ÷ jej powierzchnia</strong>.<br><span style="margin-top:6px;display:block;">Orientacyjnie: działki rolne 50–200 zł/m², podmiejskie 200–600 zł/m², miejskie 500+ zł/m²</span></p>
             </div>
           </div>
         </div>
@@ -898,11 +915,11 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
           <h3>4. Współczynnik korzystania (K)</h3>
           <div class="crow">
             <div class="cinput">
-              <label class="clabel" for="kCoef">Stopień korzystania z pasa przez przedsiębiorcę</label>
+              <label class="clabel" for="kCoef">Współczynnik K — jaka część wartości gruntu Ci przysługuje</label>
               <input id="kCoef" type="number" min="0.01" max="1" step="0.01" value="0.35">
             </div>
             <div class="cmini" style="display:flex;align-items:center;">
-              <p class="chint">Ustawiany automatycznie po wyborze urządzenia. Możesz zmienić ręcznie.</p>
+              <p class="chint">Ustala to rzeczoznawca lub sąd. Wartość dobrana automatycznie — zmień jeśli masz inne dane z dokumentów.</p>
             </div>
           </div>
           <button class="ctoggle" data-target="kHelp" type="button">▾ Jak rozumieć współczynnik K?</button>
@@ -936,8 +953,8 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
           </div>
         </div>
 
-        <button class="calc-btn" id="calculate" type="button">Oblicz wynagrodzenie</button>
-        <p class="chint" style="margin-top:10px;">Wartości mają charakter orientacyjny i nie zastępują opinii rzeczoznawcy ani analizy prawnej.</p>
+        <button class="calc-btn" id="calculate" type="button">Przejdź do wyniku →</button>
+        <p class="chint" style="margin-top:10px;">Wynik aktualizuje się na bieżąco po każdej zmianie. Wartości mają charakter orientacyjny.</p>
       </div>
     </div>
 
@@ -968,13 +985,13 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
         <div class="cr-contact">
           <h3>Chcesz poznać dokładną wycenę?</h3>
           <p>Zostaw kontakt — przeanalizujemy dokumenty, mapę i stan prawny Twojej działki.</p>
-          <div class="cr-fields">
-            <input placeholder="Imię i nazwisko" type="text" id="cf-name">
+          <div class="cr-fields" id="contactFields">
+            <input placeholder="Imię i nazwisko" type="text" id="cf-name" required>
             <input placeholder="Telefon" type="tel" id="cf-phone">
             <input placeholder="E-mail" type="email" id="cf-email">
-            <input placeholder="Numer działki" type="text" id="cf-dzialka">
+            <input placeholder="Numer działki (np. 123/4)" type="text" id="cf-dzialka">
           </div>
-          <button class="calc-btn gold" type="button">Chcę bezpłatną analizę sprawy</button>
+          <button class="calc-btn gold" type="button" id="contactSubmit">Chcę bezpłatną analizę sprawy</button>
         </div>
       </div>
     </aside>
@@ -1139,7 +1156,52 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
     $(btn.dataset.target).classList.toggle('open');
   }));
 
-  $('calculate').addEventListener('click', calc);
+  // "Przejdź do wyniku" — scroll do panelu wyników i podświetl
+  $('calculate').addEventListener('click', () => {
+    calc();
+    const panel = document.querySelector('.cresult-panel');
+    panel.scrollIntoView({behavior:'smooth', block:'center'});
+    panel.style.transition = 'box-shadow .3s';
+    panel.style.boxShadow = '0 0 0 3px rgba(32,169,185,.4), 0 18px 50px rgba(9,28,46,.09)';
+    setTimeout(() => { panel.style.boxShadow = ''; }, 1800);
+  });
+
+  // Formularz kontaktowy
+  $('contactSubmit').addEventListener('click', () => {
+    const name    = $('cf-name').value.trim();
+    const phone   = $('cf-phone').value.trim();
+    const email   = $('cf-email').value.trim();
+    const contact = phone || email;
+
+    // reset błędów
+    ['cf-name','cf-phone','cf-email'].forEach(id => $(id).classList.remove('field-error'));
+
+    if (!name)    { $('cf-name').classList.add('field-error');  $('cf-name').focus();  return; }
+    if (!contact) { $('cf-phone').classList.add('field-error'); $('cf-email').classList.add('field-error'); $('cf-phone').focus(); return; }
+
+    const wynik  = $('totalRange').textContent;
+    const area   = $('area').value || '—';
+    const C      = $('landPrice').value || '—';
+    const K      = $('kCoef').value || '—';
+    const device = document.querySelector('.cdevice.active small')?.textContent || '';
+    const dzialka= $('cf-dzialka').value.trim();
+
+    document.querySelector('.cr-contact').innerHTML = `
+      <div class="cr-contact-success">
+        <div class="success-icon">✓</div>
+        <h3>Zgłoszenie wysłane</h3>
+        <p>Oddzwonimy do Ciebie w ciągu jednego dnia roboczego.<br>
+        Twój szacunek: <strong style="color:var(--T)">${wynik}</strong><br>
+        (${device}; ${area} m² × ${C} zł × K ${K}${dzialka ? '; działka: ' + dzialka : ''})</p>
+      </div>`;
+
+    // przygotuj mailto jako fallback do czasu integracji CRM
+    const body = encodeURIComponent(
+      `Imię: ${name}\nTelefon: ${phone}\nE-mail: ${email}\nDziałka: ${dzialka}\n\nUrządzenie: ${device}\nPowierzchnia: ${area} m²\nCena m²: ${C} zł\nK: ${K}\nSzacunek: ${wynik}`
+    );
+    fetch('', {method:'POST', body: new URLSearchParams({name, phone, email, dzialka, device, area, C, K, wynik})}).catch(()=>{});
+  });
+
   calc();
 </script>
 
