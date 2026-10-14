@@ -1,6 +1,6 @@
 /* ══ FAQ accordion — wspólny komponent ══ */
 
-.faq-section { padding: 72px 0; background: var(--bg); }
+.faq-section { padding: 72px 0; background: var(--Tl); border-top: 1px solid var(--bdr); border-bottom: 1px solid var(--bdr); }
 
 .faq-list {
   display: flex;
