@@ -554,6 +554,20 @@ footer { background:var(--N); padding-bottom:80px; }
 @media(max-width:1024px){.benefit-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}.sp-services{grid-template-columns:1fr;}}
 .kw{color:var(--T);font-weight:700;}
+
+/* ══ FAQ ══ */
+.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:44px;}
+.faq-item{border-radius:14px;border:1.5px solid var(--bdr);background:#fff;overflow:hidden;transition:border-color .2s;}
+.faq-item.open{border-color:var(--T);}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;font-family:inherit;font-size:16px;font-weight:700;color:var(--N);line-height:1.4;gap:16px;}
+.faq-q:hover{color:var(--T);}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--Tl);border:1.5px solid rgba(32,169,185,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;font-weight:400;color:var(--T);line-height:1;transition:transform .25s,background .2s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--T);color:#fff;}
+.faq-a{display:none;padding:0 24px 20px;}
+.faq-item.open .faq-a{display:block;}
+.faq-a p{font-size:15px;color:var(--mut);line-height:1.75;}
+.faq-a p+p{margin-top:12px;}
+
 </style>
 </head>
 <body>
@@ -725,6 +739,32 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
   </div>
 </section>
+<!-- FAQ -->
+<section class="sec sec-bg">
+  <div class="w">
+    <div class="slabel">Najczęstsze pytania</div>
+    <h2 class="stitle">FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" type="button">Jakie umowy są potrzebne przy realizacji projektu IT lub współpracy z software house'em?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Zakres potrzebnych umów zależy od modelu projektu, ale podstawowy dokument powinien dokładnie regulować przedmiot prac, harmonogram, odbiory, wynagrodzenie i odpowiedzialność stron. Przy większych projektach znaczenie mają również SLA, utrzymanie systemu, rozwój oprogramowania, poufność oraz zasady korzystania z podwykonawców.</p><p>Szczególnej uwagi wymagają prawa autorskie i licencje do kodu, dokumentacji, grafik, baz danych oraz innych elementów projektu. Dobrze przygotowana umowa IT powinna również przewidywać, co stanie się w przypadku opóźnienia, nieudanego wdrożenia, zakończenia współpracy albo konieczności przejęcia projektu przez innego wykonawcę.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Jak zabezpieczyć prawa do kodu i własności intelektualnej?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Prawa do oprogramowania trzeba uregulować w umowie — samo opłacenie faktury nie zastępuje skutecznego przeniesienia praw. Należy ustalić, czy zamawiający nabywa autorskie prawa majątkowe, czy otrzymuje licencję, i jakie sposoby korzystania z systemu są objęte umową.</p><p>Przeniesienie autorskich praw majątkowych wymaga formy pisemnej pod rygorem nieważności; zwykła wymiana e-maili lub skan podpisu nie zastępuje tej formy. Trzeba również sprawdzić prawa wykonawcy do prac podwykonawców i licencje komponentów zewnętrznych. Osobno warto zabezpieczyć dostęp do kodu źródłowego, dokumentacji i narzędzi potrzebnych do dalszego rozwoju.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Co zrobić, gdy wykonawca IT opóźnia projekt lub nie dostarcza uzgodnionych funkcjonalności?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Najpierw trzeba ustalić, które obowiązki wynikają z umowy i czy opóźnienie rzeczywiście obciąża wykonawcę. W projektach IT spory często dotyczą zakresu prac, zmian wymagań, odbiorów poszczególnych etapów i odpowiedzialności za opóźnienia.</p><p>W zależności od sytuacji można rozważyć wezwanie wykonawcy do realizacji, przygotowanie planu naprawczego, skorzystanie z kar umownych, odmowę odbioru wadliwych prac, zakończenie umowy lub dochodzenie roszczeń. Przed eskalacją sporu warto również zabezpieczyć repozytoria, dokumentację projektu oraz dowody pokazujące rzeczywisty stan wykonanych prac.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Jak uregulować RODO i przetwarzanie danych w umowie IT?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Najpierw trzeba ustalić rolę dostawcy: czy przetwarza dane osobowe w imieniu klienta, czy działa jako odrębny administrator. Gdy jest podmiotem przetwarzającym, potrzebne są ustalenia odpowiadające art. 28 RODO, a nie tylko ogólne zapewnienie o zgodności z przepisami.</p><p>Umowa powinna regulować m.in. zakres i cel przetwarzania, bezpieczeństwo, podwykonawców, zgłaszanie naruszeń, audyty oraz usunięcie lub zwrot danych. Przy usługach chmurowych sprawdzamy także lokalizację przetwarzania i podstawy ewentualnego przekazywania danych poza Europejski Obszar Gospodarczy.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="f-top">
     <div>
@@ -802,6 +842,15 @@ footer { background:var(--N); padding-bottom:80px; }
       hamburger.classList.remove('open');
       mobileNav.classList.remove('open');
       document.body.style.overflow = '';
+    });
+  });
+
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const item=btn.closest('.faq-item');
+      const isOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!isOpen)item.classList.add('open');
     });
   });
 </script>

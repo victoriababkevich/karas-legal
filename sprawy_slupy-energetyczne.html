@@ -680,6 +680,20 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
 .cr-contact-success h3{color:var(--N);margin-bottom:8px;}
 .cr-contact-success p{color:var(--mut);font-size:14px;line-height:1.6;}
 .field-error{border-color:#e53e3e !important;box-shadow:0 0 0 3px rgba(229,62,62,.12) !important;}
+
+/* ══ FAQ ══ */
+.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:44px;}
+.faq-item{border-radius:14px;border:1.5px solid var(--bdr);background:#fff;overflow:hidden;transition:border-color .2s;}
+.faq-item.open{border-color:var(--T);}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;font-family:inherit;font-size:16px;font-weight:700;color:var(--N);line-height:1.4;gap:16px;}
+.faq-q:hover{color:var(--T);}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--Tl);border:1.5px solid rgba(32,169,185,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;font-weight:400;color:var(--T);line-height:1;transition:transform .25s,background .2s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--T);color:#fff;}
+.faq-a{display:none;padding:0 24px 20px;}
+.faq-item.open .faq-a{display:block;}
+.faq-a p{font-size:15px;color:var(--mut);line-height:1.75;}
+.faq-a p+p{margin-top:12px;}
+
 </style>
 </head>
 <body>
@@ -1006,6 +1020,36 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
 
   <div class="disclaimer-calc"><b>Zastrzeżenie:</b> niniejszy kalkulator ma charakter wyłącznie informacyjny. Nie stanowi porady prawnej, opinii rzeczoznawcy ani oferty w rozumieniu kodeksu cywilnego. Przed podjęciem decyzji o dochodzeniu roszczeń konieczna jest indywidualna analiza dokumentów, map, księgi wieczystej, przeznaczenia działki, rodzaju urządzeń, okresu korzystania i ewentualnego przedawnienia.</div>
 </div>
+<!-- FAQ -->
+<section class="sec sec-bg">
+  <div class="w">
+    <div class="slabel">Najczęstsze pytania</div>
+    <h2 class="stitle">FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" type="button">Słup energetyczny na działce — czy właścicielowi należy się wynagrodzenie lub odszkodowanie?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Roszczenia mogą przysługiwać, gdy przedsiębiorstwo korzysta z działki bez odpowiedniego tytułu prawnego. Sam słup na nieruchomości nie oznacza jednak automatycznie prawa do odszkodowania.</p><p>Trzeba odróżnić wynagrodzenie za ustanowienie służebności przesyłu od rozliczenia bezumownego korzystania i naprawienia konkretnej szkody. Każde z tych żądań ma własne przesłanki. Analiza obejmuje umowy, decyzje administracyjne, księgę wieczystą i historię urządzeń. Brak wpisu służebności w księdze nie wystarcza, aby uznać, że operator nie ma żadnych uprawnień.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Czy mogę dochodzić roszczeń, jeżeli słup lub linia energetyczna znajdują się na działce od wielu lat?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Wieloletnia obecność słupa lub linii nie przekreśla automatycznie możliwości działania. Trzeba ustalić historię korzystania z gruntu i rodzaj roszczenia, ponieważ inaczej ocenia się ustanowienie służebności na przyszłość, a inaczej należności za minione okresy.</p><p>Znaczenie mają daty budowy i zmian przebiegu sieci, wcześniejsze decyzje lub umowy oraz argumenty dotyczące zasiedzenia. Pomocne są mapy, dokumenty nabycia nieruchomości i korespondencja z operatorem.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Czy zakład energetyczny może powołać się na zasiedzenie służebności?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Przedsiębiorstwo może podnieść zarzut zasiedzenia, ale nie przesądza to o jego skuteczności. Trzeba zbadać rodzaj prawa, okres i sposób korzystania z gruntu, tytuły administracyjne oraz następstwo prawne operatorów.</p><p>Przy starszych urządzeniach należy uwzględnić wyrok TK z 2 grudnia 2025 r., P 10/16, dotyczący zasiedzenia służebności odpowiadającej treści służebności przesyłu przed wprowadzeniem tej instytucji do Kodeksu cywilnego. Znaczenie tego orzeczenia dla danej sprawy wymaga analizy aktualnego orzecznictwa i okoliczności nieruchomości.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Od czego zależy wysokość wynagrodzenia za słup lub linię energetyczną na działce?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Wysokość wynagrodzenia zależy przede wszystkim od zakresu, w jakim urządzenia ograniczają możliwość korzystania z konkretnej nieruchomości. Znaczenie mają m.in. jej wartość i przeznaczenie, rodzaj urządzeń, przebieg sieci, powierzchnia pasa niezbędnego do eksploatacji oraz faktyczny wpływ infrastruktury na sposób zagospodarowania działki.</p><p>Nie istnieje jedna stawka właściwa dla wszystkich nieruchomości. W postępowaniu sądowym ustalenie odpowiedniego wynagrodzenia często wymaga opinii biegłego, dlatego przed sformułowaniem żądania warto właściwie ustalić jego podstawę oraz zakres.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Co zrobić, gdy przedsiębiorstwo energetyczne chce postawić nowy słup albo poprowadzić linię przez moją nieruchomość?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Nie warto podpisywać zgody lub umowy bez wcześniejszego sprawdzenia jej skutków dla nieruchomości. Należy ustalić dokładny przebieg urządzeń, powierzchnię pasa eksploatacyjnego, zakres dostępu przedsiębiorstwa do działki, planowane ograniczenia w zabudowie oraz proponowane wynagrodzenie.</p><p>Służebność ustanawiana jest na wiele lat i może mieć znaczenie również przy późniejszej sprzedaży lub zabudowie nieruchomości. Gdy sprawa jest prowadzona w trybie administracyjnym, trzeba również sprawdzić pouczenia i terminy udziału w postępowaniu. Brak zgody właściciela nie zawsze wyklucza realizację inwestycji na podstawie odpowiedniej decyzji.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="f-top">
     <div>
@@ -1200,6 +1244,15 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
   });
 
   calc();
+
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const item=btn.closest('.faq-item');
+      const isOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!isOpen)item.classList.add('open');
+    });
+  });
 </script>
 
 </body>
