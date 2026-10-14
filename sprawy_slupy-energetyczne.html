@@ -654,8 +654,22 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
 .cinstruction p:last-child { margin:0; }
 .cdiagram { border:1.5px solid var(--bdr); border-radius:12px; background:#fff; padding:16px; margin:10px 0; }
 .disclaimer-calc { margin:32px 0 0; padding:18px 22px; border:1.5px solid var(--bdr); border-radius:14px; background:#fff; color:var(--mut); font-size:13px; line-height:1.65; }
-@media(max-width:900px){ .calc-app{ grid-template-columns:1fr; } .crow{ grid-template-columns:1fr; } .cr-fields{ grid-template-columns:1fr; } .device-grid{ grid-template-columns:repeat(2,1fr); } }
-@media(max-width:520px){ .calc-wrap{ padding:0 14px 60px; } .device-grid{ grid-template-columns:1fr; } }
+.court-examples{background:#fff;border:1.5px solid var(--bdr);border-radius:16px;padding:28px;margin-top:40px;margin-bottom:0;box-shadow:0 4px 16px rgba(9,28,46,.06);}
+.court-ex-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:14px;}
+.court-ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px;}
+.court-ex-card{border:1.5px solid rgba(32,169,185,.25);border-radius:12px;padding:16px;background:var(--Tl);}
+.court-ex-amount{font-size:22px;font-weight:800;color:var(--T);margin-bottom:6px;}
+.court-ex-desc{font-size:13px;color:var(--mut);line-height:1.6;}
+.court-ex-note{font-size:12px;color:var(--mut);font-style:italic;}
+.example-btn{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:11px 20px;border:2px solid var(--T);border-radius:10px;background:var(--Tl);color:var(--T);font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;transition:all .2s;}
+.example-btn:hover{background:var(--T);color:#fff;}
+.cr-formula{font-size:13px;color:var(--mut);padding:16px 24px 0;font-family:monospace;letter-spacing:.01em;}
+.cr-hist-box{margin:12px 24px 0;padding:14px;background:var(--bg);border:1.5px solid var(--bdr);border-radius:12px;}
+.cr-hist-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:4px;}
+.cr-hist-amount{font-size:22px;font-weight:800;color:var(--N);margin-bottom:4px;}
+.cr-hist-formula{font-size:12px;color:var(--mut);}
+@media(max-width:900px){.calc-app{grid-template-columns:1fr;}.crow{grid-template-columns:1fr;}.cr-fields{grid-template-columns:1fr;}.device-grid{grid-template-columns:repeat(2,1fr);}.court-ex-grid{grid-template-columns:1fr;}}
+@media(max-width:520px){.calc-wrap{padding:0 14px 60px;}.device-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -763,14 +777,32 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
 </section>
 
 <div id="kalkulator" class="calc-wrap">
+
+  <!-- Przykłady z orzecznictwa -->
+  <div class="court-examples">
+    <div class="court-ex-label">Przykłady świadczeń zasądzonych przez sądy</div>
+    <div class="court-ex-grid">
+      <div class="court-ex-card">
+        <div class="court-ex-amount">335 237 zł</div>
+        <div class="court-ex-desc">Za ustanowienie służebności na kilku nieruchomościach — SR Ropczyce; apelacja i skarga kasacyjna przedsiębiorcy oddalone. SN, II&nbsp;CSKP&nbsp;1045/24 (19.03.2026).</div>
+      </div>
+      <div class="court-ex-card">
+        <div class="court-ex-amount">ponad 180 000 zł</div>
+        <div class="court-ex-desc">Przy napowietrznej linii 110&nbsp;kV, z udziałem biegłych rzeczoznawców. SO Rzeszów, V&nbsp;Ca&nbsp;1043/24 (17.03.2026).</div>
+      </div>
+    </div>
+    <div class="court-ex-note">Podane kwoty dotyczą indywidualnych spraw i nie stanowią typowych ani średnich świadczeń.</div>
+  </div>
+
   <div class="calc-intro">
-    <h2>Kalkulator roszczeń przesyłowych</h2>
-    <p>Sprawdź orientacyjną wartość roszczeń z tytułu bezumownego korzystania z gruntu, ustanowienia służebności przesyłu oraz możliwego spadku wartości nieruchomości. Wynik jest szacunkowy — dokładna kwota wymaga analizy dokumentów i stanu prawnego Twojej działki.</p>
+    <h2>Kalkulator wynagrodzenia za służebność przesyłu</h2>
+    <p>Sprawdź orientacyjną wartość wynagrodzenia za ustanowienie służebności przesyłu. Wynik jest szacunkowy — dokładna kwota wymaga analizy dokumentów i stanu prawnego Twojej działki.</p>
     <div class="calc-badges">
       <div class="calc-badge"><span>⚖</span>Analiza sprawy przez prawnika</div>
       <div class="calc-badge"><span>⌂</span>Właściciele nieruchomości w całej Polsce</div>
       <div class="calc-badge"><span>✓</span>Orientacyjny wynik w 60 sekund</div>
     </div>
+    <button class="example-btn" id="exampleBtn" type="button">Symulacja: 180 000 zł — sprawdź jak to wygląda</button>
   </div>
 
   <div class="calc-app">
@@ -782,19 +814,19 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
         <div class="cstep">
           <h3>1. Rodzaj urządzenia</h3>
           <div class="device-grid" id="devices">
-            <button class="cdevice" data-type="low" data-width="7" type="button">
+            <button class="cdevice" data-type="low" data-width="7" data-k="0.35" type="button">
               <svg viewBox="0 0 48 48" fill="none"><path d="M24 5v38M14 43h20M16 16h16M12 22h24M17 16l7-11 7 11M17 43l7-21 7 21" stroke-width="2"/></svg>
               <small>Linia niskiego napięcia</small>
             </button>
-            <button class="cdevice active" data-type="mid" data-width="14" type="button">
+            <button class="cdevice active" data-type="mid" data-width="14" data-k="0.35" type="button">
               <svg viewBox="0 0 48 48" fill="none"><path d="M24 4v40M10 18h28M6 25h36M15 18l9-14 9 14M15 44l9-26 9 26" stroke-width="2"/></svg>
               <small>Linia średniego napięcia</small>
             </button>
-            <button class="cdevice" data-type="high" data-width="25" type="button">
+            <button class="cdevice" data-type="high" data-width="25" data-k="0.35" type="button">
               <svg viewBox="0 0 48 48" fill="none"><path d="M24 3v42M8 16h32M4 24h40M12 32h24M13 45l11-29 11 29M15 16l9-13 9 13" stroke-width="2"/></svg>
               <small>Linia wysokiego napięcia</small>
             </button>
-            <button class="cdevice" data-type="other" data-width="3" type="button">
+            <button class="cdevice" data-type="other" data-width="3" data-k="0.20" type="button">
               <svg viewBox="0 0 48 48" fill="none"><path d="M8 30h32M13 30a7 7 0 0114 0M27 30a7 7 0 0114 0M10 36h28" stroke-width="2"/></svg>
               <small>Gazociąg, wodociąg lub inne</small>
             </button>
@@ -806,22 +838,22 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
           <div class="crow">
             <div class="cinput">
               <label class="clabel" for="area">Wpisz powierzchnię ręcznie</label>
-              <input id="area" type="number" min="0" value="1120">
+              <input id="area" type="number" min="0" value="1200">
               <span class="cunit">m²</span>
             </div>
             <div class="cmini">
               <label class="clabel">albo oblicz automatycznie</label>
               <div class="cinput" style="margin-bottom:8px;">
-                <input id="length" type="number" min="0" value="80">
+                <input id="length" type="number" min="0" value="100">
                 <span class="cunit" style="top:13px">m</span>
               </div>
               <div class="chint">Długość linii na działce</div>
               <div class="cinput" style="margin-top:10px;">
-                <input id="width" type="number" min="0" value="14">
+                <input id="width" type="number" min="0" value="12">
                 <span class="cunit" style="top:13px">m</span>
               </div>
               <div class="chint">Sugerowana szerokość pasa</div>
-              <p style="margin:10px 0 0;font-size:13px;">Powierzchnia pasa: <strong id="autoArea">1 120 m²</strong></p>
+              <p style="margin:10px 0 0;font-size:13px;">Powierzchnia pasa: <strong id="autoArea">1 200 m²</strong></p>
             </div>
           </div>
           <button class="ctoggle" data-target="areaHelp" type="button">▾ Jak obliczyć powierzchnię pasa?</button>
@@ -834,7 +866,7 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
                 <polygon points="95,160 560,178 506,76 150,55" fill="url(#g)" stroke="#20A9B9" stroke-dasharray="6 5"/>
                 <line x1="110" y1="108" x2="545" y2="126" stroke="#091C2E" stroke-width="4"/>
                 <g stroke="#091C2E" stroke-width="3"><line x1="210" y1="72" x2="210" y2="168"/><line x1="195" y1="94" x2="225" y2="94"/><line x1="200" y1="168" x2="220" y2="168"/><line x1="390" y1="80" x2="390" y2="176"/><line x1="374" y1="102" x2="406" y2="102"/><line x1="380" y1="176" x2="400" y2="176"/></g>
-                <text x="245" y="222" fill="#5A6E7F" font-size="14">Długość linii na działce (np. 80 m)</text>
+                <text x="245" y="222" fill="#5A6E7F" font-size="14">Długość linii na działce (np. 100 m)</text>
                 <text x="58" y="88" fill="#5A6E7F" font-size="13">Szerokość pasa</text>
               </svg>
             </div>
@@ -849,92 +881,98 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
         </div>
 
         <div class="cstep">
-          <h3>3. Okres bezumownego korzystania</h3>
+          <h3>3. Cena 1 m² gruntu (C)</h3>
           <div class="crow">
             <div class="cinput">
-              <label class="clabel" for="months">Liczba miesięcy</label>
-              <input id="months" type="number" min="0" value="120">
-              <span class="cunit">mies.</span>
+              <label class="clabel" for="landPrice">Szacunkowa cena 1 m² w Twojej okolicy</label>
+              <input id="landPrice" type="number" min="0" step="10" value="300">
+              <span class="cunit">zł</span>
             </div>
-            <div class="cmini">
-              Czyli około<br><strong id="years">10 lat</strong>
+            <div class="cmini" style="display:flex;align-items:center;">
+              <p class="chint">Możesz wpisać cenę z portalu ogłoszeń albo obliczyć: <strong style="color:var(--N)">wartość działki ÷ jej powierzchnia</strong></p>
             </div>
           </div>
         </div>
 
         <div class="cstep">
-          <h3>4. Stawka i wartość gruntu</h3>
+          <h3>4. Współczynnik korzystania (K)</h3>
           <div class="crow">
             <div class="cinput">
-              <label class="clabel" for="rate">Stawka dzierżawy za 1 m² / miesiąc</label>
-              <input id="rate" type="number" min="0" step="0.01" value="1.50">
-              <span class="cunit">zł</span>
+              <label class="clabel" for="kCoef">Stopień korzystania z pasa przez przedsiębiorcę</label>
+              <input id="kCoef" type="number" min="0.01" max="1" step="0.01" value="0.35">
             </div>
-            <div class="cinput">
-              <label class="clabel" for="landValue">Wartość 1 m² gruntu</label>
-              <input id="landValue" type="number" min="0" step="1" value="300">
-              <span class="cunit">zł</span>
+            <div class="cmini" style="display:flex;align-items:center;">
+              <p class="chint">Ustawiany automatycznie po wyborze urządzenia. Możesz zmienić ręcznie.</p>
             </div>
           </div>
-        </div>
-
-        <div class="cstep">
-          <h3>5. Współczynnik uciążliwości</h3>
-          <div class="cinput" style="margin-bottom:10px;">
-            <label class="clabel" for="impact">Skala ograniczeń w korzystaniu z działki</label>
-            <input id="impact" type="number" min="1" max="2" step="0.05" value="1.30">
-          </div>
-          <input id="impactSlider" type="range" min="1" max="2" step="0.05" value="1.30">
-          <div class="cscale"><span>1,0</span><span>1,25</span><span>1,50</span><span>1,75</span><span>2,0</span></div>
-          <button class="ctoggle" data-target="impactHelp" type="button">▾ Jak ustalić współczynnik uciążliwości?</button>
-          <div class="cexplain open" id="impactHelp">
-            <p>Współczynnik odzwierciedla, jak bardzo urządzenia ograniczają możliwość korzystania z działki.</p>
+          <button class="ctoggle" data-target="kHelp" type="button">▾ Jak rozumieć współczynnik K?</button>
+          <div class="cexplain" id="kHelp">
             <table class="ctable">
-              <tr><th>Stopień</th><th>Opis</th><th>Współczynnik</th></tr>
-              <tr><td>Niska</td><td>Urządzenie nie utrudnia zabudowy ani dojazdu.</td><td>1,00–1,25</td></tr>
-              <tr><td>Średnia</td><td>Widoczne ograniczenia w zagospodarowaniu.</td><td>1,25–1,50</td></tr>
-              <tr><td>Wysoka</td><td>Znaczne ograniczenia w zabudowie lub użytkowaniu.</td><td>1,50–1,75</td></tr>
-              <tr><td>Bardzo wysoka</td><td>Istotne wyłączenie dużej części działki.</td><td>1,75–2,00</td></tr>
+              <tr><th>Urządzenie</th><th>K (orientacyjnie)</th></tr>
+              <tr><td>Linia napowietrzna (NN / SN / WN)</td><td>0,35</td></tr>
+              <tr><td>Kabel lub rurociąg podziemny</td><td>0,20</td></tr>
+              <tr><td>Urządzenie naziemne (np. stacja)</td><td>1,00</td></tr>
             </table>
+            <p class="chint" style="margin-top:10px;">K wyraża stopień korzystania z pasa służebności przez przedsiębiorcę. Wartości orientacyjne zgodnie z § 32 ust. 6 rozporządzenia z 5.09.2023 r. Sąd może przyjąć inne na podstawie opinii biegłego. Symulacja 180 000 zł korzysta z K = 0,50.</p>
           </div>
         </div>
 
-        <button class="calc-btn" id="calculate" type="button">Oblicz wartość roszczeń</button>
-        <p class="chint" style="margin-top:10px;">Wszystkie wartości mają charakter orientacyjny i nie zastępują opinii rzeczoznawcy ani analizy prawnej.</p>
+        <div class="cstep" style="padding-bottom:8px;">
+          <button class="ctoggle" data-target="histSection" style="font-size:15px;font-weight:700;" type="button">▾ Wcześniejsze bezumowne korzystanie (opcjonalnie)</button>
+          <div class="cexplain" id="histSection">
+            <p class="chint" style="margin-bottom:14px;">Jeśli urządzenia były na działce bez umowy przez lata, możesz dochodzić dodatkowego wynagrodzenia za ten okres. Kalkulator pokaże szacunek osobno — poza głównym wynikiem.</p>
+            <div class="crow">
+              <div class="cinput">
+                <label class="clabel" for="histRate">Stawka za 1 m² / miesiąc</label>
+                <input id="histRate" type="number" min="0" step="0.01" placeholder="np. 0,40">
+                <span class="cunit">zł</span>
+              </div>
+              <div class="cinput">
+                <label class="clabel" for="histMonths">Liczba miesięcy</label>
+                <input id="histMonths" type="number" min="0" placeholder="np. 60">
+                <span class="cunit">mies.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="calc-btn" id="calculate" type="button">Oblicz wynagrodzenie</button>
+        <p class="chint" style="margin-top:10px;">Wartości mają charakter orientacyjny i nie zastępują opinii rzeczoznawcy ani analizy prawnej.</p>
       </div>
     </div>
 
     <!-- PRAWA KOLUMNA: WYNIK + KONTAKT -->
     <aside>
-      <div class="cinstruction">
-        <h3>Instrukcja</h3>
-        <p><strong>Najpierw</strong> wybierz rodzaj urządzenia i oblicz powierzchnię pasa. Następnie wpisz okres korzystania, stawkę oraz współczynnik uciążliwości.</p>
-        <p class="chint">Kalkulator pokazuje orientacyjny przedział, ponieważ dokładna kwota zależy m.in. od przeznaczenia nieruchomości, dokumentów, map i przebiegu urządzeń.</p>
-      </div>
-
       <div class="cresult-panel">
-        <div class="cr-lines">
-          <h3 style="color:var(--N);font-size:17px;font-weight:800;margin:0 0 12px;">Szacowana wartość roszczeń</h3>
-          <div class="cr-lineitem"><span>Bezumowne korzystanie z gruntu</span><b id="useFee">201 600 zł</b></div>
-          <div class="cr-lineitem"><span>Możliwe obniżenie wartości nieruchomości</span><b id="damageFee">436 800 zł</b></div>
+        <div class="cr-lines" style="padding-bottom:0;">
+          <h3 style="color:var(--N);font-size:17px;font-weight:800;margin:0;">Szacowane wynagrodzenie za służebność przesyłu</h3>
         </div>
+        <div class="cr-formula" id="formulaDisplay">1 200 m² × 300 zł/m² × K 0,50</div>
         <div class="cr-amount-box">
-          <div class="cr-label">Orientacyjna kwota brutto</div>
-          <div class="cr-amount" id="totalRange">510 720 – 765 600 zł</div>
-          <p class="cr-sub">Wynik jest przedziałem szacunkowym. Ostateczna wartość wymaga analizy dokumentów i stanu prawnego nieruchomości.</p>
+          <div class="cr-label" id="resultLabel">Symulacja na przykładowych założeniach</div>
+          <div class="cr-amount" id="totalRange">180 000 zł</div>
         </div>
+
+        <div id="histResult" style="display:none;">
+          <div class="cr-hist-box">
+            <div class="cr-hist-label">Roszczenie historyczne — osobno</div>
+            <div class="cr-hist-amount" id="histAmount">—</div>
+            <div class="cr-hist-formula" id="histFormula"></div>
+          </div>
+        </div>
+
         <div class="cr-notice">
           <div class="cr-notice-icon">!</div>
-          <div class="cr-notice-text"><b>Wynik nie jest poradą prawną.</b><br>Może stanowić punkt wyjścia do wstępnej oceny opłacalności dochodzenia roszczeń.</div>
+          <div class="cr-notice-text">To orientacyjna symulacja. Możliwość i wysokość roszczenia wymagają indywidualnej weryfikacji przez kancelarię.</div>
         </div>
         <div class="cr-contact">
           <h3>Chcesz poznać dokładną wycenę?</h3>
           <p>Zostaw kontakt — przeanalizujemy dokumenty, mapę i stan prawny Twojej działki.</p>
           <div class="cr-fields">
-            <input placeholder="Imię i nazwisko" type="text">
-            <input placeholder="Telefon" type="tel">
-            <input placeholder="E-mail" type="email">
-            <input placeholder="Numer działki" type="text">
+            <input placeholder="Imię i nazwisko" type="text" id="cf-name">
+            <input placeholder="Telefon" type="tel" id="cf-phone">
+            <input placeholder="E-mail" type="email" id="cf-email">
+            <input placeholder="Numer działki" type="text" id="cf-dzialka">
           </div>
           <button class="calc-btn gold" type="button">Chcę bezpłatną analizę sprawy</button>
         </div>
@@ -1029,28 +1067,79 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
   const $ = id => document.getElementById(id);
   const fmt = n => new Intl.NumberFormat('pl-PL',{maximumFractionDigits:0}).format(Math.max(0,n)) + ' zł';
   const fmtM2 = n => new Intl.NumberFormat('pl-PL',{maximumFractionDigits:0}).format(Math.max(0,n)) + ' m²';
-  function calc(){
-    const length=parseFloat($('length').value)||0, width=parseFloat($('width').value)||0;
-    const autoArea=length*width; $('autoArea').textContent=fmtM2(autoArea);
-    if(document.activeElement===$('length')||document.activeElement===$('width')) $('area').value=Math.round(autoArea);
-    const area=parseFloat($('area').value)||0, months=parseFloat($('months').value)||0,
-          rate=parseFloat($('rate').value)||0, land=parseFloat($('landValue').value)||0,
-          impact=parseFloat($('impact').value)||1;
-    $('years').textContent=(months/12).toLocaleString('pl-PL',{maximumFractionDigits:1})+' lat';
-    $('impactSlider').value=impact;
-    const use=area*rate*months*impact, damage=area*land*impact, total=use+damage;
-    $('useFee').textContent=fmt(use);
-    $('damageFee').textContent=fmt(damage);
-    $('totalRange').textContent=fmt(total*.8)+' – '+fmt(total*1.2);
+  const fmtNum = n => n.toLocaleString('pl-PL',{maximumFractionDigits:2});
+
+  let usingExample = true;
+
+  function calc() {
+    const length = parseFloat($('length').value) || 0;
+    const width  = parseFloat($('width').value)  || 0;
+    const autoArea = length * width;
+    $('autoArea').textContent = fmtM2(autoArea);
+    if (document.activeElement === $('length') || document.activeElement === $('width')) {
+      $('area').value = Math.round(autoArea);
+    }
+    const area = parseFloat($('area').value)      || 0;
+    const C    = parseFloat($('landPrice').value) || 0;
+    const K    = parseFloat($('kCoef').value)     || 0;
+
+    // W = A × C × K
+    if (area > 0 && C > 0 && K > 0) {
+      const W = area * C * K;
+      $('totalRange').textContent   = fmt(W);
+      $('formulaDisplay').textContent = fmtM2(area) + ' × ' + fmtNum(C) + ' zł/m² × K ' + fmtNum(K);
+      $('resultLabel').textContent  = usingExample ? 'Symulacja na przykładowych założeniach' : 'Twoje dane';
+    } else {
+      $('totalRange').textContent   = '—';
+      $('formulaDisplay').textContent = 'Uzupełnij dane powyżej';
+      $('resultLabel').textContent  = 'Brak danych';
+    }
+
+    // Roszczenie historyczne (opcjonalne, osobno)
+    const R = parseFloat($('histRate').value)   || 0;
+    const M = parseFloat($('histMonths').value) || 0;
+    if (R > 0 && M > 0 && area > 0) {
+      const W_hist = area * R * M;
+      $('histResult').style.display = 'block';
+      $('histAmount').textContent   = fmt(W_hist);
+      $('histFormula').textContent  = fmtM2(area) + ' × ' + fmtNum(R) + ' zł × ' + M + ' mies.';
+    } else {
+      $('histResult').style.display = 'none';
+    }
   }
-  document.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',calc));
-  $('impactSlider').addEventListener('input',e=>{ $('impact').value=e.target.value; calc(); });
-  document.querySelectorAll('.ctoggle').forEach(btn=>btn.addEventListener('click',()=>$(btn.dataset.target).classList.toggle('open')));
-  document.querySelectorAll('.cdevice').forEach(btn=>btn.addEventListener('click',()=>{
-    document.querySelectorAll('.cdevice').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active'); $('width').value=btn.dataset.width; calc();
+
+  // Przycisk symulacji 180 000 zł (T01: 100m × 12m × 300 zł × K 0,50)
+  $('exampleBtn').addEventListener('click', () => {
+    $('length').value    = 100;
+    $('width').value     = 12;
+    $('area').value      = 1200;
+    $('landPrice').value = 300;
+    $('kCoef').value     = 0.50;
+    usingExample = true;
+    calc();
+  });
+
+  // Edycja pól → oznacz jako dane użytkownika
+  ['length','width','area','landPrice','kCoef','histRate','histMonths'].forEach(id => {
+    $(id).addEventListener('input', () => { usingExample = false; calc(); });
+  });
+
+  // Wybór urządzenia → ustaw szerokość i K
+  document.querySelectorAll('.cdevice').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.cdevice').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    $('width').value = btn.dataset.width;
+    $('kCoef').value = btn.dataset.k;
+    usingExample = false;
+    calc();
   }));
-  $('calculate').addEventListener('click',calc);
+
+  // Sekcje rozwijane
+  document.querySelectorAll('.ctoggle').forEach(btn => btn.addEventListener('click', () => {
+    $(btn.dataset.target).classList.toggle('open');
+  }));
+
+  $('calculate').addEventListener('click', calc);
   calc();
 </script>
 
