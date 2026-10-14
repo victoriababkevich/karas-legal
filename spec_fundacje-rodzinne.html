@@ -555,19 +555,31 @@ footer { background:var(--N); padding-bottom:80px; }
 @media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}.sp-services{grid-template-columns:1fr;}}
 .kw{color:var(--T);font-weight:700;}
 
+
 /* ══ FAQ ══ */
-.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:44px;}
-.faq-item{border-radius:14px;border:1.5px solid var(--bdr);background:#fff;overflow:hidden;transition:border-color .2s;}
-.faq-item.open{border-color:var(--T);}
-.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;font-family:inherit;font-size:16px;font-weight:700;color:var(--N);line-height:1.4;gap:16px;}
-.faq-q:hover{color:var(--T);}
-.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--Tl);border:1.5px solid rgba(32,169,185,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;font-weight:400;color:var(--T);line-height:1;transition:transform .25s,background .2s;}
-.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--T);color:#fff;}
-.faq-a{display:none;padding:0 24px 20px;}
+.faq-sec{padding:40px 0;}
+.faq-toggle{width:100%;text-align:left;background:#fff;border:1.5px solid var(--bdr);border-radius:12px;padding:18px 24px;cursor:pointer;font-family:inherit;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:border-color .2s,background .15s;}
+.faq-toggle:hover{border-color:var(--T);background:var(--Tl);}
+.faq-toggle.open{border-color:var(--T);background:var(--Tl);border-bottom-left-radius:0;border-bottom-right-radius:0;}
+.faq-toggle-inner{display:flex;align-items:center;gap:16px;}
+.faq-toggle-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--T);}
+.faq-toggle-title{font-size:17px;font-weight:800;color:var(--N);}
+.faq-arrow{font-size:16px;color:var(--T);transition:transform .3s;flex-shrink:0;}
+.faq-toggle.open .faq-arrow{transform:rotate(180deg);}
+.faq-body{display:none;border:1.5px solid var(--T);border-top:none;border-radius:0 0 12px 12px;overflow:hidden;background:#fff;}
+.faq-body.open{display:block;}
+.faq-list{display:flex;flex-direction:column;}
+.faq-item{border-bottom:1px solid var(--bdr);}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;font-family:inherit;font-size:15px;font-weight:700;color:var(--N);line-height:1.4;gap:16px;transition:color .15s,background .15s;}
+.faq-q:hover{color:var(--T);background:var(--Tl);}
+.faq-item.open>.faq-q{color:var(--T);}
+.faq-icon{font-size:14px;color:var(--T);flex-shrink:0;transition:transform .25s;}
+.faq-item.open .faq-icon{transform:rotate(180deg);}
+.faq-a{display:none;padding:4px 24px 18px;}
 .faq-item.open .faq-a{display:block;}
 .faq-a p{font-size:15px;color:var(--mut);line-height:1.75;}
 .faq-a p+p{margin-top:12px;}
-
 </style>
 </head>
 <body>
@@ -740,28 +752,27 @@ footer { background:var(--N); padding-bottom:80px; }
   </div>
 </section>
 <!-- FAQ -->
-<section class="sec sec-bg">
+<section class="sec sec-bg faq-sec">
   <div class="w">
-    <div class="slabel">Najczęstsze pytania</div>
-    <h2 class="stitle">FAQ</h2>
-    <div class="faq-list">
+    <button class="faq-toggle" type="button"><div class="faq-toggle-inner"><span class="faq-toggle-label">Najczęstsze pytania</span><span class="faq-toggle-title">FAQ</span></div><span class="faq-arrow">&#9660;</span></button>
+    <div class="faq-body"><div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q" type="button">Dla kogo fundacja rodzinna jest dobrym rozwiązaniem i kiedy warto ją założyć?<span class="faq-icon">+</span></button>
+        <button class="faq-q" type="button">Dla kogo fundacja rodzinna jest dobrym rozwiązaniem i kiedy warto ją założyć?<span class="faq-icon">&#9660;</span></button>
         <div class="faq-a"><p>Fundacja rodzinna może być dobrym rozwiązaniem dla właścicieli firm i rodzin planujących wielopokoleniowe zarządzanie majątkiem. Pozwala ograniczać jego rozdrobnienie i z góry określić zasady świadczeń dla beneficjentów.</p><p>Nie zawsze będzie korzystniejsza od testamentu, darowizny lub innych rozwiązań. Wybór wymaga porównania celów rodziny, rodzaju aktywów, kosztów utrzymania i skutków podatkowych.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button">Jak założyć fundację rodzinną i jakie decyzje trzeba wcześniej podjąć?<span class="faq-icon">+</span></button>
+        <button class="faq-q" type="button">Jak założyć fundację rodzinną i jakie decyzje trzeba wcześniej podjąć?<span class="faq-icon">&#9660;</span></button>
         <div class="faq-a"><p>Najpierw trzeba ustalić cel fundacji, beneficjentów, zasady świadczeń, zarządzania i podejmowania decyzji. Należy także określić, jaki majątek ma zostać wniesiony i jak będzie wykorzystywany.</p><p>Utworzenie fundacji wymaga m.in. oświadczenia w akcie założycielskim albo testamencie, statutu w odpowiedniej formie, spisu mienia, ustanowienia wymaganych organów i wpisu do rejestru. Minimalny fundusz założycielski wynosi 100 000 zł. Statut warto przygotować tak, aby regulował również przyszłe zmiany pokoleniowe i konflikty.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button">Jakie są podatkowe skutki utworzenia fundacji rodzinnej i wypłaty świadczeń?<span class="faq-icon">+</span></button>
+        <button class="faq-q" type="button">Jakie są podatkowe skutki utworzenia fundacji rodzinnej i wypłaty świadczeń?<span class="faq-icon">&#9660;</span></button>
         <div class="faq-a"><p>Trzeba osobno ocenić wniesienie majątku, działalność fundacji, wypłaty świadczeń i ewentualne rozwiązanie fundacji. Znaczenie mają rodzaj aktywów, wykonywane transakcje oraz relacja beneficjenta z fundatorem.</p><p>Preferencje podatkowe nie obejmują automatycznie każdej czynności ani każdego odbiorcy świadczenia. Przed decyzją potrzebne jest porównanie planowanej struktury z innymi sposobami sukcesji i ustalenie kosztów jej utrzymania. Analiza powinna opierać się na przepisach obowiązujących w dacie danej czynności.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button">Jak fundacja rodzinna pomaga w sukcesji i ochronie rodzinnego majątku?<span class="faq-icon">+</span></button>
+        <button class="faq-q" type="button">Jak fundacja rodzinna pomaga w sukcesji i ochronie rodzinnego majątku?<span class="faq-icon">&#9660;</span></button>
         <div class="faq-a"><p>Fundacja może utrzymywać kluczowe aktywa w jednym podmiocie, a rodzinie zapewniać świadczenia według zasad określonych w statucie. Pozwala to oddzielić zarządzanie majątkiem od bieżących potrzeb poszczególnych beneficjentów.</p><p>Nie oznacza to wyłączenia wszystkich roszczeń. Wniesienie majątku wymaga uwzględnienia praw wierzycieli, obowiązków alimentacyjnych, roszczeń o zachowek i zasad majątkowych małżonków. Fundacja nie służy do ukrywania aktywów przed osobami uprawnionymi.</p></div>
       </div>
-    </div>
+    </div></div>
   </div>
 </section>
 
@@ -845,6 +856,15 @@ footer { background:var(--N); padding-bottom:80px; }
     });
   });
 
+
+  const faqToggle=document.querySelector('.faq-toggle');
+  const faqBody=document.querySelector('.faq-body');
+  if(faqToggle&&faqBody){
+    faqToggle.addEventListener('click',()=>{
+      const open=faqToggle.classList.toggle('open');
+      faqBody.classList.toggle('open',open);
+    });
+  }
   document.querySelectorAll('.faq-q').forEach(btn=>{
     btn.addEventListener('click',()=>{
       const item=btn.closest('.faq-item');
@@ -852,6 +872,7 @@ footer { background:var(--N); padding-bottom:80px; }
       document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
       if(!isOpen)item.classList.add('open');
     });
+  });
   });
 </script>
 

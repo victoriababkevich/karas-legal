@@ -555,19 +555,31 @@ footer { background:var(--N); padding-bottom:80px; }
 @media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}.sp-services{grid-template-columns:1fr;}}
 .kw{color:var(--T);font-weight:700;}
 
+
 /* ══ FAQ ══ */
-.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:44px;}
-.faq-item{border-radius:14px;border:1.5px solid var(--bdr);background:#fff;overflow:hidden;transition:border-color .2s;}
-.faq-item.open{border-color:var(--T);}
-.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;font-family:inherit;font-size:16px;font-weight:700;color:var(--N);line-height:1.4;gap:16px;}
-.faq-q:hover{color:var(--T);}
-.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--Tl);border:1.5px solid rgba(32,169,185,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;font-weight:400;color:var(--T);line-height:1;transition:transform .25s,background .2s;}
-.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--T);color:#fff;}
-.faq-a{display:none;padding:0 24px 20px;}
+.faq-sec{padding:40px 0;}
+.faq-toggle{width:100%;text-align:left;background:#fff;border:1.5px solid var(--bdr);border-radius:12px;padding:18px 24px;cursor:pointer;font-family:inherit;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:border-color .2s,background .15s;}
+.faq-toggle:hover{border-color:var(--T);background:var(--Tl);}
+.faq-toggle.open{border-color:var(--T);background:var(--Tl);border-bottom-left-radius:0;border-bottom-right-radius:0;}
+.faq-toggle-inner{display:flex;align-items:center;gap:16px;}
+.faq-toggle-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--T);}
+.faq-toggle-title{font-size:17px;font-weight:800;color:var(--N);}
+.faq-arrow{font-size:16px;color:var(--T);transition:transform .3s;flex-shrink:0;}
+.faq-toggle.open .faq-arrow{transform:rotate(180deg);}
+.faq-body{display:none;border:1.5px solid var(--T);border-top:none;border-radius:0 0 12px 12px;overflow:hidden;background:#fff;}
+.faq-body.open{display:block;}
+.faq-list{display:flex;flex-direction:column;}
+.faq-item{border-bottom:1px solid var(--bdr);}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;font-family:inherit;font-size:15px;font-weight:700;color:var(--N);line-height:1.4;gap:16px;transition:color .15s,background .15s;}
+.faq-q:hover{color:var(--T);background:var(--Tl);}
+.faq-item.open>.faq-q{color:var(--T);}
+.faq-icon{font-size:14px;color:var(--T);flex-shrink:0;transition:transform .25s;}
+.faq-item.open .faq-icon{transform:rotate(180deg);}
+.faq-a{display:none;padding:4px 24px 18px;}
 .faq-item.open .faq-a{display:block;}
 .faq-a p{font-size:15px;color:var(--mut);line-height:1.75;}
 .faq-a p+p{margin-top:12px;}
-
 </style>
 </head>
 <body>
@@ -740,28 +752,27 @@ footer { background:var(--N); padding-bottom:80px; }
   </div>
 </section>
 <!-- FAQ -->
-<section class="sec sec-bg">
+<section class="sec sec-bg faq-sec">
   <div class="w">
-    <div class="slabel">Najczęstsze pytania</div>
-    <h2 class="stitle">FAQ</h2>
-    <div class="faq-list">
+    <button class="faq-toggle" type="button"><div class="faq-toggle-inner"><span class="faq-toggle-label">Najczęstsze pytania</span><span class="faq-toggle-title">FAQ</span></div><span class="faq-arrow">&#9660;</span></button>
+    <div class="faq-body"><div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q" type="button">Co powinna zawierać dobra umowa inwestycyjna?<span class="faq-icon">+</span></button>
+        <button class="faq-q" type="button">Co powinna zawierać dobra umowa inwestycyjna?<span class="faq-icon">&#9660;</span></button>
         <div class="faq-a"><p>Dobra umowa inwestycyjna powinna regulować nie tylko wysokość inwestycji i liczbę obejmowanych udziałów, lecz również zasady przyszłej współpracy inwestora i założycieli. Kluczowe znaczenie mają m.in. sposób podejmowania ważnych decyzji, prawa kontrolne inwestora, zasady dalszego finansowania, rozwodnienia udziałów oraz wyjścia z inwestycji.</p><p>Warto również uregulować sytuacje konfliktowe, możliwość sprzedaży udziałów, odpowiedzialność za składane zapewnienia oraz obowiązki założycieli. Najlepsza umowa nie polega na maksymalnym zabezpieczeniu tylko jednej strony — powinna umożliwiać rozwój spółki, a jednocześnie jasno określać ryzyka i zasady postępowania w trudnych sytuacjach.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button">Czym różni się umowa inwestycyjna od umowy wspólników?<span class="faq-icon">+</span></button>
+        <button class="faq-q" type="button">Czym różni się umowa inwestycyjna od umowy wspólników?<span class="faq-icon">&#9660;</span></button>
         <div class="faq-a"><p>Umowa inwestycyjna określa przede wszystkim warunki wejścia inwestora do spółki, natomiast umowa wspólników reguluje zasady dalszej współpracy pomiędzy właścicielami spółki. W praktyce oba dokumenty są często negocjowane łącznie, a część ich postanowień wzajemnie się uzupełnia.</p><p>Umowa inwestycyjna może określać m.in. wysokość finansowania, wycenę spółki, warunki zamknięcia transakcji i zapewnienia stron. Umowa wspólników skupia się zwykle na zarządzaniu spółką, prawach głosu, sprzedaży udziałów, sytuacji impasu czy zasadach wyjścia z inwestycji. Ważne jest również zapewnienie zgodności tych dokumentów z umową lub statutem spółki.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button">Na co założyciel spółki powinien uważać podczas negocjacji z inwestorem?<span class="faq-icon">+</span></button>
+        <button class="faq-q" type="button">Na co założyciel spółki powinien uważać podczas negocjacji z inwestorem?<span class="faq-icon">&#9660;</span></button>
         <div class="faq-a"><p>Nie należy oceniać oferty inwestora wyłącznie przez pryzmat wyceny spółki i wysokości oferowanego finansowania. Równie istotne mogą być prawa, które inwestor otrzyma po transakcji.</p><p>Warto sprawdzić, kto będzie mógł blokować decyzje, jak podzielone zostaną środki ze sprzedaży spółki i co stanie się przy kolejnej rundzie finansowania. Klauzule dotyczące rozwodnienia udziałów, pierwszeństwa wypłat czy obowiązku wspólnej sprzedaży mogą być ważniejsze od samej wyceny. Warunek, który na etapie pierwszej rundy wydaje się mało istotny, może mieć bardzo duże znaczenie przy kolejnym finansowaniu, sprzedaży spółki lub konflikcie pomiędzy wspólnikami.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" type="button">Kiedy najlepiej zaangażować prawnika w negocjacje z inwestorem?<span class="faq-icon">+</span></button>
+        <button class="faq-q" type="button">Kiedy najlepiej zaangażować prawnika w negocjacje z inwestorem?<span class="faq-icon">&#9660;</span></button>
         <div class="faq-a"><p>Najlepiej przed zaakceptowaniem term sheetu lub innych kluczowych warunków inwestycji. Wiele najważniejszych ekonomicznych i korporacyjnych elementów transakcji jest uzgadnianych jeszcze zanim powstanie właściwa umowa inwestycyjna.</p><p>Dokument wstępny nie musi być w całości wiążący, ale może zawierać skuteczne postanowienia o poufności, wyłączności negocjacji lub kosztach. Późniejsza zmiana zaakceptowanych warunków może być trudniejsza negocjacyjnie. Prawnik może pomóc nie tylko przy redagowaniu dokumentów, ale również w ocenie konsekwencji poszczególnych propozycji i negocjowaniu rozwiązań odpowiadających długoterminowym interesom spółki oraz jej wspólników.</p></div>
       </div>
-    </div>
+    </div></div>
   </div>
 </section>
 
@@ -845,6 +856,15 @@ footer { background:var(--N); padding-bottom:80px; }
     });
   });
 
+
+  const faqToggle=document.querySelector('.faq-toggle');
+  const faqBody=document.querySelector('.faq-body');
+  if(faqToggle&&faqBody){
+    faqToggle.addEventListener('click',()=>{
+      const open=faqToggle.classList.toggle('open');
+      faqBody.classList.toggle('open',open);
+    });
+  }
   document.querySelectorAll('.faq-q').forEach(btn=>{
     btn.addEventListener('click',()=>{
       const item=btn.closest('.faq-item');
@@ -852,6 +872,7 @@ footer { background:var(--N); padding-bottom:80px; }
       document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
       if(!isOpen)item.classList.add('open');
     });
+  });
   });
 </script>
 
