@@ -588,6 +588,7 @@ footer { background:var(--N); padding-bottom:80px; }
   --calc-shadow: 0 18px 50px rgba(9,28,46,.09);
 }
 .calc-wrap { max-width:1180px; margin:0 auto; padding:0 28px 80px; }
+#kalkulator { scroll-margin-top:88px; }
 .calc-intro { padding:48px 0 28px; }
 .calc-intro h2 { font-size:32px; font-weight:800; color:var(--N); margin:0 0 12px; }
 .calc-intro p { font-size:17px; color:var(--mut); line-height:1.7; max-width:720px; margin:0; }
@@ -662,8 +663,6 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
 .court-ex-amount{font-size:32px;font-weight:800;color:var(--T);margin-bottom:6px;line-height:1.1;}
 .court-ex-desc{font-size:13px;color:var(--mut);line-height:1.6;}
 .court-ex-note{font-size:12px;color:var(--mut);font-style:italic;}
-.example-btn{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:11px 20px;border:2px solid var(--T);border-radius:10px;background:var(--Tl);color:var(--T);font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;transition:all .2s;}
-.example-btn:hover{background:var(--T);color:#fff;}
 .cr-formula{font-size:13px;color:var(--mut);padding:16px 24px 0;font-family:monospace;letter-spacing:.01em;}
 .cr-hist-box{margin:12px 24px 0;padding:14px;background:var(--bg);border:1.5px solid var(--bdr);border-radius:12px;}
 .cr-hist-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:4px;}
@@ -793,7 +792,7 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
 </div>
 </section>
 
-<div id="kalkulator" class="calc-wrap">
+<div class="calc-wrap">
 
   <!-- Przykłady z orzecznictwa -->
   <div class="court-examples">
@@ -811,7 +810,7 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
     <div class="court-ex-note">Podane kwoty dotyczą indywidualnych spraw i nie stanowią typowych ani średnich świadczeń.</div>
   </div>
 
-  <div class="calc-intro">
+  <div id="kalkulator" class="calc-intro">
     <h2>Kalkulator wynagrodzenia za służebność przesyłu</h2>
     <p>Sprawdź orientacyjną wartość wynagrodzenia za ustanowienie służebności przesyłu. Wynik jest szacunkowy — dokładna kwota wymaga analizy dokumentów i stanu prawnego Twojej działki.</p>
     <div class="calc-badges">
@@ -819,7 +818,6 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
       <div class="calc-badge"><span>⌂</span>Właściciele nieruchomości w całej Polsce</div>
       <div class="calc-badge"><span>✓</span>Orientacyjny wynik w 60 sekund</div>
     </div>
-    <button class="example-btn" id="exampleBtn" type="button">Symulacja: 180 000 zł — sprawdź jak to wygląda</button>
   </div>
 
   <div class="calc-app">
@@ -1134,16 +1132,6 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
     }
   }
 
-  // Przycisk symulacji 180 000 zł (T01: 100m × 12m × 300 zł × K 0,50)
-  $('exampleBtn').addEventListener('click', () => {
-    $('length').value    = 100;
-    $('width').value     = 12;
-    $('area').value      = 1200;
-    $('landPrice').value = 300;
-    $('kCoef').value     = 0.50;
-    usingExample = true;
-    calc();
-  });
 
   // Edycja pól → oznacz jako dane użytkownika
   ['length','width','area','landPrice','kCoef','histRate','histMonths'].forEach(id => {
