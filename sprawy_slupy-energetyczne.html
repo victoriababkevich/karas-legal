@@ -615,7 +615,7 @@ footer { background:var(--N); padding-bottom:80px; }
 .cinput { position:relative; }
 .cinput input, .cinput select { width:100%; border:1.5px solid var(--bdr); border-radius:10px; padding:13px 44px 13px 14px; font-family:inherit; font-size:14px; color:var(--N); background:#fff; outline:none; }
 .cinput input:focus, .cinput select:focus { border-color:var(--T); box-shadow:0 0 0 3px rgba(32,169,185,.12); }
-.cunit { position:absolute; right:13px; top:14px; color:var(--mut); font-size:13px; }
+.cunit { position:absolute; right:13px; bottom:13px; color:var(--mut); font-size:13px; }
 .cmini { border:1.5px solid var(--bdr); border-radius:12px; padding:14px; background:var(--bg); }
 .cmini strong { font-size:22px; color:var(--T); }
 input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; width:100%; }
@@ -862,12 +862,12 @@ input[type=range] { padding:0; height:34px; accent-color:var(--T); border:0; wid
               <label class="clabel">albo oblicz automatycznie</label>
               <div class="cinput" style="margin-bottom:8px;">
                 <input id="length" type="number" min="0" value="100">
-                <span class="cunit" style="top:13px">m</span>
+                <span class="cunit">m</span>
               </div>
               <div class="chint">Długość linii na działce</div>
               <div class="cinput" style="margin-top:10px;">
                 <input id="width" type="number" min="0" value="12">
-                <span class="cunit" style="top:13px">m</span>
+                <span class="cunit">m</span>
               </div>
               <div class="chint">Sugerowana szerokość pasa</div>
               <p style="margin:10px 0 0;font-size:13px;">Powierzchnia pasa: <strong id="autoArea">1 200 m²</strong></p>
