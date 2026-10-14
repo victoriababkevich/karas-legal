@@ -584,20 +584,6 @@ footer { background:var(--N); padding-bottom:80px; }
   .sp-cta h2{font-size:28px;}
 }
 
-
-/* ══ FAQ ══ */
-.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:44px;}
-.faq-item{border-radius:14px;border:1.5px solid var(--bdr);background:#fff;overflow:hidden;transition:border-color .2s;}
-.faq-item.open{border-color:var(--T);}
-.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;font-family:inherit;font-size:16px;font-weight:700;color:var(--N);line-height:1.4;gap:16px;}
-.faq-q:hover{color:var(--T);}
-.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--Tl);border:1.5px solid rgba(32,169,185,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;font-weight:400;color:var(--T);line-height:1;transition:transform .25s,background .2s;}
-.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--T);color:#fff;}
-.faq-a{display:none;padding:0 24px 20px;}
-.faq-item.open .faq-a{display:block;}
-.faq-a p{font-size:15px;color:var(--mut);line-height:1.75;}
-.faq-a p+p{margin-top:12px;}
-
 </style>
 </head>
 <body>
@@ -846,36 +832,6 @@ footer { background:var(--N); padding-bottom:80px; }
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="sec sec-bg">
-  <div class="w">
-    <div class="slabel">Najczęstsze pytania</div>
-    <h2 class="stitle">FAQ</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" type="button">Czy muszę zwrócić subwencję PFR, jeżeli PFR żąda jej zwrotu?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Nie zawsze. Samo żądanie PFR nie przesądza, że zwrot subwencji jest należny w podanej wysokości. Trzeba porównać zarzuty Funduszu z umową, właściwą wersją regulaminu oraz dokumentami dotyczącymi przyznania i rozliczenia wsparcia.</p><p>Znaczenie mogą mieć m.in. status przedsiębiorcy, zatrudnienie, przychody, złożone oświadczenia i wykorzystanie środków. Osobno sprawdzamy wyliczenie należności i odsetek. Wcześniejsze rozliczenie lub umorzenie subwencji także wymaga uwzględnienia, lecz nie daje samo w sobie odpowiedzi na każde późniejsze żądanie zwrotu.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Co zrobić po otrzymaniu wezwania PFR do zwrotu subwencji?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Najpierw zabezpiecz otrzymane pismo, datę jego doręczenia i wskazany termin reakcji. Ustal też, czy jest to wezwanie PFR, pismo pełnomocnika, pozew czy nakaz zapłaty — każdy z tych dokumentów wymaga innej odpowiedzi.</p><p>Przygotuj umowę subwencji, wniosek, dokumenty rozliczenia i wcześniejszą korespondencję. Zanim złożysz oświadczenie o uznaniu należności lub zaproponujesz spłatę, warto ocenić skutki takiego działania. Rozmowy z PFR nie zastępują odpowiedzi na pismo sądowe i nie wstrzymują automatycznie terminów procesowych.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Czy od żądania zwrotu subwencji PFR można się odwołać lub je zakwestionować?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Żądanie zwrotu można kwestionować, ale nie należy automatycznie stosować zasad odwołania od decyzji administracyjnej. Samo użycie przez PFR nazwy „decyzja" nie rozstrzyga o trybie zaskarżenia — przy subwencjach kluczowe znaczenie mają umowa i dokumenty programu.</p><p>Reakcja może obejmować stanowisko wraz z dowodami, procedurę przewidzianą dla danego programu albo obronę przed roszczeniem w sądzie. Nie ma jednego terminu na wszystkie takie działania. W przypadku pisma sądowego trzeba sprawdzić jego rodzaj, pouczenie oraz sposób i datę doręczenia.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Czy można rozłożyć zwrot subwencji PFR na raty albo zawrzeć porozumienie z PFR?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Można wystąpić o rozmowy dotyczące porozumienia lub spłaty ratalnej, ale przedsiębiorca nie ma gwarancji, że PFR zaakceptuje propozycję. Warunki zależą od podstawy roszczenia, etapu sprawy i stanowiska Funduszu.</p><p>Przed negocjacjami warto porównać ryzyko sporu z obciążeniem finansowym proponowanej ugody. Sprawdzamy nie tylko liczbę rat, lecz również odsetki, zabezpieczenia, konsekwencje opóźnienia i skutki uznania roszczenia. Samo skierowanie prośby o raty nie oznacza zgody PFR na zmianę terminu płatności.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Kiedy warto skonsultować spór z PFR z prawnikiem?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Najlepiej przed pierwszą odpowiedzią dotyczącą zasadności zwrotu, uznaniem roszczenia lub podpisaniem porozumienia. Gdy doręczono już pozew albo nakaz zapłaty, priorytetem jest zachowanie właściwego terminu procesowego.</p><p>W Karaś Chacia i Wspólnicy pomoc może obejmować analizę dokumentów, przygotowanie stanowiska, negocjacje i reprezentację przed sądem. Zakres zlecenia i wynagrodzenie uzgadniamy przed rozpoczęciem pracy. Ocena obejmuje zarówno argumenty prawne, jak i konsekwencje poszczególnych rozwiązań dla płynności firmy.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="f-top">
     <div>
@@ -953,15 +909,6 @@ footer { background:var(--N); padding-bottom:80px; }
       hamburger.classList.remove('open');
       mobileNav.classList.remove('open');
       document.body.style.overflow = '';
-    });
-  });
-
-  document.querySelectorAll('.faq-q').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const item=btn.closest('.faq-item');
-      const isOpen=item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-      if(!isOpen)item.classList.add('open');
     });
   });
 </script>

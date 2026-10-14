@@ -554,20 +554,6 @@ footer { background:var(--N); padding-bottom:80px; }
 @media(max-width:1024px){.benefit-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:768px){.trigger-grid{grid-template-columns:1fr;}.benefit-grid{grid-template-columns:1fr;}.sp-services{grid-template-columns:1fr;}}
 .kw{color:var(--T);font-weight:700;}
-
-/* ══ FAQ ══ */
-.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:44px;}
-.faq-item{border-radius:14px;border:1.5px solid var(--bdr);background:#fff;overflow:hidden;transition:border-color .2s;}
-.faq-item.open{border-color:var(--T);}
-.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;font-family:inherit;font-size:16px;font-weight:700;color:var(--N);line-height:1.4;gap:16px;}
-.faq-q:hover{color:var(--T);}
-.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--Tl);border:1.5px solid rgba(32,169,185,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;font-weight:400;color:var(--T);line-height:1;transition:transform .25s,background .2s;}
-.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--T);color:#fff;}
-.faq-a{display:none;padding:0 24px 20px;}
-.faq-item.open .faq-a{display:block;}
-.faq-a p{font-size:15px;color:var(--mut);line-height:1.75;}
-.faq-a p+p{margin-top:12px;}
-
 </style>
 </head>
 <body>
@@ -739,32 +725,6 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
   </div>
 </section>
-<!-- FAQ -->
-<section class="sec sec-bg">
-  <div class="w">
-    <div class="slabel">Najczęstsze pytania</div>
-    <h2 class="stitle">FAQ</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" type="button">Dla kogo fundacja rodzinna jest dobrym rozwiązaniem i kiedy warto ją założyć?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Fundacja rodzinna może być dobrym rozwiązaniem dla właścicieli firm i rodzin planujących wielopokoleniowe zarządzanie majątkiem. Pozwala ograniczać jego rozdrobnienie i z góry określić zasady świadczeń dla beneficjentów.</p><p>Nie zawsze będzie korzystniejsza od testamentu, darowizny lub innych rozwiązań. Wybór wymaga porównania celów rodziny, rodzaju aktywów, kosztów utrzymania i skutków podatkowych.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Jak założyć fundację rodzinną i jakie decyzje trzeba wcześniej podjąć?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Najpierw trzeba ustalić cel fundacji, beneficjentów, zasady świadczeń, zarządzania i podejmowania decyzji. Należy także określić, jaki majątek ma zostać wniesiony i jak będzie wykorzystywany.</p><p>Utworzenie fundacji wymaga m.in. oświadczenia w akcie założycielskim albo testamencie, statutu w odpowiedniej formie, spisu mienia, ustanowienia wymaganych organów i wpisu do rejestru. Minimalny fundusz założycielski wynosi 100 000 zł. Statut warto przygotować tak, aby regulował również przyszłe zmiany pokoleniowe i konflikty.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Jakie są podatkowe skutki utworzenia fundacji rodzinnej i wypłaty świadczeń?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Trzeba osobno ocenić wniesienie majątku, działalność fundacji, wypłaty świadczeń i ewentualne rozwiązanie fundacji. Znaczenie mają rodzaj aktywów, wykonywane transakcje oraz relacja beneficjenta z fundatorem.</p><p>Preferencje podatkowe nie obejmują automatycznie każdej czynności ani każdego odbiorcy świadczenia. Przed decyzją potrzebne jest porównanie planowanej struktury z innymi sposobami sukcesji i ustalenie kosztów jej utrzymania. Analiza powinna opierać się na przepisach obowiązujących w dacie danej czynności.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Jak fundacja rodzinna pomaga w sukcesji i ochronie rodzinnego majątku?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Fundacja może utrzymywać kluczowe aktywa w jednym podmiocie, a rodzinie zapewniać świadczenia według zasad określonych w statucie. Pozwala to oddzielić zarządzanie majątkiem od bieżących potrzeb poszczególnych beneficjentów.</p><p>Nie oznacza to wyłączenia wszystkich roszczeń. Wniesienie majątku wymaga uwzględnienia praw wierzycieli, obowiązków alimentacyjnych, roszczeń o zachowek i zasad majątkowych małżonków. Fundacja nie służy do ukrywania aktywów przed osobami uprawnionymi.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="f-top">
     <div>
@@ -842,15 +802,6 @@ footer { background:var(--N); padding-bottom:80px; }
       hamburger.classList.remove('open');
       mobileNav.classList.remove('open');
       document.body.style.overflow = '';
-    });
-  });
-
-  document.querySelectorAll('.faq-q').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const item=btn.closest('.faq-item');
-      const isOpen=item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-      if(!isOpen)item.classList.add('open');
     });
   });
 </script>
