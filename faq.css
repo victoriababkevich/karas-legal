@@ -1,0 +1,96 @@
+/* ══ FAQ accordion — wspólny komponent ══ */
+
+.faq-section { padding: 72px 0; background: var(--bg); }
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 44px;
+}
+
+.faq-item {
+  border: 1.5px solid var(--bdr);
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.faq-item.is-open {
+  border-color: var(--T);
+  box-shadow: 0 4px 16px rgba(32,169,185,.1);
+}
+
+.faq-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--N);
+  line-height: 1.4;
+  gap: 16px;
+}
+
+.faq-btn:hover {
+  color: var(--T);
+}
+
+.faq-btn[aria-expanded="true"] {
+  color: var(--T);
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: var(--T);
+  transition: transform .3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-btn[aria-expanded="true"] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .38s ease;
+}
+
+.faq-item.is-open .faq-body {
+  max-height: 2000px;
+}
+
+.faq-answer {
+  padding: 0 24px 22px;
+  border-top: 1px solid var(--bdr);
+}
+
+.faq-answer p {
+  font-size: 15px;
+  color: var(--mut);
+  line-height: 1.78;
+  margin-top: 16px;
+}
+
+.faq-answer p:first-child {
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .faq-section { padding: 48px 0; }
+  .faq-btn { font-size: 15px; padding: 18px 20px; }
+  .faq-answer { padding: 0 20px 20px; }
+}
