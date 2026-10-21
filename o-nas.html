@@ -399,6 +399,19 @@ footer { background:var(--N); padding-bottom:80px; }
   .sp-hero h1 { font-size:28px; }
 }
 
+
+/* ══ JAK PRACUJEMY — extensions ══ */
+.jak-num{font-size:34px;font-weight:800;color:var(--T);line-height:1;margin-bottom:14px;}
+.jak-statement{background:var(--N);border-radius:20px;padding:44px 48px;margin-top:52px;text-align:center;}
+.jak-statement h3{font-size:22px;font-weight:800;color:#fff;margin-bottom:16px;line-height:1.35;letter-spacing:-.3px;}
+.jak-statement p{font-size:16px;color:rgba(255,255,255,.65);line-height:1.78;max-width:640px;margin:0 auto;}
+.panel-klienta-card{display:flex;align-items:center;justify-content:space-between;gap:32px;background:var(--Tl);border:1.5px solid rgba(32,169,185,.3);border-radius:18px;padding:28px 32px;margin-top:40px;flex-wrap:wrap;}
+.panel-klienta-text{flex:1;}
+.panel-klienta-label{font-size:18px;font-weight:800;color:var(--N);margin-bottom:4px;}
+.panel-klienta-subtitle{font-size:12px;font-weight:700;color:var(--T);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;}
+.panel-klienta-card p{font-size:14.5px;color:var(--mut);line-height:1.7;}
+@media(max-width:768px){.jak-statement{padding:28px 24px;}.panel-klienta-card{flex-direction:column;align-items:flex-start;}}
+
 </style>
 </head>
 <body>
@@ -440,9 +453,10 @@ footer { background:var(--N); padding-bottom:80px; }
         <a href="o-nas.html" class="active">O nas <span class="arrow">▾</span></a>
         <div class="dropdown-menu">
           <a href="o-nas.html#kancelaria">O kancelarii</a>
+          <a href="o-nas.html#jak-pracujemy">Jak pracujemy</a>
           <a href="o-nas.html#zespol">Nasz zespół</a>
           <a href="o-nas.html#zaufali-nam">Zaufali nam</a>
-          <a href="o-nas.html#kariera">Dołącz do nas</a>
+          <a href="kariera.html">Dołącz do nas</a>
         </div>
       </div>
       <a href="kontakt.html" class="nav-btn">Kontakt</a>
@@ -483,9 +497,10 @@ footer { background:var(--N); padding-bottom:80px; }
     <div class="mn-label" style="color:var(--T);">O nas</div>
     <div class="mn-sub">
       <a href="o-nas.html#kancelaria" style="color:var(--T);">O kancelarii</a>
+      <a href="o-nas.html#jak-pracujemy">Jak pracujemy</a>
       <a href="o-nas.html#zespol">Nasz zespół</a>
       <a href="o-nas.html#zaufali-nam">Zaufali nam</a>
-      <a href="o-nas.html#kariera">Dołącz do nas</a>
+      <a href="kariera.html">Dołącz do nas</a>
     </div>
   </div>
   <a href="kontakt.html" class="mn-cta">Kontakt</a>
@@ -533,49 +548,67 @@ footer { background:var(--N); padding-bottom:80px; }
   </div>
 </section>
 
-<!-- CO NAS WYRÓŻNIA -->
-<section class="sec sec-bg">
+
+<!-- JAK PRACUJEMY -->
+<section class="sec sec-bg" id="jak-pracujemy">
   <div class="w">
-    <div class="tc">
-      <div class="slabel" style="justify-content:center;">Nasze wyróżniki</div>
-      <h2 class="stitle">Co nas wyróżnia?</h2>
-      <p class="ssub">Zapewniamy przedsiębiorcom coś więcej niż interpretację przepisów — dostarczamy realne bezpieczeństwo prawne i praktyczne wsparcie na każdym etapie działalności.</p>
+    <div class="slabel">Jak pracujemy</div>
+    <h2 class="stitle">Siłą naszej kancelarii są ludzie i sposób, w jaki współpracują</h2>
+
+    <div class="onas-para-grid" style="margin-top:36px;">
+      <div>
+        <p>Za jakością świadczonej przez nas pomocy prawnej stoi praca całego zespołu – adwokatów, radców prawnych oraz osób zapewniających wsparcie organizacyjne i administracyjne. To ich wiedza, doświadczenie, zaangażowanie i wzajemna współpraca stanowią fundament naszej kancelarii.</p>
+        <p>Do naszego zespołu dobieramy osoby, które łączą wysokie kompetencje z odpowiedzialnością, rzetelnością, samodzielnością i zaangażowaniem w sprawy klientów. Dbamy o to, aby każdy członek zespołu, niezależnie od pełnionej funkcji, miał realny wkład w jakość i sprawność świadczonych przez nas usług.</p>
+      </div>
+      <div>
+        <p>Każda sprawa wymaga indywidualnego podejścia. Dlatego angażujemy prawników z naszego zespołu odpowiednio do jej charakteru, skali i stopnia złożoności. Poszczególne zadania powierzamy osobom posiadającym właściwe doświadczenie i kompetencje, dbając jednocześnie o sprawną organizację pracy i efektywne wykorzystanie czasu.</p>
+        <p>W bardziej złożonych sprawach łączymy wiedzę prawników specjalizujących się w różnych dziedzinach prawa, a w razie potrzeby korzystamy również ze wsparcia współpracujących z nami ekspertów.</p>
+      </div>
     </div>
-    <div class="wyroz-grid">
-      <div class="wyroz-card">
-        <div class="wyroz-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <div class="wyroz-t">Kompleksowe wsparcie dla biznesu</div>
-        <div class="wyroz-d">Zapewniamy przedsiębiorcom wsparcie prawne na każdym etapie działalności — od bieżącego doradztwa, przez negocjowanie kontraktów, po reprezentację w sporach sądowych.</div>
+
+    <div class="intro-quote">Dzięki takiej organizacji klient korzysta z wiedzy i doświadczenia całego zespołu, zachowując jednocześnie bezpośredni kontakt z prawnikiem odpowiedzialnym za prowadzenie jego sprawy.</div>
+
+    <div class="slabel" style="margin-top:52px;">Jak wygląda współpraca?</div>
+    <div class="jak-grid">
+      <div class="jak-tile">
+        <div class="jak-num">01</div>
+        <div class="jak-t">Dobieramy właściwych prawników</div>
+        <div class="jak-d">Do każdej sprawy angażujemy prawników, których doświadczenie i kompetencje najlepiej odpowiadają jej charakterowi oraz potrzebom klienta. Pozwala to zapewnić odpowiedni poziom specjalizacji i efektywnie wykorzystać czas pracy.</div>
       </div>
-      <div class="wyroz-card">
-        <div class="wyroz-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <div class="wyroz-t">Prosta i szybka komunikacja</div>
-        <div class="wyroz-d">Komunikujemy się jasno, konkretnie i bez zbędnego prawniczego języka. Jesteśmy dostępni telefonicznie, mailowo, podczas spotkań oraz wideokonferencji.</div>
+      <div class="jak-tile">
+        <div class="jak-num">02</div>
+        <div class="jak-t">Zapewniamy jasną odpowiedzialność</div>
+        <div class="jak-d">Każda sprawa ma wyznaczonego prawnika odpowiedzialnego za jej prowadzenie, koordynację działań oraz komunikację z klientem. Klient wie, kto zajmuje się jego sprawą, a odpowiedzialność za jej przebieg pozostaje jasno określona.</div>
       </div>
-      <div class="wyroz-card">
-        <div class="wyroz-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-        <div class="wyroz-t">Doświadczenie i wiedza</div>
-        <div class="wyroz-d">Nasz zespół tworzą adwokaci posiadający wieloletnie doświadczenie w obsłudze przedsiębiorców, realizacji inwestycji oraz prowadzeniu sporów gospodarczych.</div>
+      <div class="jak-tile">
+        <div class="jak-num">03</div>
+        <div class="jak-t">Łączymy kompetencje całego zespołu</div>
+        <div class="jak-d">Współpracujemy, konsultujemy rozwiązania i wymieniamy się wiedzą, wykorzystując doświadczenie prawników z różnych obszarów prawa. W razie potrzeby korzystamy również z kompetencji współpracujących z nami specjalistów.</div>
       </div>
-      <div class="wyroz-card">
-        <div class="wyroz-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-        <div class="wyroz-t">Praktyczne podejście</div>
-        <div class="wyroz-d">Koncentrujemy się na rozwiązaniu problemu i osiągnięciu celu biznesowego klienta. Proponujemy rozwiązania skuteczne i możliwe do wdrożenia w rzeczywistych warunkach prowadzenia działalności.</div>
+      <div class="jak-tile">
+        <div class="jak-num">04</div>
+        <div class="jak-t">Działamy sprawnie i z myślą o biznesie</div>
+        <div class="jak-d">Koncentrujemy się na rozwiązaniu problemu i osiągnięciu celu biznesowego klienta. Proponujemy rozwiązania skuteczne i możliwe do wdrożenia w rzeczywistych warunkach prowadzenia działalności. Nie ograniczamy się do analizy przepisów. Uwzględniamy cele biznesowe klienta, związane z nimi ryzyka oraz ekonomiczne konsekwencje podejmowanych decyzji.</div>
       </div>
-      <div class="wyroz-card">
-        <div class="wyroz-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg></div>
-        <div class="wyroz-t">Panel Klienta</div>
-        <div class="wyroz-d">Zapewniamy wygodny dostęp do dokumentów, informacji o prowadzonych sprawach oraz bieżącej komunikacji za pośrednictwem nowoczesnego Panelu Klienta.</div>
+    </div>
+
+    <div class="jak-statement">
+      <h3>Stały kontakt. Jasne zasady. Sprawna realizacja.</h3>
+      <p>Komunikujemy się jasno, konkretnie i bez zbędnego prawniczego języka. Jesteśmy dostępni telefonicznie, mailowo, podczas spotkań oraz wideokonferencji. Dbamy o to, aby klient wiedział, na jakim etapie znajduje się jego sprawa, jakie działania podejmujemy i jakie rozwiązania rekomendujemy.</p>
+    </div>
+
+    <div class="intro-quote" style="margin-top:36px;">Chcemy, aby każdy klient miał pewność, że za jego sprawą stoi nie tylko konkretny prawnik, lecz także dobrze zorganizowana kancelaria, której cały zespół wspólnie pracuje na rzecz ochrony jego interesów.</div>
+
+    <div class="panel-klienta-card">
+      <div class="panel-klienta-text">
+        <div class="panel-klienta-label">Panel Klienta</div>
+        <div class="panel-klienta-subtitle">Wygodny dostęp do informacji o prowadzonych sprawach</div>
+        <p>Zapewniamy wygodny dostęp do dokumentów, informacji o prowadzonych sprawach oraz bieżącej komunikacji za pośrednictwem nowoczesnego Panelu Klienta.</p>
       </div>
-      <div class="wyroz-card">
-        <div class="wyroz-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <div class="wyroz-t">Zaufanie klientów</div>
-        <div class="wyroz-d">Naszą jakość potwierdzają wieloletnie relacje z klientami, rekomendacje oraz liczne sukcesy osiągane w prowadzonych sprawach i projektach.</div>
-      </div>
+      <a href="https://karas-legal.amberlo.io/login/?lang=pl" class="btn-t" target="_blank" rel="noopener">Przejdź do Panelu Klienta →</a>
     </div>
   </div>
 </section>
-
 
 <!-- WSPÓLNICY -->
 <section class="sec" id="zespol">
@@ -886,31 +919,6 @@ footer { background:var(--N); padding-bottom:80px; }
   </div>
 </section>
 
-<section class="sec sec-kariera" id="kariera">
-  <div class="kariera-inner">
-    <div class="slabel" style="justify-content:center;color:var(--T);">Dołącz do nas</div>
-    <h2 class="stitle">Szukamy ambitnych prawników</h2>
-    <p class="ssub">Pracujemy przy sprawach, które mają realny wpływ na funkcjonowanie przedsiębiorstw. Jeśli chcesz rozwijać się w środowisku, gdzie liczy się jakość, samodzielność i odpowiedzialność za wynik — napisz do nas.</p>
-    <div class="kariera-perks">
-      <div class="kperk">
-        <div class="kperk-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-        <div class="kperk-t">Złożone sprawy</div>
-        <div class="kperk-d">Wielomilionowe spory, transakcje i projekty wymagające niestandardowego myślenia</div>
-      </div>
-      <div class="kperk">
-        <div class="kperk-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <div class="kperk-t">Realne partnerstwo</div>
-        <div class="kperk-d">Pracujesz bezpośrednio z wspólnikami i masz realny wpływ na prowadzone sprawy</div>
-      </div>
-      <div class="kperk">
-        <div class="kperk-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-        <div class="kperk-t">Rozwój kariery</div>
-        <div class="kperk-d">Jasna ścieżka rozwoju i dostęp do spraw z wielu obszarów prawa biznesowego</div>
-      </div>
-    </div>
-    <a href="mailto:kancelaria@karas-legal.com?subject=Aplikacja%20-%20oferta%20pracy" class="btn-t">Wyślij swoje CV →</a>
-  </div>
-</section>
 
 <footer>
   <div class="f-top">
@@ -952,9 +960,10 @@ footer { background:var(--N); padding-bottom:80px; }
         <a href="o-nas.html">O nas <span class="arrow">▾</span></a>
         <div class="dropdown-menu">
           <a href="o-nas.html#kancelaria">O kancelarii</a>
+          <a href="o-nas.html#jak-pracujemy">Jak pracujemy</a>
           <a href="o-nas.html#zespol">Nasz zespół</a>
           <a href="o-nas.html#zaufali-nam">Zaufali nam</a>
-          <a href="o-nas.html#kariera">Dołącz do nas</a>
+          <a href="kariera.html">Dołącz do nas</a>
         </div>
       </div></li>
         <li><a href="sukcesy.html">Sukcesy</a></li>
