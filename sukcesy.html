@@ -530,14 +530,12 @@ footer { background:var(--N); padding-bottom:80px; }
 .suk-filters{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 28px;}
 .suk-filter{border:1.5px solid var(--bdr);background:#fff;color:var(--mut);border-radius:40px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;}
 .suk-filter.active,.suk-filter:hover{border-color:var(--T);color:var(--T);background:var(--Tl);}
-.suk-count{background:var(--bg);border-radius:40px;padding:1px 8px;font-size:11px;}
-.suk-filter.active .suk-count{background:rgba(32,169,185,.15);}
 .suk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .suk-card{border:1.5px solid var(--bdr);border-radius:16px;padding:22px;background:#fff;transition:all .2s;display:flex;flex-direction:column;gap:10px;}
 .suk-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.1);transform:translateY(-2px);}
 .suk-card.hidden{display:none;}
 .suk-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
-.suk-badge{font-size:11px;font-weight:700;border-radius:6px;padding:4px 10px;}
+.suk-badge{font-size:11px;font-weight:700;border-radius:6px;padding:4px 10px;background:var(--Tl);color:var(--T);}
 .suk-date{font-size:12px;color:var(--mut);font-weight:600;}
 .suk-card h3{font-size:15px;font-weight:800;color:var(--N);line-height:1.4;margin:0;}
 .suk-card p{font-size:13.5px;color:var(--mut);line-height:1.65;margin:0;flex:1;}
@@ -659,20 +657,20 @@ footer { background:var(--N); padding-bottom:80px; }
     <p class="ssub">Od 2014 roku prowadzimy sprawy z zakresu prawa gospodarczego, sporów budowlanych, inwestycji i sukcesji. Poniżej wybrane przykłady naszych sukcesów.</p>
 
     <div class="suk-filters">
-    <button class="suk-filter active" data-filter="all">Wszystkie <span class="suk-count" id="count-all">15</span></button>
-    <button class="suk-filter" data-filter="wyroki">Korzystne wyroki <span class="suk-count" id="count-wyroki">3</span></button>
-    <button class="suk-filter" data-filter="ugody">Ugody <span class="suk-count" id="count-ugody">3</span></button>
-    <button class="suk-filter" data-filter="transakcje">Zakończone transakcje <span class="suk-count" id="count-transakcje">2</span></button>
-    <button class="suk-filter" data-filter="fundacje">Fundacje rodzinne <span class="suk-count" id="count-fundacje">2</span></button>
-    <button class="suk-filter" data-filter="naleznosci">Odzyskane należności <span class="suk-count" id="count-naleznosci">3</span></button>
-    <button class="suk-filter" data-filter="zabezpieczenia">Postanowienia zabezpieczające <span class="suk-count" id="count-zabezpieczenia">2</span></button>
+    <button class="suk-filter active" data-filter="all">Wszystkie</button>
+    <button class="suk-filter" data-filter="wyroki">Korzystne wyroki</button>
+    <button class="suk-filter" data-filter="ugody">Ugody</button>
+    <button class="suk-filter" data-filter="transakcje">Zakończone transakcje</button>
+    <button class="suk-filter" data-filter="fundacje">Fundacje rodzinne</button>
+    <button class="suk-filter" data-filter="naleznosci">Odzyskane należności</button>
+    <button class="suk-filter" data-filter="zabezpieczenia">Postanowienia zabezpieczające</button>
     </div>
 
     <div class="suk-grid" id="sukGrid">
 
     <div class="suk-card" data-cat="wyroki">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#1e7e3420;color:#1e7e34">Korzystny wyrok</span>
+        <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Grudzień 2024</span>
       </div>
       <h3>Pierwszy prawomocny wyrok SA w Warszawie przeciwko PFR</h3>
@@ -682,7 +680,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="naleznosci">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#b91c1c20;color:#b91c1c">Odzyskane należności</span>
+        <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Październik 2024</span>
       </div>
       <h3>Odzyskanie ponad 2,3 mln zł niezapłaconego wynagrodzenia za roboty budowlane</h3>
@@ -692,7 +690,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="fundacje">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#c0571a20;color:#c0571a">Fundacja rodzinna</span>
+        <span class="suk-badge">Fundacja rodzinna</span>
         <span class="suk-date">Wrzesień 2024</span>
       </div>
       <h3>Założenie fundacji rodzinnej dla grupy kapitałowej z branży produkcyjnej</h3>
@@ -702,7 +700,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="ugody">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#0a6dab20;color:#0a6dab">Ugoda</span>
+        <span class="suk-badge">Ugoda</span>
         <span class="suk-date">Sierpień 2024</span>
       </div>
       <h3>Ugoda w sporze korporacyjnym między wspólnikami spółki technologicznej</h3>
@@ -712,7 +710,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="zabezpieczenia">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#04748120;color:#047481">Postanowienie zabezpieczające</span>
+        <span class="suk-badge">Postanowienie zabezpieczające</span>
         <span class="suk-date">Lipiec 2024</span>
       </div>
       <h3>Zabezpieczenie roszczenia o 4,7 mln zł w sporze budowlanym</h3>
@@ -722,7 +720,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="transakcje">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#6c3fb520;color:#6c3fb5">Transakcja</span>
+        <span class="suk-badge">Transakcja</span>
         <span class="suk-date">Czerwiec 2024</span>
       </div>
       <h3>Obsługa prawna transakcji przejęcia spółki IT o wartości 12 mln zł</h3>
@@ -732,7 +730,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="wyroki">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#1e7e3420;color:#1e7e34">Korzystny wyrok</span>
+        <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Maj 2024</span>
       </div>
       <h3>Wyrok oddalający pozew PFR o zwrot subwencji w kwocie 860 tys. zł</h3>
@@ -742,7 +740,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="fundacje">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#c0571a20;color:#c0571a">Fundacja rodzinna</span>
+        <span class="suk-badge">Fundacja rodzinna</span>
         <span class="suk-date">Kwiecień 2024</span>
       </div>
       <h3>Fundacja rodzinna jako narzędzie ochrony majątku w wielopokoleniowej firmie rodzinnej</h3>
@@ -752,7 +750,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="naleznosci">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#b91c1c20;color:#b91c1c">Odzyskane należności</span>
+        <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Marzec 2024</span>
       </div>
       <h3>Odzyskanie 1,1 mln zł z tytułu niezrealizowanej umowy SaaS</h3>
@@ -762,7 +760,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="ugody">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#0a6dab20;color:#0a6dab">Ugoda</span>
+        <span class="suk-badge">Ugoda</span>
         <span class="suk-date">Luty 2024</span>
       </div>
       <h3>Ugoda w sporze o rozliczenie kontraktu wdrożeniowego na kwotę 3,2 mln zł</h3>
@@ -772,7 +770,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="zabezpieczenia">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#04748120;color:#047481">Postanowienie zabezpieczające</span>
+        <span class="suk-badge">Postanowienie zabezpieczające</span>
         <span class="suk-date">Styczeń 2024</span>
       </div>
       <h3>Zabezpieczenie roszczenia wspólnika mniejszościowego w sporze korporacyjnym</h3>
@@ -782,7 +780,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="wyroki">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#1e7e3420;color:#1e7e34">Korzystny wyrok</span>
+        <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Grudzień 2023</span>
       </div>
       <h3>Wyrok SA: bank zobowiązany do wypłaty odszkodowania inwestorom funduszy W-Investments</h3>
@@ -792,7 +790,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="transakcje">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#6c3fb520;color:#6c3fb5">Transakcja</span>
+        <span class="suk-badge">Transakcja</span>
         <span class="suk-date">Październik 2023</span>
       </div>
       <h3>Obsługa prawna inwestycji deweloperskiej o wartości 28 mln zł</h3>
@@ -802,7 +800,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="naleznosci">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#b91c1c20;color:#b91c1c">Odzyskane należności</span>
+        <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Sierpień 2023</span>
       </div>
       <h3>Odzyskanie 5,1 mln zł z tytułu bezumownego korzystania z nieruchomości</h3>
@@ -812,7 +810,7 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-card" data-cat="ugody">
       <div class="suk-header">
-        <span class="suk-badge" style="background:#0a6dab20;color:#0a6dab">Ugoda</span>
+        <span class="suk-badge">Ugoda</span>
         <span class="suk-date">Maj 2023</span>
       </div>
       <h3>Ugoda z generalnym wykonawcą — uniknięcie roszczeń z tytułu kar umownych o łącznej wartości 900 tys. zł</h3>
