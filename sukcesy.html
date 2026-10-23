@@ -530,8 +530,8 @@ footer { background:var(--N); padding-bottom:80px; }
 .suk-filters{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 28px;}
 .suk-filter{border:1.5px solid var(--bdr);background:#fff;color:var(--mut);border-radius:40px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;}
 .suk-filter.active,.suk-filter:hover{border-color:var(--T);color:var(--T);background:var(--Tl);}
-.suk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.suk-card{border:1.5px solid var(--bdr);border-radius:16px;padding:22px;background:#fff;transition:all .2s;display:flex;flex-direction:column;gap:10px;}
+.suk-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.suk-card{border:1.5px solid var(--bdr);border-radius:14px;padding:20px 22px 20px 18px;background:#fff;transition:all .2s;display:flex;flex-direction:column;gap:10px;border-left:4px solid var(--T);}
 .suk-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.1);transform:translateY(-2px);}
 .suk-card.hidden{display:none;}
 .suk-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
@@ -542,7 +542,21 @@ footer { background:var(--N); padding-bottom:80px; }
 .suk-area{font-size:12px;font-weight:700;color:var(--T);margin-top:4px;}
 .suk-empty{display:none;text-align:center;padding:56px 24px;color:var(--mut);grid-column:1/-1;}
 .suk-empty.visible{display:block;}
-@media(max-width:1024px){.suk-grid{grid-template-columns:repeat(2,1fr);}}
+/* featured card */
+.suk-featured{grid-column:1/-1;background:var(--N);border:none!important;border-radius:16px!important;padding:0!important;display:grid!important;grid-template-columns:1fr 400px;min-height:280px;overflow:hidden;transition:box-shadow .3s!important;}
+.suk-featured:hover{box-shadow:0 12px 40px rgba(9,28,46,.3)!important;transform:none!important;}
+.suk-f-content{padding:36px 40px;display:flex;flex-direction:column;gap:12px;justify-content:center;}
+.suk-featured .suk-badge{background:rgba(32,169,185,.2);color:var(--T);}
+.suk-featured .suk-date{color:rgba(255,255,255,.4);}
+.suk-featured h3{font-size:22px!important;color:#fff!important;}
+.suk-featured p{color:rgba(255,255,255,.65)!important;font-size:14px!important;}
+.suk-featured .suk-area{color:var(--T);}
+.suk-featured .suk-tag{background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.12);}
+.suk-f-photo{position:relative;overflow:hidden;}
+.suk-f-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 6s ease;}
+.suk-featured:hover .suk-f-photo img{transform:scale(1.04);}
+.suk-f-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--N) 0%,rgba(9,28,46,.82) 25%,rgba(14,48,80,.65) 60%,rgba(32,169,185,.18) 100%);}
+@media(max-width:900px){.suk-featured{grid-template-columns:1fr;}.suk-f-photo{min-height:220px;}}
 @media(max-width:600px){.suk-grid{grid-template-columns:1fr;}}
 
 .suk-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;}.suk-tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:var(--bg);color:var(--mut);border:1px solid var(--bdr);}
@@ -648,7 +662,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </nav>
     <div class="hero-chip">Osiągnięcia kancelarii</div>
     <h1>Sukcesy — wybrane sprawy i osiągnięcia</h1>
-    <p class="sp-hero-sub">Prezentujemy wybrane sprawy zakończone pomyślnie dla naszych klientów. Ze względu na obowiązek zachowania tajemnicy zawodowej opisy są zanonimizowane.</p>
+    <p class="sp-hero-sub">Korzystne wyroki, zawarte ugody, odzyskane należności i ważne wydarzenia z życia kancelarii.</p>
   </div>
 </section>
 
@@ -656,7 +670,7 @@ footer { background:var(--N); padding-bottom:80px; }
   <div class="w">
     <div class="slabel">Filtruj według kategorii</div>
     <h2 class="stitle">Osiągnięcia kancelarii</h2>
-    <p class="ssub">Od 2014 roku prowadzimy sprawy z zakresu prawa gospodarczego, sporów budowlanych, inwestycji i sukcesji. Poniżej wybrane przykłady naszych sukcesów.</p>
+    <p class="ssub" style="max-width:100%">Od 2014 roku prowadzimy sprawy z zakresu prawa gospodarczego, sporów budowlanych, inwestycji i sukcesji. Poniżej wybrane przykłady naszych sukcesów.</p>
 
     <div class="suk-filters">
     <button class="suk-filter active" data-filter="all">Wszystkie</button>
@@ -695,15 +709,20 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="suk-grid" id="sukGrid">
 
-    <div class="suk-card" data-tags="PFR,Subwencje,Wyrok SA" data-cat="wyroki">
-      <div class="suk-header">
-        <span class="suk-badge">Korzystny wyrok</span>
-        <span class="suk-date">Grudzień 2024</span>
+    <div class="suk-card suk-featured" data-tags="PFR,Subwencje,Wyrok SA" data-cat="wyroki">
+      <div class="suk-f-content">
+        <div class="suk-header">
+          <span class="suk-badge">Korzystny wyrok</span>
+          <span class="suk-date">Grudzień 2024</span>
+        </div>
+        <h3>Pierwszy prawomocny wyrok SA w Warszawie przeciwko PFR</h3>
+        <p>Sąd Apelacyjny w Warszawie wydał pierwszy prawomocny wyrok potwierdzający odpowiedzialność PFR na podstawie art. 417 k.c. Wyrok otwiera drogę do ochrony tysięcy firm bezpodstawnie wzywanych do zwrotu subwencji.</p>
+        <div class="suk-area">Spory z PFR</div>
+        <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span><span class="suk-tag">Wyrok SA</span></div>
       </div>
-      <h3>Pierwszy prawomocny wyrok SA w Warszawie przeciwko PFR</h3>
-      <p>Sąd Apelacyjny w Warszawie wydał pierwszy prawomocny wyrok potwierdzający odpowiedzialność PFR na podstawie art. 417 k.c. Wyrok otwiera drogę do ochrony tysięcy firm bezpodstawnie wzywanych do zwrotu subwencji.</p>
-      <div class="suk-area">Spory z PFR</div>
-      <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span><span class="suk-tag">Wyrok SA</span></div>
+      <div class="suk-f-photo">
+        <img src="images/sukcesy-featured.jpg" alt="Wnętrze kancelarii prawnej">
+      </div>
     </div>
 
     <div class="suk-card" data-tags="Budownictwo,Wynagrodzenie" data-cat="naleznosci">
