@@ -546,6 +546,7 @@ footer { background:var(--N); padding-bottom:80px; }
 @media(max-width:600px){.suk-grid{grid-template-columns:1fr;}}
 
 .suk-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;}.suk-tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:var(--bg);color:var(--mut);border:1px solid var(--bdr);}
+.suk-tag-select{border:1.5px solid var(--bdr);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235A6E7F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--mut);border-radius:40px;padding:8px 36px 8px 18px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;appearance:none;-webkit-appearance:none;transition:all .2s;}.suk-tag-select:focus{outline:none;border-color:var(--T);color:var(--T);}.suk-tag-select.active{border-color:var(--T);color:var(--T);background-color:var(--Tl);}
 </style>
 </head>
 <body>
@@ -665,11 +666,36 @@ footer { background:var(--N); padding-bottom:80px; }
     <button class="suk-filter" data-filter="fundacje">Fundacje rodzinne</button>
     <button class="suk-filter" data-filter="naleznosci">Odzyskane należności</button>
     <button class="suk-filter" data-filter="zabezpieczenia">Postanowienia zabezpieczające</button>
+    <select class="suk-tag-select" id="tagSelect">
+    <option value="">Temat: wszystkie</option>
+    <option value="Budownictwo">Budownictwo</option>
+    <option value="Deweloper">Deweloper</option>
+    <option value="Due diligence">Due diligence</option>
+    <option value="ERP">ERP</option>
+    <option value="Fundacja rodzinna">Fundacja rodzinna</option>
+    <option value="Fundusze">Fundusze</option>
+    <option value="Kary umowne">Kary umowne</option>
+    <option value="M&amp;A">M&amp;A</option>
+    <option value="Nieruchomości">Nieruchomości</option>
+    <option value="Odszkodowanie">Odszkodowanie</option>
+    <option value="Oprogramowanie">Oprogramowanie</option>
+    <option value="PFR">PFR</option>
+    <option value="Prawo IT">Prawo IT</option>
+    <option value="SaaS">SaaS</option>
+    <option value="Spółki">Spółki</option>
+    <option value="Subwencje">Subwencje</option>
+    <option value="Sukcesja">Sukcesja</option>
+    <option value="W-Investments">W-Investments</option>
+    <option value="Wspólnicy">Wspólnicy</option>
+    <option value="Wynagrodzenie">Wynagrodzenie</option>
+    <option value="Wyrok SA">Wyrok SA</option>
+    <option value="Zabezpieczenie">Zabezpieczenie</option>
+  </select>
     </div>
 
     <div class="suk-grid" id="sukGrid">
 
-    <div class="suk-card" data-cat="wyroki">
+    <div class="suk-card" data-tags="PFR,Subwencje,Wyrok SA" data-cat="wyroki">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Grudzień 2024</span>
@@ -680,7 +706,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span><span class="suk-tag">Wyrok SA</span></div>
     </div>
 
-    <div class="suk-card" data-cat="naleznosci">
+    <div class="suk-card" data-tags="Budownictwo,Wynagrodzenie" data-cat="naleznosci">
       <div class="suk-header">
         <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Październik 2024</span>
@@ -691,7 +717,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">Budownictwo</span><span class="suk-tag">Wynagrodzenie</span></div>
     </div>
 
-    <div class="suk-card" data-cat="fundacje">
+    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja" data-cat="fundacje">
       <div class="suk-header">
         <span class="suk-badge">Fundacja rodzinna</span>
         <span class="suk-date">Wrzesień 2024</span>
@@ -702,7 +728,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">Fundacja rodzinna</span><span class="suk-tag">Sukcesja</span></div>
     </div>
 
-    <div class="suk-card" data-cat="ugody">
+    <div class="suk-card" data-tags="Spółki,Wspólnicy,Prawo IT" data-cat="ugody">
       <div class="suk-header">
         <span class="suk-badge">Ugoda</span>
         <span class="suk-date">Sierpień 2024</span>
@@ -713,7 +739,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">Spółki</span><span class="suk-tag">Wspólnicy</span><span class="suk-tag">Prawo IT</span></div>
     </div>
 
-    <div class="suk-card" data-cat="zabezpieczenia">
+    <div class="suk-card" data-tags="Budownictwo,Zabezpieczenie" data-cat="zabezpieczenia">
       <div class="suk-header">
         <span class="suk-badge">Postanowienie zabezpieczające</span>
         <span class="suk-date">Lipiec 2024</span>
@@ -724,7 +750,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">Budownictwo</span><span class="suk-tag">Zabezpieczenie</span></div>
     </div>
 
-    <div class="suk-card" data-cat="transakcje">
+    <div class="suk-card" data-tags="M&A,Prawo IT,Due diligence" data-cat="transakcje">
       <div class="suk-header">
         <span class="suk-badge">Transakcja</span>
         <span class="suk-date">Czerwiec 2024</span>
@@ -735,7 +761,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">M&A</span><span class="suk-tag">Prawo IT</span><span class="suk-tag">Due diligence</span></div>
     </div>
 
-    <div class="suk-card" data-cat="wyroki">
+    <div class="suk-card" data-tags="PFR,Subwencje" data-cat="wyroki">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Maj 2024</span>
@@ -746,7 +772,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span></div>
     </div>
 
-    <div class="suk-card" data-cat="fundacje">
+    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja,Nieruchomości" data-cat="fundacje">
       <div class="suk-header">
         <span class="suk-badge">Fundacja rodzinna</span>
         <span class="suk-date">Kwiecień 2024</span>
@@ -757,7 +783,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">Fundacja rodzinna</span><span class="suk-tag">Sukcesja</span><span class="suk-tag">Nieruchomości</span></div>
     </div>
 
-    <div class="suk-card" data-cat="naleznosci">
+    <div class="suk-card" data-tags="Prawo IT,SaaS" data-cat="naleznosci">
       <div class="suk-header">
         <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Marzec 2024</span>
@@ -768,7 +794,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">Prawo IT</span><span class="suk-tag">SaaS</span></div>
     </div>
 
-    <div class="suk-card" data-cat="ugody">
+    <div class="suk-card" data-tags="Prawo IT,Oprogramowanie,ERP" data-cat="ugody">
       <div class="suk-header">
         <span class="suk-badge">Ugoda</span>
         <span class="suk-date">Luty 2024</span>
@@ -779,7 +805,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">Prawo IT</span><span class="suk-tag">Oprogramowanie</span><span class="suk-tag">ERP</span></div>
     </div>
 
-    <div class="suk-card" data-cat="zabezpieczenia">
+    <div class="suk-card" data-tags="Spółki,Wspólnicy" data-cat="zabezpieczenia">
       <div class="suk-header">
         <span class="suk-badge">Postanowienie zabezpieczające</span>
         <span class="suk-date">Styczeń 2024</span>
@@ -790,7 +816,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">Spółki</span><span class="suk-tag">Wspólnicy</span></div>
     </div>
 
-    <div class="suk-card" data-cat="wyroki">
+    <div class="suk-card" data-tags="W-Investments,Fundusze" data-cat="wyroki">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Grudzień 2023</span>
@@ -801,7 +827,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">W-Investments</span><span class="suk-tag">Fundusze</span></div>
     </div>
 
-    <div class="suk-card" data-cat="transakcje">
+    <div class="suk-card" data-tags="Deweloper,Nieruchomości" data-cat="transakcje">
       <div class="suk-header">
         <span class="suk-badge">Transakcja</span>
         <span class="suk-date">Październik 2023</span>
@@ -812,7 +838,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">Deweloper</span><span class="suk-tag">Nieruchomości</span></div>
     </div>
 
-    <div class="suk-card" data-cat="naleznosci">
+    <div class="suk-card" data-tags="Nieruchomości,Odszkodowanie" data-cat="naleznosci">
       <div class="suk-header">
         <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Sierpień 2023</span>
@@ -823,7 +849,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <div class="suk-tags"><span class="suk-tag">Nieruchomości</span><span class="suk-tag">Odszkodowanie</span></div>
     </div>
 
-    <div class="suk-card" data-cat="ugody">
+    <div class="suk-card" data-tags="Budownictwo,Kary umowne" data-cat="ugody">
       <div class="suk-header">
         <span class="suk-badge">Ugoda</span>
         <span class="suk-date">Maj 2023</span>
@@ -915,23 +941,35 @@ footer { background:var(--N); padding-bottom:80px; }
 
 <script>
   const filters = document.querySelectorAll('.suk-filter');
-  const cards = document.querySelectorAll('.suk-card');
-  const emptyMsg = document.getElementById('emptyMsg');
+  const cards   = document.querySelectorAll('.suk-card');
+  const emptyMsg  = document.getElementById('emptyMsg');
+  const tagSelect = document.getElementById('tagSelect');
+
+  function applyFilters() {
+    const cat = document.querySelector('.suk-filter.active').dataset.filter;
+    const tag = tagSelect.value;
+    tagSelect.classList.toggle('active', tag !== '');
+    let visible = 0;
+    cards.forEach(card => {
+      const catOk = cat === 'all' || card.dataset.cat === cat;
+      const cardTags = card.dataset.tags ? card.dataset.tags.split(',') : [];
+      const tagOk = !tag || cardTags.includes(tag);
+      const match = catOk && tagOk;
+      card.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+    emptyMsg.classList.toggle('visible', visible === 0);
+  }
 
   filters.forEach(btn => {
     btn.addEventListener('click', () => {
       filters.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const f = btn.dataset.filter;
-      let visible = 0;
-      cards.forEach(card => {
-        const match = f === 'all' || card.dataset.cat === f;
-        card.classList.toggle('hidden', !match);
-        if(match) visible++;
-      });
-      emptyMsg.classList.toggle('visible', visible === 0);
+      applyFilters();
     });
   });
+
+  tagSelect.addEventListener('change', applyFilters);
 </script>
 
 </body>
