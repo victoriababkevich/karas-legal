@@ -561,6 +561,18 @@ footer { background:var(--N); padding-bottom:80px; }
 
 .suk-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;}.suk-tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:var(--bg);color:var(--mut);border:1px solid var(--bdr);}
 .suk-tag-select{border:1.5px solid var(--bdr);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235A6E7F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--mut);border-radius:40px;padding:8px 36px 8px 18px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;appearance:none;-webkit-appearance:none;transition:all .2s;}.suk-tag-select:focus{outline:none;border-color:var(--T);color:var(--T);}.suk-tag-select.active{border-color:var(--T);color:var(--T);background-color:var(--Tl);}
+
+/* ══ CLICKABLE CARDS (Kroki 2+4) ══ */
+.suk-card[data-href] { cursor:pointer; }
+.suk-more-link { font-size:13px; font-weight:700; color:var(--T); margin-top:4px; display:flex; align-items:center; gap:5px; }
+.suk-more-link::after { content:'→'; transition:margin .2s; }
+.suk-card:hover .suk-more-link::after { margin-left:4px; }
+.suk-card:focus { outline:2px solid var(--T); outline-offset:3px; }
+/* Featured card: suk-more-link in white */
+.suk-featured .suk-more-link { color:var(--T); }
+@media(max-width:600px) {
+  .suk-more-link { display:flex; }
+}
 </style>
 </head>
 <body>
@@ -712,7 +724,7 @@ footer { background:var(--N); padding-bottom:80px; }
     <div class="suk-grid" id="sukGrid">
 
     <!-- WYRÓŻNIONY: Wrzesień 2026 -->
-    <div class="suk-card suk-featured" data-tags="PFR,Subwencje,CBA" data-cat="wyroki">
+    <div class="suk-card suk-featured" data-tags="PFR,Subwencje,CBA" data-cat="wyroki" data-href="sukces_prawomocna-wygrana-pfr-cba-wrzesien-2026.html" tabindex="0" role="link" aria-label="Prawomocna wygrana z PFR — sąd oddalił roszczenie o ponad 1,5 mln zł, PFR nie wniósł apelacji">
       <div class="suk-f-content">
         <div class="suk-header">
           <span class="suk-badge">Korzystny wyrok prawomocny</span>
@@ -722,6 +734,7 @@ footer { background:var(--N); padding-bottom:80px; }
         <p>Sąd Okręgowy w Warszawie 3 września 2026 r. oddalił w całości roszczenie PFR o zwrot ponad 1,5 mln zł subwencji, oparte na negatywnej rekomendacji CBA. Ujawniono, że jej podstawą były dawne postępowania karne zakończone prawomocnymi uniewinnieniami. PFR nie wniósł apelacji — wyrok prawomocny.</p>
         <div class="suk-area">Spory z PFR</div>
         <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span><span class="suk-tag">CBA</span></div>
+        <div class="suk-more-link">Więcej →</div>
       </div>
       <div class="suk-f-photo">
         <img src="images/Logo_paragraf.jpeg" alt="Logo kancelarii prawnej">
@@ -729,7 +742,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
 
     <!-- Październik 2026 (30 X) -->
-    <div class="suk-card" data-tags="PFR,Subwencje,CBA" data-cat="wyroki">
+    <div class="suk-card" data-tags="PFR,Subwencje,CBA" data-cat="wyroki" data-href="sukces_oddalenie-pfr-cba-324-tys-pazdziernik-2026.html" tabindex="0" role="link" aria-label="Kolejna wygrana z PFR w sprawie rekomendacji CBA — oddalenie powództwa o 324 tys. zł">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Październik 2026</span>
@@ -738,10 +751,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>30 października 2026 r. sąd oddalił w całości powództwo PFR o zwrot 324 tys. zł subwencji. Podstawą żądania była negatywna rekomendacja CBA, której rzeczywiste przyczyny ujawniono dopiero po kilku latach.</p>
       <div class="suk-area">Spory z PFR</div>
       <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span><span class="suk-tag">CBA</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Październik 2026 (16 X) -->
-    <div class="suk-card" data-tags="PFR,Subwencje,Wyrok SA" data-cat="wyroki">
+    <div class="suk-card" data-tags="PFR,Subwencje,Wyrok SA" data-cat="wyroki" data-href="sukces_sa-szczecin-pfr-apelacja-1-5-mln.html" tabindex="0" role="link" aria-label="SA w Szczecinie oddalił apelację PFR — wygrana o ponad 1,5 mln zł">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok prawomocny</span>
         <span class="suk-date">Październik 2026</span>
@@ -750,10 +764,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>16 października 2026 r. Sąd Apelacyjny w Szczecinie (I AGa 11/26) oddalił apelację PFR, utrzymując korzystny wyrok o oddaleniu powództwa o ponad 1,5 mln zł. Istotne znaczenie miało niewykazanie podstaw roszczenia i spóźnione wnioski dowodowe Funduszu. Wyrok prawomocny.</p>
       <div class="suk-area">Spory z PFR</div>
       <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span><span class="suk-tag">Wyrok SA</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Czerwiec 2026 (22 VI) — z publikacji -->
-    <div class="suk-card" data-tags="PFR,Subwencje" data-cat="wyroki">
+    <div class="suk-card" data-tags="PFR,Subwencje" data-cat="wyroki" data-href="sukces_sn-pfr-icsk2106-25-czerwiec-2026.html" tabindex="0" role="link" aria-label="Sąd Najwyższy ponownie po stronie beneficjentów Tarczy PFR">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Czerwiec 2026</span>
@@ -762,10 +777,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>W postanowieniu I CSK 2106/25 Sąd Najwyższy po raz drugi odrzucił skargę kasacyjną PFR. SN potwierdził: fundusz nie może karać przedsiębiorców za dane prawidłowe w momencie składania wniosku, które PFR sam zaakceptował, a dopiero później zmienił interpretację.</p>
       <div class="suk-area">Spory z PFR</div>
       <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Czerwiec 2026 (15 VI) — z blogu karas-legal.com -->
-    <div class="suk-card" data-tags="PFR,Subwencje,Wyrok SA,Kantor" data-cat="wyroki">
+    <div class="suk-card" data-tags="PFR,Subwencje,Wyrok SA,Kantor" data-cat="wyroki" data-href="sukces_sa-warszawa-pfr-kantor-vii-aga-746-25.html" tabindex="0" role="link" aria-label="Kolejny prawomocny wyrok SA — sąd oddalił roszczenie PFR w sprawie kantoru">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok prawomocny</span>
         <span class="suk-date">Czerwiec 2026</span>
@@ -774,10 +790,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>15 czerwca 2026 r. Sąd Apelacyjny w Warszawie (VII AGa 746/25) zmienił niekorzystny wyrok SO i w całości oddalił powództwo PFR. Sprawa dotyczyła kantoru i sposobu ustalania przychodów. Sąd zasądził od PFR koszty postępowania za obie instancje.</p>
       <div class="suk-area">Spory z PFR</div>
       <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span><span class="suk-tag">Wyrok SA</span><span class="suk-tag">Kantor</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Maj 2026 -->
-    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja" data-cat="fundacje">
+    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja" data-cat="fundacje" data-href="sukces_fundacja-rodzinna-45-mln-maj-2026.html" tabindex="0" role="link" aria-label="Założenie fundacji rodzinnej — majątek 45 mln zł objęty ochroną sukcesyjną">
       <div class="suk-header">
         <span class="suk-badge">Fundacja rodzinna</span>
         <span class="suk-date">Maj 2026</span>
@@ -786,10 +803,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Kompleksowe przeprowadzenie procesu tworzenia fundacji rodzinnej zapewniające ochronę majątku i sprawną sukcesję.</p>
       <div class="suk-area">Fundacje rodzinne</div>
       <div class="suk-tags"><span class="suk-tag">Fundacja rodzinna</span><span class="suk-tag">Sukcesja</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Czerwiec 2025 — z publikacji -->
-    <div class="suk-card" data-tags="PFR,Subwencje" data-cat="wyroki">
+    <div class="suk-card" data-tags="PFR,Subwencje" data-cat="wyroki" data-href="sukces_wygrana-pfr-korekta-deklaracji-2025.html" tabindex="0" role="link" aria-label="Wygrana z PFR — sąd oddalił pozew w sprawie korekt deklaracji">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Czerwiec 2025</span>
@@ -798,10 +816,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Sąd Okręgowy w Warszawie oddalił powództwo PFR. Sąd uznał, że samo złożenie korekty deklaracji podatkowej — bez wykazania celowego działania na szkodę PFR — nie stanowi naruszenia warunków umowy subwencji.</p>
       <div class="suk-area">Spory z PFR</div>
       <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Maj 2025 — z publikacji -->
-    <div class="suk-card" data-tags="PFR,Subwencje,Kantor" data-cat="wyroki">
+    <div class="suk-card" data-tags="PFR,Subwencje,Kantor" data-cat="wyroki" data-href="sukces_wygrana-pfr-kantor-1-75-mln-2025.html" tabindex="0" role="link" aria-label="Wygrana z PFR o 1,75 mln zł — przełomowy wyrok dla kantorów">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Maj 2025</span>
@@ -810,10 +829,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>25 kwietnia 2025 r. Sąd Okręgowy w Warszawie (XXVI Wydział Gospodarczy) w całości oddalił roszczenie PFR o zwrot 1,75 mln zł. Sprawa dotyczyła kantoru — kategorii przedsiębiorstw, dla której dotychczasowa linia orzecznicza była niekorzystna. To przełom.</p>
       <div class="suk-area">Spory z PFR</div>
       <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span><span class="suk-tag">Kantor</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Marzec 2025 — z publikacji -->
-    <div class="suk-card" data-tags="PFR,Subwencje" data-cat="wyroki">
+    <div class="suk-card" data-tags="PFR,Subwencje" data-cat="wyroki" data-href="sukces_wygrana-pfr-oddzial-zagraniczny-1-3-mln.html" tabindex="0" role="link" aria-label="Wygrana Oddziału zagranicznego przedsiębiorcy z PFR — oddalenie roszczenia o ponad 1,3 mln zł">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Marzec 2025</span>
@@ -822,10 +842,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>13 marca 2025 r. Sąd Okręgowy w Warszawie oddalił roszczenie PFR o zwrot ponad 1,3 mln zł subwencji przyznanej Oddziałowi zagranicznego przedsiębiorcy w ramach Tarczy Finansowej 1.0. Wyrok otwiera drogę do odzyskania środków przez podobne firmy.</p>
       <div class="suk-area">Spory z PFR</div>
       <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Październik 2024 -->
-    <div class="suk-card" data-tags="Budownictwo,Wynagrodzenie" data-cat="naleznosci">
+    <div class="suk-card" data-tags="Budownictwo,Wynagrodzenie" data-cat="naleznosci" data-href="sukces_wynagrodzenie-budowlane-2-3-mln-2024.html" tabindex="0" role="link" aria-label="Odzyskanie ponad 2,3 mln zł niezapłaconego wynagrodzenia za roboty budowlane">
       <div class="suk-header">
         <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Październik 2024</span>
@@ -834,10 +855,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Skuteczne dochodzenie wynagrodzenia generalnego wykonawcy od inwestora, który odmówił zapłaty za zakończone prace, powołując się na rzekome wady. Sprawa zakończona ugodą sądową.</p>
       <div class="suk-area">Inwestycje budowlane</div>
       <div class="suk-tags"><span class="suk-tag">Budownictwo</span><span class="suk-tag">Wynagrodzenie</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Wrzesień 2024 -->
-    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja" data-cat="fundacje">
+    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja" data-cat="fundacje" data-href="sukces_fundacja-rodzinna-grupa-kapitalowa-40-mln.html" tabindex="0" role="link" aria-label="Założenie fundacji rodzinnej dla grupy kapitałowej z branży produkcyjnej">
       <div class="suk-header">
         <span class="suk-badge">Fundacja rodzinna</span>
         <span class="suk-date">Wrzesień 2024</span>
@@ -846,10 +868,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Kompleksowe doradztwo przy strukturyzacji przekazania majątku o wartości ponad 40 mln zł do fundacji rodzinnej. Przygotowanie statutu, zasad funkcjonowania organów i polityki dywidendowej dla beneficjentów.</p>
       <div class="suk-area">Fundacje rodzinne</div>
       <div class="suk-tags"><span class="suk-tag">Fundacja rodzinna</span><span class="suk-tag">Sukcesja</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Sierpień 2024 -->
-    <div class="suk-card" data-tags="Spółki,Wspólnicy,Prawo IT" data-cat="ugody">
+    <div class="suk-card" data-tags="Spółki,Wspólnicy,Prawo IT" data-cat="ugody" data-href="sukces_ugoda-wspolnicy-spolka-it-2024.html" tabindex="0" role="link" aria-label="Ugoda w sporze korporacyjnym między wspólnikami spółki technologicznej">
       <div class="suk-header">
         <span class="suk-badge">Ugoda</span>
         <span class="suk-date">Sierpień 2024</span>
@@ -858,10 +881,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Rozwiązanie wieloletniego konfliktu między dwoma równorzędnymi wspólnikami spółki IT. Ugoda obejmuje wyjście jednego ze wspólników z zachowaniem wartości jego udziałów oraz dalsze zasady współpracy.</p>
       <div class="suk-area">Konflikty korporacyjne</div>
       <div class="suk-tags"><span class="suk-tag">Spółki</span><span class="suk-tag">Wspólnicy</span><span class="suk-tag">Prawo IT</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Lipiec 2024 -->
-    <div class="suk-card" data-tags="Budownictwo,Zabezpieczenie" data-cat="zabezpieczenia">
+    <div class="suk-card" data-tags="Budownictwo,Zabezpieczenie" data-cat="zabezpieczenia" data-href="sukces_zabezpieczenie-4-7-mln-budowlane-2024.html" tabindex="0" role="link" aria-label="Zabezpieczenie roszczenia o 4,7 mln zł w sporze budowlanym">
       <div class="suk-header">
         <span class="suk-badge">Postanowienie zabezpieczające</span>
         <span class="suk-date">Lipiec 2024</span>
@@ -870,10 +894,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Uzyskanie postanowienia zabezpieczającego roszczenie w kwocie 4,7 mln zł przez zajęcie rachunków bankowych pozwanego wykonawcy, który wstrzymał prace na budowie i odmówił dokończenia inwestycji.</p>
       <div class="suk-area">Inwestycje budowlane</div>
       <div class="suk-tags"><span class="suk-tag">Budownictwo</span><span class="suk-tag">Zabezpieczenie</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Czerwiec 2024 -->
-    <div class="suk-card" data-tags="M&A,Prawo IT,Due diligence" data-cat="transakcje">
+    <div class="suk-card" data-tags="M&A,Prawo IT,Due diligence" data-cat="transakcje" data-href="sukces_transakcja-spolka-it-12-mln-2024.html" tabindex="0" role="link" aria-label="Obsługa prawna transakcji przejęcia spółki IT o wartości 12 mln zł">
       <div class="suk-header">
         <span class="suk-badge">Transakcja</span>
         <span class="suk-date">Czerwiec 2024</span>
@@ -882,10 +907,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Kompleksowa obsługa transakcji nabycia pakietu kontrolnego w spółce dostarczającej oprogramowanie dla sektora finansowego — due diligence, umowa inwestycyjna, dokumentacja zamknięcia.</p>
       <div class="suk-area">Umowy inwestycyjne</div>
       <div class="suk-tags"><span class="suk-tag">M&A</span><span class="suk-tag">Prawo IT</span><span class="suk-tag">Due diligence</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Maj 2024 -->
-    <div class="suk-card" data-tags="PFR,Subwencje,Kantor" data-cat="wyroki">
+    <div class="suk-card" data-tags="PFR,Subwencje,Kantor" data-cat="wyroki" data-href="sukces_wyrok-pfr-kantor-860-tys-2024.html" tabindex="0" role="link" aria-label="Wyrok oddalający pozew PFR o zwrot subwencji w kwocie 860 tys. zł">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Maj 2024</span>
@@ -894,10 +920,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Sąd Okręgowy w Warszawie oddalił powództwo PFR przeciwko kantorowi walutowemu, uznając, że PFR nie opublikował zasad obliczania obrotów w czasie wymagającym od przedsiębiorcy ich stosowania przy składaniu wniosku.</p>
       <div class="suk-area">Spory z PFR</div>
       <div class="suk-tags"><span class="suk-tag">PFR</span><span class="suk-tag">Subwencje</span><span class="suk-tag">Kantor</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Kwiecień 2024 -->
-    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja,Nieruchomości" data-cat="fundacje">
+    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja,Nieruchomości" data-cat="fundacje" data-href="sukces_fundacja-rodzinna-wielopokoleniowa-2024.html" tabindex="0" role="link" aria-label="Fundacja rodzinna jako narzędzie ochrony majątku w wielopokoleniowej firmie rodzinnej">
       <div class="suk-header">
         <span class="suk-badge">Fundacja rodzinna</span>
         <span class="suk-date">Kwiecień 2024</span>
@@ -906,10 +933,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Zaprojektowanie i wdrożenie struktury fundacji rodzinnej dla firmy z ponad 30-letnim dorobkiem, obejmującej nieruchomości, udziały w spółkach i aktywa finansowe. Wdrożenie planu sukcesji na kolejne pokolenie.</p>
       <div class="suk-area">Fundacje rodzinne</div>
       <div class="suk-tags"><span class="suk-tag">Fundacja rodzinna</span><span class="suk-tag">Sukcesja</span><span class="suk-tag">Nieruchomości</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Marzec 2024 -->
-    <div class="suk-card" data-tags="Prawo IT,SaaS" data-cat="naleznosci">
+    <div class="suk-card" data-tags="Prawo IT,SaaS" data-cat="naleznosci" data-href="sukces_odzyskanie-1-1-mln-saas-2024.html" tabindex="0" role="link" aria-label="Odzyskanie 1,1 mln zł z tytułu niezrealizowanej umowy SaaS">
       <div class="suk-header">
         <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Marzec 2024</span>
@@ -918,10 +946,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Skuteczne dochodzenie odszkodowania od dostawcy oprogramowania, który nie dostarczył zamówionego systemu w terminie i zgodnie ze specyfikacją, powodując realne straty operacyjne u klienta.</p>
       <div class="suk-area">Prawo IT</div>
       <div class="suk-tags"><span class="suk-tag">Prawo IT</span><span class="suk-tag">SaaS</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Luty 2024 -->
-    <div class="suk-card" data-tags="Prawo IT,Oprogramowanie,ERP" data-cat="ugody">
+    <div class="suk-card" data-tags="Prawo IT,Oprogramowanie,ERP" data-cat="ugody" data-href="sukces_ugoda-erp-3-2-mln-2024.html" tabindex="0" role="link" aria-label="Ugoda w sporze o rozliczenie kontraktu wdrożeniowego na kwotę 3,2 mln zł">
       <div class="suk-header">
         <span class="suk-badge">Ugoda</span>
         <span class="suk-date">Luty 2024</span>
@@ -930,10 +959,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Negocjacja i zawarcie ugody kończącej wielomiesięczny spór między klientem a dostawcą oprogramowania ERP. Klient odzyskał 75% wynagrodzenia za niedostarczone funkcjonalności.</p>
       <div class="suk-area">Prawo IT</div>
       <div class="suk-tags"><span class="suk-tag">Prawo IT</span><span class="suk-tag">Oprogramowanie</span><span class="suk-tag">ERP</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Styczeń 2024 -->
-    <div class="suk-card" data-tags="Spółki,Wspólnicy" data-cat="zabezpieczenia">
+    <div class="suk-card" data-tags="Spółki,Wspólnicy" data-cat="zabezpieczenia" data-href="sukces_zabezpieczenie-wspolnik-mniejszosciowy-2024.html" tabindex="0" role="link" aria-label="Zabezpieczenie roszczenia wspólnika mniejszościowego w sporze korporacyjnym">
       <div class="suk-header">
         <span class="suk-badge">Postanowienie zabezpieczające</span>
         <span class="suk-date">Styczeń 2024</span>
@@ -942,10 +972,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Uzyskanie postanowienia zabezpieczającego roszczenie wspólnika mniejszościowego o wykup udziałów przez zakaz zbycia i obciążania aktywów spółki w toku sporu o wyjście ze spółki.</p>
       <div class="suk-area">Konflikty korporacyjne</div>
       <div class="suk-tags"><span class="suk-tag">Spółki</span><span class="suk-tag">Wspólnicy</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Październik 2023 -->
-    <div class="suk-card" data-tags="Deweloper,Nieruchomości" data-cat="transakcje">
+    <div class="suk-card" data-tags="Deweloper,Nieruchomości" data-cat="transakcje" data-href="sukces_inwestycja-deweloperska-28-mln-2023.html" tabindex="0" role="link" aria-label="Obsługa prawna inwestycji deweloperskiej o wartości 28 mln zł">
       <div class="suk-header">
         <span class="suk-badge">Transakcja</span>
         <span class="suk-date">Październik 2023</span>
@@ -954,10 +985,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Kompleksowa obsługa prawna projektu budowy osiedla mieszkaniowego — umowy z wykonawcami, finansowanie, regulacje planistyczne, ochrona interesów inwestora na etapie realizacji i sprzedaży.</p>
       <div class="suk-area">Inwestycje budowlane</div>
       <div class="suk-tags"><span class="suk-tag">Deweloper</span><span class="suk-tag">Nieruchomości</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Sierpień 2023 -->
-    <div class="suk-card" data-tags="Nieruchomości,Odszkodowanie" data-cat="naleznosci">
+    <div class="suk-card" data-tags="Nieruchomości,Odszkodowanie" data-cat="naleznosci" data-href="sukces_odzyskanie-510-tys-bezumowne-nieruchomosc.html" tabindex="0" role="link" aria-label="Odzyskanie 510 tys. zł z tytułu bezumownego korzystania z nieruchomości">
       <div class="suk-header">
         <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Sierpień 2023</span>
@@ -966,10 +998,11 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Skuteczne dochodzenie roszczeń właściciela nieruchomości przemysłowej wobec spółki użytkującej grunt bez tytułu prawnego przez ponad 8 lat. Sprawa zakończona wyrokiem zasądzającym pełną kwotę z odsetkami.</p>
       <div class="suk-area">Spory gospodarcze</div>
       <div class="suk-tags"><span class="suk-tag">Nieruchomości</span><span class="suk-tag">Odszkodowanie</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
     <!-- Maj 2023 -->
-    <div class="suk-card" data-tags="Budownictwo,Kary umowne" data-cat="ugody">
+    <div class="suk-card" data-tags="Budownictwo,Kary umowne" data-cat="ugody" data-href="sukces_ugoda-kary-umowne-900-tys-2023.html" tabindex="0" role="link" aria-label="Ugoda z generalnym wykonawcą — uniknięcie roszczeń z tytułu kar umownych o łącznej wartości 900 tys. zł">
       <div class="suk-header">
         <span class="suk-badge">Ugoda</span>
         <span class="suk-date">Maj 2023</span>
@@ -978,6 +1011,7 @@ footer { background:var(--N); padding-bottom:80px; }
       <p>Negocjacje i ugoda z generalnym wykonawcą pozwoliły klientowi uniknąć odpowiedzialności za przekroczenie terminów wynikające z przyczyn niezależnych. Klient zaoszczędził ponad 900 tys. zł.</p>
       <div class="suk-area">Inwestycje budowlane</div>
       <div class="suk-tags"><span class="suk-tag">Budownictwo</span><span class="suk-tag">Kary umowne</span></div>
+      <div class="suk-more-link">Więcej →</div>
     </div>
 
       <div class="suk-empty" id="emptyMsg">Brak wyników dla wybranej kategorii.</div>
@@ -1058,6 +1092,52 @@ footer { background:var(--N); padding-bottom:80px; }
       document.body.style.overflow = '';
     });
   });
+</script>
+
+
+<script>
+(function(){
+  /* Krok 3 — save filter+scroll before navigation, restore on return */
+  const SK_F = 'sukFiltr', SK_S = 'sukScroll';
+
+  /* Restore on page load */
+  const savedFilter = sessionStorage.getItem(SK_F);
+  const savedScroll = sessionStorage.getItem(SK_S);
+  sessionStorage.removeItem(SK_F);
+  sessionStorage.removeItem(SK_S);
+
+  if(savedFilter) {
+    const btn = document.querySelector(`.suk-filter[data-filter="${savedFilter}"]`);
+    if(btn) {
+      document.querySelectorAll('.suk-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  }
+  if(savedScroll) {
+    requestAnimationFrame(() => window.scrollTo(0, parseInt(savedScroll, 10)));
+  }
+
+  /* Save before navigation to sukces_* pages */
+  document.addEventListener('click', function(e) {
+    const card = e.target.closest('[data-href]');
+    if(!card) return;
+    e.preventDefault();
+    const activeBtn = document.querySelector('.suk-filter.active');
+    sessionStorage.setItem(SK_F, activeBtn ? activeBtn.dataset.filter : 'all');
+    sessionStorage.setItem(SK_S, String(window.scrollY));
+    window.location.href = card.dataset.href;
+  });
+  document.addEventListener('keydown', function(e) {
+    if(e.key !== 'Enter' && e.key !== ' ') return;
+    const card = e.target.closest('[data-href]');
+    if(!card) return;
+    e.preventDefault();
+    const activeBtn = document.querySelector('.suk-filter.active');
+    sessionStorage.setItem(SK_F, activeBtn ? activeBtn.dataset.filter : 'all');
+    sessionStorage.setItem(SK_S, String(window.scrollY));
+    window.location.href = card.dataset.href;
+  });
+})();
 </script>
 
 <script>
