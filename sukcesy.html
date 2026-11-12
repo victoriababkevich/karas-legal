@@ -565,8 +565,7 @@ footer { background:var(--N); padding-bottom:80px; }
 /* ══ CLICKABLE CARDS (Kroki 2+4) ══ */
 .suk-card[data-href] { cursor:pointer; }
 .suk-more-link { font-size:13px; font-weight:700; color:var(--T); margin-top:4px; display:flex; align-items:center; gap:5px; }
-.suk-more-link::after { content:'→'; transition:margin .2s; }
-.suk-card:hover .suk-more-link::after { margin-left:4px; }
+.suk-card:hover .suk-more-link { gap:9px; }
 .suk-card:focus { outline:2px solid var(--T); outline-offset:3px; }
 /* Featured card: suk-more-link in white */
 .suk-featured .suk-more-link { color:var(--T); }
