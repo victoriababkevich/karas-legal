@@ -176,7 +176,8 @@ nav > a.active { color:var(--T); }
 .pub-card{background:#fff;border:1.5px solid var(--bdr);border-radius:18px;overflow:hidden;transition:all .25s;display:flex;flex-direction:column;}
 .pub-card:hover{box-shadow:0 12px 36px rgba(9,28,46,.1);transform:translateY(-2px);border-color:var(--T);}
 .pub-body{padding:24px;flex:1;}
-.pub-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--T);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.pub-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--T);margin-bottom:4px;display:flex;align-items:center;gap:6px;}
+.pub-area{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin-bottom:10px;}
 .pub-title{font-size:16px;font-weight:800;color:var(--N);line-height:1.4;margin-bottom:10px;}
 .pub-desc{font-size:13.5px;color:var(--mut);line-height:1.65;}
 .pub-foot{padding:14px 24px;border-top:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--mut);}
@@ -371,18 +372,14 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="pub-filters">
       <button class="pub-filter active" data-filter="all">Wszystkie</button>
-      <button class="pub-filter" data-filter="pfr">Spory z PFR</button>
-      <button class="pub-filter" data-filter="krypto">Prawo IT / Krypto</button>
-      <button class="pub-filter" data-filter="nieruchomosci">Prawo nieruchomości</button>
-      <button class="pub-filter" data-filter="budowlane">Prawo budowlane</button>
-      <button class="pub-filter" data-filter="podatkowe">Prawo podatkowe</button>
-      <button class="pub-filter" data-filter="gospodarcze">Prawo gospodarcze</button>
-      <button class="pub-filter" data-filter="media">Media eksperckie</button>
+      <button class="pub-filter" data-filter="w-mediach">W mediach</button>
+      <button class="pub-filter" data-filter="komentarz-prawny">Komentarze prawne</button>
+      <button class="pub-filter" data-filter="poradnik">Poradniki</button>
     </div>
 
       <div class="pub-featured">
         <div class="pub-featured-content">
-          <div class="pub-featured-label">Najnowsza publikacja</div>
+          <div class="pub-featured-label">W mediach</div>
           <h2>Rynek kryptoaktywów po MiCA – wymogi licencyjne CASP i nowe ryzyka</h2>
           <p class="pub-featured-desc">Sam wpis do rejestru wirtualnych walut nie zastępuje licencji CASP. Firmy muszą zweryfikować model działania i wymogi kapitałowe wynikające z nowego reżimu.</p>
           <div class="pub-featured-foot">
@@ -397,9 +394,10 @@ footer { background:var(--N); padding-bottom:80px; }
 
     <div class="pub-grid" id="pubGrid">
 
-      <div class="pub-card" data-cat="krypto">
+      <div class="pub-card" data-type="w-mediach">
         <div class="pub-body">
-          <div class="pub-tag">Prawo IT / Krypto</div>
+          <div class="pub-tag">W mediach</div>
+          <div class="pub-area">Prawo IT / Krypto</div>
           <h3 class="pub-title"><a href="aktualnosci_zondacrypto-prawa-klientow.html">Zondacrypto – jak dochodzić swoich praw? Łukasz Chacia dla DGP i Prawo.pl</a></h3>
           <p class="pub-desc">Analiza sytuacji klientów giełdy Zondacrypto — ścieżki prawne, specyfika obrotu kryptoaktywami i ocena ryzyka różnych działań. Dobór strategii wymaga weryfikacji dokumentacji.</p>
         </div>
@@ -409,9 +407,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="podatkowe">
+      <div class="pub-card" data-type="w-mediach">
         <div class="pub-body">
-          <div class="pub-tag">Prawo podatkowe</div>
+          <div class="pub-tag">W mediach</div>
+          <div class="pub-area">Prawo podatkowe</div>
           <h3 class="pub-title"><a href="aktualnosci_podatek-pustostanow.html">Podatek od pustostanów – Łukasz Chacia dla Business Insider i Infor.pl</a></h3>
           <p class="pub-desc">Podstawy prawne podwyższonego opodatkowania niezamieszkałych lokali i granice działania samorządów. Ryzyko podatku katastralnego dla właścicieli i inwestorów.</p>
         </div>
@@ -421,9 +420,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="pfr">
+      <div class="pub-card" data-type="komentarz-prawny">
         <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
+          <div class="pub-tag">Komentarz prawny</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_pfr-sn-komornik-2026.html">Sąd Najwyższy ponownie nie przyjął skargi kasacyjnej PFR – sprawa komornika</a></h3>
           <p class="pub-desc">Postanowieniem I CSK 2106/25 SN odmówił przyjęcia skargi PFR. Beneficjent nie ukrywał charakteru działalności — fundusz zażądał zwrotu środków po latach z naruszeniem zasady zaufania.</p>
         </div>
@@ -433,9 +433,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="gospodarcze">
+      <div class="pub-card" data-type="komentarz-prawny">
         <div class="pub-body">
-          <div class="pub-tag">Prawo gospodarcze</div>
+          <div class="pub-tag">Komentarz prawny</div>
+          <div class="pub-area">Prawo gospodarcze</div>
           <h3 class="pub-title"><a href="aktualnosci_ceny-energii-roszczenia.html">Maksymalne ceny energii – czy przedsiębiorcy mogą bronić się przed roszczeniami?</a></h3>
           <p class="pub-desc">Roszczenia z systemu maksymalnych cen energii — podobieństwa do sporów z PFR. Kluczowe jest zbadanie warunków umowy i dokumentacji obowiązującej w danym momencie.</p>
         </div>
@@ -445,9 +446,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="budowlane">
+      <div class="pub-card" data-type="komentarz-prawny">
         <div class="pub-body">
-          <div class="pub-tag">Prawo budowlane</div>
+          <div class="pub-tag">Komentarz prawny</div>
+          <div class="pub-area">Prawo budowlane</div>
           <h3 class="pub-title"><a href="aktualnosci_mediacje-budowlane-2026.html">Obowiązkowe mediacje w sporach budowlanych – czy skrócą wieloletnie procesy?</a></h3>
           <p class="pub-desc">Obowiązkowe mediacje nie usuwają nierównowagi ekonomicznej. Mniejszy wykonawca może latami czekać na zapłatę — silniejsza strona nie ma wystarczającej motywacji do ugody.</p>
         </div>
@@ -457,9 +459,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="pfr">
+      <div class="pub-card" data-type="komentarz-prawny">
         <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
+          <div class="pub-tag">Komentarz prawny</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_pfr-sn-analiza-dgp-2026.html">Sąd Najwyższy podważa argumenty PFR – analiza Łukasza Chaci w DGP</a></h3>
           <p class="pub-desc">Analiza postanowienia SN z 18 grudnia 2025 r. (I CSK 2279/25): znaczenie danych przekazanych PFR przed wypłatą i granice późniejszej zmiany zasad programu.</p>
         </div>
@@ -469,9 +472,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="pfr">
+      <div class="pub-card" data-type="w-mediach">
         <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
+          <div class="pub-tag">W mediach</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_pfr-sn-postanowienie-2026.html">Spory z PFR po postanowieniu Sądu Najwyższego – komentarze w ogólnopolskich mediach</a></h3>
           <p class="pub-desc">Skutki postanowienia SN z 18 grudnia 2025 r.: wykładnia zasad programu przy przyznaniu pomocy i rola późniejszych komunikatów PFR w aktualnym orzecznictwie.</p>
         </div>
@@ -481,9 +485,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="pfr">
+      <div class="pub-card" data-type="w-mediach">
         <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
+          <div class="pub-tag">W mediach</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_pfr-legitymacja-fakt.html">Czy PFR może pozywać przedsiębiorców? Komentarz Łukasza Chaci dla „Faktu"</a></h3>
           <p class="pub-desc">Legitymacja PFR do żądania zwrotu: kluczowa jest podstawa konkretnego roszczenia, warunki umowy i właściwy Regulamin — nie formalne uprawnienia procesowe.</p>
         </div>
@@ -493,9 +498,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="pfr">
+      <div class="pub-card" data-type="komentarz-prawny">
         <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
+          <div class="pub-tag">Komentarz prawny</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_pfr-polemika-prawopl.html">Czy PFR ma podstawę do dochodzenia zwrotu subwencji? Polemika na Prawo.pl</a></h3>
           <p class="pub-desc">Polemika z argumentami pełnomocników PFR: związek umowy subwencji z realizacją zadań publicznych i wymagana podstawa ustawowa przy dochodzeniu środków.</p>
         </div>
@@ -505,9 +511,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="pfr">
+      <div class="pub-card" data-type="komentarz-prawny">
         <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
+          <div class="pub-tag">Komentarz prawny</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_pfr-wygrane-dgp-2025.html">Przedsiębiorcy coraz częściej wygrywają z PFR – artykuł Łukasza Chaci w DGP</a></h3>
           <p class="pub-desc">Rozwijająca się linia orzecznicza: stosowanie późniejszych wyjaśnień PFR do wcześniejszych umów i konieczność udowodnienia konkretnych przesłanek zwrotu.</p>
         </div>
@@ -517,9 +524,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="nieruchomosci">
+      <div class="pub-card" data-type="komentarz-prawny">
         <div class="pub-body">
-          <div class="pub-tag">Prawo nieruchomości</div>
+          <div class="pub-tag">Komentarz prawny</div>
+          <div class="pub-area">Prawo nieruchomości</div>
           <h3 class="pub-title"><a href="aktualnosci_jawnosc-cen-mieszkan.html">Jawność cen mieszkań – nowe obowiązki i ryzyka dla deweloperów</a></h3>
           <p class="pub-desc">Ustawa o jawności cen mieszkań: obowiązki publikowania i aktualizacji danych, ryzyko sankcji i możliwe roszczenia nabywców za braki w dokumentacji cenowej.</p>
         </div>
@@ -529,9 +537,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="pfr">
+      <div class="pub-card" data-type="w-mediach">
         <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
+          <div class="pub-tag">W mediach</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_pfr-forbes-2025.html">Tysiące przedsiębiorców w sporach z PFR. Łukasz Chacia dla „Forbes Polska"</a></h3>
           <p class="pub-desc">Skala sporów z PFR: rekomendacje CBA, korekty deklaracji, spory kantorowe — najczęstsze problemy przedsiębiorców pozywanych o zwrot subwencji.</p>
         </div>
@@ -541,9 +550,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="media">
+      <div class="pub-card" data-type="w-mediach">
         <div class="pub-body">
-          <div class="pub-tag">Media eksperckie</div>
+          <div class="pub-tag">W mediach</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_pfr-wywiady-wideo-2025.html">Spory przedsiębiorców z PFR – Łukasz Chacia w telewizji i programach wideo</a></h3>
           <p class="pub-desc">Wywiady w TVP Info, Telewizji Biznesowej i DGP wideo: podstawy roszczeń PFR, rekomendacje CBA i skutki wieloletnich sporów dla przedsiębiorców.</p>
         </div>
@@ -553,9 +563,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="pfr">
+      <div class="pub-card" data-type="komentarz-prawny">
         <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
+          <div class="pub-tag">Komentarz prawny</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_pfr-korekta-deklaracji.html">Korekta deklaracji podatkowej a żądanie zwrotu subwencji PFR</a></h3>
           <p class="pub-desc">Korekta VAT lub JPK po otrzymaniu subwencji nie uzasadnia automatycznie żądania zwrotu. Liczy się sytuacja przedsiębiorcy w chwili składania wniosku.</p>
         </div>
@@ -565,9 +576,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="pfr">
+      <div class="pub-card" data-type="komentarz-prawny">
         <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
+          <div class="pub-tag">Komentarz prawny</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_pfr-rekomendacje-cba.html">PFR pozywa na podstawie rekomendacji CBA. Jak przedsiębiorca może się bronić?</a></h3>
           <p class="pub-desc">Negatywna rekomendacja CBA nie jest równoznaczna z wykazaniem naruszenia zasad programu — PFR musi udowodnić konkretną podstawę żądania. Rola dokumentacji i ciężar dowodu.</p>
         </div>
@@ -577,9 +589,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="pfr">
+      <div class="pub-card" data-type="komentarz-prawny">
         <div class="pub-body">
-          <div class="pub-tag">Spory z PFR</div>
+          <div class="pub-tag">Komentarz prawny</div>
+          <div class="pub-area">Spory z PFR</div>
           <h3 class="pub-title"><a href="aktualnosci_jak-odpierac-roszczenia-pfr.html">Jak odpierać roszczenia PFR? Rusza cykl artykułów mec. Łukasza Chaci na Infor.pl</a></h3>
           <p class="pub-desc">Start cyklu artykułów na Infor.pl: strategie obrony przed ponad 16 000 pozwami PFR, oparte na orzecznictwie i przepisach krajowych i unijnych.</p>
         </div>
@@ -589,9 +602,10 @@ footer { background:var(--N); padding-bottom:80px; }
         </div>
       </div>
 
-      <div class="pub-card" data-cat="gospodarcze">
+      <div class="pub-card" data-type="poradnik">
         <div class="pub-body">
-          <div class="pub-tag">Prawo gospodarcze</div>
+          <div class="pub-tag">Poradnik</div>
+          <div class="pub-area">Prawo gospodarcze</div>
           <h3 class="pub-title"><a href="aktualnosci_zabezpieczenie-firmy-smierc-wspolnika.html">Jak zabezpieczyć firmę na wypadek śmierci wspólnika?</a></h3>
           <p class="pub-desc">Śmierć wspólnika bez odpowiednich zabezpieczeń prowadzi do paraliżu operacyjnego. Rozwiązania dla spółek osobowych i kapitałowych — fundacja rodzinna, umowy wspólników.</p>
         </div>
@@ -695,7 +709,7 @@ footer { background:var(--N); padding-bottom:80px; }
       btn.classList.add('active');
       const cat = btn.dataset.filter;
       document.querySelectorAll('.pub-card').forEach(card => {
-        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+        card.style.display = (cat === 'all' || card.dataset.type === cat) ? '' : 'none';
       });
     });
   });
