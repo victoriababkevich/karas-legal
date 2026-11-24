@@ -560,7 +560,6 @@ footer { background:var(--N); padding-bottom:80px; }
 @media(max-width:600px){.suk-grid{grid-template-columns:1fr;}}
 
 .suk-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;}.suk-tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:var(--bg);color:var(--mut);border:1px solid var(--bdr);}
-.suk-tag-select{border:1.5px solid var(--bdr);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235A6E7F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--mut);border-radius:40px;padding:8px 36px 8px 18px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;appearance:none;-webkit-appearance:none;transition:all .2s;}.suk-tag-select:focus{outline:none;border-color:var(--T);color:var(--T);}.suk-tag-select.active{border-color:var(--T);color:var(--T);background-color:var(--Tl);}
 
 /* ══ CLICKABLE CARDS (Kroki 2+4) ══ */
 .suk-card[data-href] { cursor:pointer; }
@@ -673,7 +672,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </nav>
     <div class="hero-chip">Osiągnięcia kancelarii</div>
     <h1>Sukcesy i aktualności</h1>
-    <p class="sp-hero-sub">Korzystne wyroki, zawarte ugody, odzyskane należności i ważne wydarzenia z życia kancelarii.</p>
+    <p class="sp-hero-sub">Korzystne wyroki, zawarte ugody, odzyskane należności oraz ważne orzeczenia i wydarzenia.</p>
   </div>
 </section>
 
@@ -681,43 +680,16 @@ footer { background:var(--N); padding-bottom:80px; }
   <div class="w">
     <div class="slabel">Filtruj według kategorii</div>
     <h2 class="stitle">Osiągnięcia kancelarii</h2>
-    <p class="ssub" style="max-width:100%">Od 2014 roku prowadzimy sprawy z zakresu prawa gospodarczego, sporów budowlanych, inwestycji i sukcesji. Poniżej wybrane przykłady naszych sukcesów.</p>
+    <p class="ssub" style="max-width:100%">Od 2014 roku prowadzimy sprawy z zakresu prawa gospodarczego, sporów budowlanych, inwestycji i sukcesji. Prezentujemy wybrane sukcesy kancelarii oraz istotne orzeczenia dotyczące zagadnień, którymi zajmujemy się w naszej praktyce.</p>
 
     <div class="suk-filters">
     <button class="suk-filter active" data-filter="all">Wszystkie</button>
     <button class="suk-filter" data-filter="wyroki">Korzystne wyroki</button>
     <button class="suk-filter" data-filter="ugody">Ugody</button>
-    <button class="suk-filter" data-filter="transakcje">Zakończone transakcje</button>
-    <button class="suk-filter" data-filter="fundacje">Fundacje rodzinne</button>
+    <button class="suk-filter" data-filter="transakcje">Zrealizowane transakcje</button>
+    <button class="suk-filter" data-filter="rozstrzygniecia">Ważne rozstrzygnięcia</button>
     <button class="suk-filter" data-filter="naleznosci">Odzyskane należności</button>
-    <button class="suk-filter" data-filter="zabezpieczenia">Postanowienia zabezpieczające</button>
-    <select class="suk-tag-select" id="tagSelect">
-    <option value="">Temat: wszystkie</option>
-    <option value="Budownictwo">Budownictwo</option>
-    <option value="CBA">CBA</option>
-    <option value="Deweloper">Deweloper</option>
-    <option value="Due diligence">Due diligence</option>
-    <option value="ERP">ERP</option>
-    <option value="Fundacja rodzinna">Fundacja rodzinna</option>
-    <option value="Fundusze">Fundusze</option>
-    <option value="Kantor">Kantor</option>
-    <option value="Kary umowne">Kary umowne</option>
-    <option value="M&amp;A">M&amp;A</option>
-    <option value="Nieruchomości">Nieruchomości</option>
-    <option value="Odszkodowanie">Odszkodowanie</option>
-    <option value="Oprogramowanie">Oprogramowanie</option>
-    <option value="PFR">PFR</option>
-    <option value="Prawo IT">Prawo IT</option>
-    <option value="SaaS">SaaS</option>
-    <option value="Spółki">Spółki</option>
-    <option value="Subwencje">Subwencje</option>
-    <option value="Sukcesja">Sukcesja</option>
-    <option value="W-Investments">W-Investments</option>
-    <option value="Wspólnicy">Wspólnicy</option>
-    <option value="Wynagrodzenie">Wynagrodzenie</option>
-    <option value="Wyrok SA">Wyrok SA</option>
-    <option value="Zabezpieczenie">Zabezpieczenie</option>
-  </select>
+    <button class="suk-filter" data-filter="projekty">Zrealizowane projekty</button>
     </div>
 
     <div class="suk-grid" id="sukGrid">
@@ -767,7 +739,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
 
     <!-- Czerwiec 2026 (22 VI) — z publikacji -->
-    <div class="suk-card" data-tags="PFR,Subwencje" data-cat="wyroki" data-href="sukces_sn-pfr-icsk2106-25-czerwiec-2026.html" tabindex="0" role="link" aria-label="Sąd Najwyższy ponownie po stronie beneficjentów Tarczy PFR">
+    <div class="suk-card" data-tags="PFR,Subwencje" data-cat="rozstrzygniecia" data-href="sukces_sn-pfr-icsk2106-25-czerwiec-2026.html" tabindex="0" role="link" aria-label="Sąd Najwyższy ponownie po stronie beneficjentów Tarczy PFR">
       <div class="suk-header">
         <span class="suk-badge">Korzystny wyrok</span>
         <span class="suk-date">Czerwiec 2026</span>
@@ -793,7 +765,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
 
     <!-- Maj 2026 -->
-    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja" data-cat="fundacje" data-href="sukces_fundacja-rodzinna-45-mln-maj-2026.html" tabindex="0" role="link" aria-label="Założenie fundacji rodzinnej — majątek 45 mln zł objęty ochroną sukcesyjną">
+    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja" data-cat="projekty" data-href="sukces_fundacja-rodzinna-45-mln-maj-2026.html" tabindex="0" role="link" aria-label="Założenie fundacji rodzinnej — majątek 45 mln zł objęty ochroną sukcesyjną">
       <div class="suk-header">
         <span class="suk-badge">Fundacja rodzinna</span>
         <span class="suk-date">Maj 2026</span>
@@ -858,7 +830,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
 
     <!-- Wrzesień 2024 -->
-    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja" data-cat="fundacje" data-href="sukces_fundacja-rodzinna-grupa-kapitalowa-40-mln.html" tabindex="0" role="link" aria-label="Założenie fundacji rodzinnej dla grupy kapitałowej z branży produkcyjnej">
+    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja" data-cat="projekty" data-href="sukces_fundacja-rodzinna-grupa-kapitalowa-40-mln.html" tabindex="0" role="link" aria-label="Założenie fundacji rodzinnej dla grupy kapitałowej z branży produkcyjnej">
       <div class="suk-header">
         <span class="suk-badge">Fundacja rodzinna</span>
         <span class="suk-date">Wrzesień 2024</span>
@@ -884,7 +856,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
 
     <!-- Lipiec 2024 -->
-    <div class="suk-card" data-tags="Budownictwo,Zabezpieczenie" data-cat="zabezpieczenia" data-href="sukces_zabezpieczenie-4-7-mln-budowlane-2024.html" tabindex="0" role="link" aria-label="Zabezpieczenie roszczenia o 4,7 mln zł w sporze budowlanym">
+    <div class="suk-card" data-tags="Budownictwo,Zabezpieczenie" data-cat="rozstrzygniecia" data-href="sukces_zabezpieczenie-4-7-mln-budowlane-2024.html" tabindex="0" role="link" aria-label="Zabezpieczenie roszczenia o 4,7 mln zł w sporze budowlanym">
       <div class="suk-header">
         <span class="suk-badge">Postanowienie zabezpieczające</span>
         <span class="suk-date">Lipiec 2024</span>
@@ -923,7 +895,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
 
     <!-- Kwiecień 2024 -->
-    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja,Nieruchomości" data-cat="fundacje" data-href="sukces_fundacja-rodzinna-wielopokoleniowa-2024.html" tabindex="0" role="link" aria-label="Fundacja rodzinna jako narzędzie ochrony majątku w wielopokoleniowej firmie rodzinnej">
+    <div class="suk-card" data-tags="Fundacja rodzinna,Sukcesja,Nieruchomości" data-cat="projekty" data-href="sukces_fundacja-rodzinna-wielopokoleniowa-2024.html" tabindex="0" role="link" aria-label="Fundacja rodzinna jako narzędzie ochrony majątku w wielopokoleniowej firmie rodzinnej">
       <div class="suk-header">
         <span class="suk-badge">Fundacja rodzinna</span>
         <span class="suk-date">Kwiecień 2024</span>
@@ -962,7 +934,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
 
     <!-- Styczeń 2024 -->
-    <div class="suk-card" data-tags="Spółki,Wspólnicy" data-cat="zabezpieczenia" data-href="sukces_zabezpieczenie-wspolnik-mniejszosciowy-2024.html" tabindex="0" role="link" aria-label="Zabezpieczenie roszczenia wspólnika mniejszościowego w sporze korporacyjnym">
+    <div class="suk-card" data-tags="Spółki,Wspólnicy" data-cat="rozstrzygniecia" data-href="sukces_zabezpieczenie-wspolnik-mniejszosciowy-2024.html" tabindex="0" role="link" aria-label="Zabezpieczenie roszczenia wspólnika mniejszościowego w sporze korporacyjnym">
       <div class="suk-header">
         <span class="suk-badge">Postanowienie zabezpieczające</span>
         <span class="suk-date">Styczeń 2024</span>
@@ -975,7 +947,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
 
     <!-- Październik 2023 -->
-    <div class="suk-card" data-tags="Deweloper,Nieruchomości" data-cat="transakcje" data-href="sukces_inwestycja-deweloperska-28-mln-2023.html" tabindex="0" role="link" aria-label="Obsługa prawna inwestycji deweloperskiej o wartości 28 mln zł">
+    <div class="suk-card" data-tags="Deweloper,Nieruchomości" data-cat="projekty" data-href="sukces_inwestycja-deweloperska-28-mln-2023.html" tabindex="0" role="link" aria-label="Obsługa prawna inwestycji deweloperskiej o wartości 28 mln zł">
       <div class="suk-header">
         <span class="suk-badge">Transakcja</span>
         <span class="suk-date">Październik 2023</span>
@@ -1143,18 +1115,13 @@ footer { background:var(--N); padding-bottom:80px; }
   const filters = document.querySelectorAll('.suk-filter');
   const cards   = document.querySelectorAll('.suk-card');
   const emptyMsg  = document.getElementById('emptyMsg');
-  const tagSelect = document.getElementById('tagSelect');
 
   function applyFilters() {
     const cat = document.querySelector('.suk-filter.active').dataset.filter;
-    const tag = tagSelect.value;
-    tagSelect.classList.toggle('active', tag !== '');
     let visible = 0;
     cards.forEach(card => {
       const catOk = cat === 'all' || card.dataset.cat === cat;
-      const cardTags = card.dataset.tags ? card.dataset.tags.split(',') : [];
-      const tagOk = !tag || cardTags.includes(tag);
-      const match = catOk && tagOk;
+      const match = catOk;
       card.classList.toggle('hidden', !match);
       if (match) visible++;
     });
@@ -1169,7 +1136,6 @@ footer { background:var(--N); padding-bottom:80px; }
     });
   });
 
-  tagSelect.addEventListener('change', applyFilters);
 </script>
 
 </body>
