@@ -11,8 +11,9 @@
     });
   });
   nav.querySelectorAll('a[href]').forEach(function(a){
-    if(a.getAttribute('href').split('#')[0]===here && !a.classList.contains('mn-cta')){
-      a.classList.add('mn-current');
+    var href=a.getAttribute('href');
+    if(href.split('#')[0]===here && here!=='kontakt.html'){
+      if(href.indexOf('#')<0) a.classList.add('mn-current');
       var g=a.closest('.mn-group'); if(g && !nav.querySelector('.mn-group.open')){g.classList.add('open');g.querySelector('.mn-toggle').setAttribute('aria-expanded','true');}
     }
   });
