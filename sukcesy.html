@@ -530,6 +530,7 @@ footer { background:var(--N); padding-bottom:80px; }
 .suk-filters{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 28px;}
 .suk-filter{border:1.5px solid var(--bdr);background:#fff;color:var(--mut);border-radius:40px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;}
 .suk-filter.active,.suk-filter:hover{border-color:var(--T);color:var(--T);background:var(--Tl);}
+@media(max-width:768px){.suk-filters{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:28px -28px 24px;padding:2px 28px 6px;}.suk-filters::-webkit-scrollbar{display:none;}.suk-filter{flex-shrink:0;white-space:nowrap;}}
 .suk-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 .suk-card{border:1.5px solid var(--bdr);border-radius:14px;padding:20px 22px 20px 18px;background:#fff;transition:all .2s;display:flex;flex-direction:column;gap:10px;border-left:2px solid var(--T);}
 .suk-card:hover{border-color:var(--T);box-shadow:0 8px 28px rgba(32,169,185,.1);transform:translateY(-2px);}
