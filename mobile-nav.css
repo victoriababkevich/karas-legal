@@ -1,0 +1,15 @@
+/* Wspólne menu mobilne (wszystkie strony) */
+.mobile-nav{max-height:calc(100vh - 72px);max-height:calc(100dvh - 72px);padding-bottom:32px;overscroll-behavior:contain;}
+body.mn-open .float-bar{display:none !important;}
+.mobile-nav .mn-group{margin-bottom:0;}
+.mobile-nav .mn-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:none;border:0;font-family:inherit;cursor:pointer;
+  padding:12px 14px;font-size:15px;font-weight:600;color:var(--text);text-transform:none;letter-spacing:0;border-radius:9px;text-align:left;}
+.mobile-nav .mn-toggle:hover{color:var(--T);background:var(--Tl);}
+.mobile-nav .mn-toggle .mn-arrow{font-size:12px;color:var(--mut);transition:transform .2s;}
+.mobile-nav .mn-group.open > .mn-toggle .mn-arrow{transform:rotate(180deg);color:var(--T);}
+.mobile-nav .mn-group.open > .mn-toggle{color:var(--T);}
+.mobile-nav .mn-sub{display:none;padding:0 0 6px 14px;}
+.mobile-nav .mn-group.open > .mn-sub{display:block;}
+.mobile-nav .mn-sub a{padding:9px 14px;}
+.mobile-nav a.mn-current{color:var(--T);background:var(--Tl);}
+.mobile-nav .mn-panel{text-align:center;margin-top:8px;color:var(--T) !important;border:1.5px solid var(--T);border-radius:9px;padding:11px 14px !important;display:block;font-weight:600;}

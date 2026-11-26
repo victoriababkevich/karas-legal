@@ -111,6 +111,7 @@ footer { background:var(--N); padding-bottom:80px; }
 .fb-cta:hover{background:var(--Td)!important;}
 @media(max-width:768px){nav .dropdown,nav>a:not(.nav-btn){display:none;}.nav-btn,.nav-panel{display:none;}.hamburger{display:flex;}.sp-hero{padding:48px 0 40px;}.sp-hero h1{font-size:28px;}.art-section{padding:48px 0 72px;}.art-w{padding:0 18px;}.f-top{grid-template-columns:1fr;gap:28px;}.fb-item:not(.fb-cta){display:none;}.art-sources{padding:20px 20px;}}
 </style>
+<link rel="stylesheet" href="mobile-nav.css">
 </head>
 <body>
 <header>
@@ -129,10 +130,43 @@ footer { background:var(--N); padding-bottom:80px; }
   </div>
 </header>
 <div class="mobile-nav" id="mobileNav">
-  <a href="spec_spory-pfr.html">Spory z PFR</a>
+  <div class="mn-group">
+    <button class="mn-label mn-toggle" type="button" aria-expanded="false">Specjalizacje <span class="mn-arrow">▾</span></button>
+    <div class="mn-sub">
+      <a href="spec_umowy-inwestycyjne.html">Umowy inwestycyjne i projekty biznesowe</a>
+      <a href="spec_prawo-it.html">Prawo IT i projekty technologiczne</a>
+      <a href="spec_spory-pfr.html">Spory z PFR i pomoc publiczna</a>
+      <a href="spec_inwestycje-budowlane.html">Inwestycje budowlane i nieruchomości</a>
+      <a href="spec_konflikty-wspolnicy.html">Konflikty między wspólnikami</a>
+      <a href="spec_spory-gospodarcze.html">Spory gospodarcze</a>
+      <a href="spec_fundacje-rodzinne.html">Fundacje rodzinne i sukcesja majątku</a>
+      <a href="pozostale-obszary.html">Pozostałe obszary →</a>
+    </div>
+  </div>
+  <div class="mn-group">
+    <button class="mn-label mn-toggle" type="button" aria-expanded="false">Sprawy <span class="mn-arrow">▾</span></button>
+    <div class="mn-sub">
+      <a href="sprawy_subwencje-pfr.html">Subwencje PFR</a>
+      <a href="sprawy_w-investments.html">Fundusze W-Investments</a>
+      <a href="sprawy_slupy-energetyczne.html">Odszkodowania za słupy energetyczne</a>
+      <a href="kontakt.html">Inne sprawy →</a>
+    </div>
+  </div>
   <a href="sukcesy.html">Sukcesy</a>
-  <a href="publikacje.html" style="color:var(--T);">Publikacje</a>
+  <a href="publikacje.html">Publikacje</a>
+  <div class="mn-group">
+    <button class="mn-label mn-toggle" type="button" aria-expanded="false">O nas <span class="mn-arrow">▾</span></button>
+    <div class="mn-sub">
+      <a href="o-nas.html#kancelaria">O kancelarii</a>
+      <a href="o-nas.html#wspolnicy">Wspólnicy</a>
+      <a href="o-nas.html#zespol">Zespół</a>
+      <a href="o-nas.html#wspolpraca">Współpraca</a>
+      <a href="o-nas.html#zaufali-nam">Zaufali nam</a>
+      <a href="kariera.html">Dołącz do nas</a>
+    </div>
+  </div>
   <a href="kontakt.html" class="mn-cta">Kontakt</a>
+  <a href="https://karas-legal.amberlo.io/login/?lang=pl" target="_blank" rel="noopener" class="mn-panel">Panel Klienta →</a>
 </div>
 <section class="sp-hero">
   <div class="sp-hero-video"><img src="images/hero-publikacje.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
@@ -213,5 +247,6 @@ footer { background:var(--N); padding-bottom:80px; }
   hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileNav.classList.toggle('open'); });
   mobileNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { hamburger.classList.remove('open'); mobileNav.classList.remove('open'); }));
 </script>
+<script src="mobile-nav.js"></script>
 </body>
 </html>
