@@ -686,6 +686,7 @@ footer { background:var(--N); padding-bottom:80px; }
     <h2 class="stitle">Osiągnięcia kancelarii</h2>
     <p class="ssub" style="max-width:100%">Od 2014 roku prowadzimy sprawy z zakresu prawa gospodarczego, sporów budowlanych, inwestycji i sukcesji. Prezentujemy wybrane sukcesy kancelarii oraz istotne orzeczenia dotyczące zagadnień, którymi zajmujemy się w naszej praktyce.</p>
 
+    <!-- Wpis może być w kilku filtrach: data-cat="wyroki,naleznosci" (po przecinku) -->
     <div class="suk-filters">
     <button class="suk-filter active" data-filter="all">Wszystkie</button>
     <button class="suk-filter" data-filter="wyroki">Korzystne wyroki</button>
@@ -821,7 +822,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
 
     <!-- Październik 2024 -->
-    <div class="suk-card" data-tags="Budownictwo,Wynagrodzenie" data-cat="naleznosci" data-href="sukces_wynagrodzenie-budowlane-2-3-mln-2024.html" tabindex="0" role="link" aria-label="Odzyskanie ponad 2,3 mln zł niezapłaconego wynagrodzenia za roboty budowlane">
+    <div class="suk-card" data-tags="Budownictwo,Wynagrodzenie" data-cat="naleznosci,ugody" data-href="sukces_wynagrodzenie-budowlane-2-3-mln-2024.html" tabindex="0" role="link" aria-label="Odzyskanie ponad 2,3 mln zł niezapłaconego wynagrodzenia za roboty budowlane">
       <div class="suk-header">
         <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Październik 2024</span>
@@ -964,7 +965,7 @@ footer { background:var(--N); padding-bottom:80px; }
     </div>
 
     <!-- Sierpień 2023 -->
-    <div class="suk-card" data-tags="Nieruchomości,Odszkodowanie" data-cat="naleznosci" data-href="sukces_odzyskanie-510-tys-bezumowne-nieruchomosc.html" tabindex="0" role="link" aria-label="Odzyskanie 510 tys. zł z tytułu bezumownego korzystania z nieruchomości">
+    <div class="suk-card" data-tags="Nieruchomości,Odszkodowanie" data-cat="naleznosci,wyroki" data-href="sukces_odzyskanie-510-tys-bezumowne-nieruchomosc.html" tabindex="0" role="link" aria-label="Odzyskanie 510 tys. zł z tytułu bezumownego korzystania z nieruchomości">
       <div class="suk-header">
         <span class="suk-badge">Odzyskane należności</span>
         <span class="suk-date">Sierpień 2023</span>
@@ -1124,7 +1125,8 @@ footer { background:var(--N); padding-bottom:80px; }
     const cat = document.querySelector('.suk-filter.active').dataset.filter;
     let visible = 0;
     cards.forEach(card => {
-      const catOk = cat === 'all' || card.dataset.cat === cat;
+      const cats = (card.dataset.cat || '').split(',').map(s => s.trim());
+      const catOk = cat === 'all' || cats.includes(cat);
       const match = catOk;
       card.classList.toggle('hidden', !match);
       if (match) visible++;
@@ -1139,6 +1141,7 @@ footer { background:var(--N); padding-bottom:80px; }
       applyFilters();
     });
   });
+  applyFilters();
 
 </script>
 
